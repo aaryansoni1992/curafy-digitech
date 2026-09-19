@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Healthcare &amp; Clinic Digital Growth | Curafy Digitech</title>
+  <meta name="description" content="Specialized patient acquisition systems, medical SEO, doctor personal branding, and high-converting OPD appointment funnels for Hospitals, Clinics, and Doctors.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            curafy: {
+              dark: '#0A0F1D',
+              darker: '#060A14',
+              card: 'rgba(15, 23, 42, 0.8)',
+              border: 'rgba(56, 189, 248, 0.15)',
+              royal: '#2563EB',
+              blue: '#1D4ED8',
+              cyan: '#06B6D4',
+              electric: '#00F0FF',
+              sky: '#38BDF8',
+              emerald: '#10B981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[#0A0F1D] text-slate-200 antialiased bg-grid-pattern relative">
+
+  <!-- Ambient background glow (Option 1) -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-20 right-1/4 w-[500px] h-[500px] bg-cyan-500/15 rounded-full blur-[130px] animate-orb-1"></div>
+    <div class="absolute bottom-1/4 -left-20 w-[500px] h-[500px] bg-blue-600/16 rounded-full blur-[140px] animate-orb-2"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-6">
+        <a href="index.html" class="flex items-center shrink-0 mr-6 lg:mr-10 group">
+          <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-9 sm:h-10 md:h-11 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-sm font-medium text-slate-300 shrink-0">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+
+          <!-- Services Dropdown Button with 9 Options -->
+          <div class="relative group/services py-2">
+            <a href="services.html" class="flex items-center gap-1 hover:text-cyan-400 transition-colors py-1 focus:outline-none cursor-pointer">
+              <span>Services (01–09)</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover/services:rotate-180 text-cyan-400"></i>
+            </a>
+
+            <!-- Mega Dropdown Panel with 9 Services -->
+            <div class="absolute top-full -left-20 w-[680px] pt-2 opacity-0 pointer-events-none group-hover/services:opacity-100 group-hover/services:pointer-events-auto transition-all duration-200 z-50">
+              <div class="glass-panel rounded-2xl p-5 border border-cyan-500/30 shadow-2xl bg-[#0A0F1D]/95 backdrop-blur-xl">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-cyan-300 font-heading">Our 9 Core Growth Services</span>
+                  </div>
+                  <a href="services.html" class="text-[11px] font-semibold text-slate-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+                    Explore All Deliverables <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
+                <div class="grid grid-cols-3 gap-2.5 text-xs">
+                  <a href="services.html#service-01" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">01.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Digital Marketing</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Complete online presence</span>
+                  </a>
+                  <a href="services.html#service-02" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">02.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Social Media Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Turn social into growth</span>
+                  </a>
+                  <a href="services.html#service-03" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">03.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Performance Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Meta &amp; Google Ads</span>
+                  </a>
+                  <a href="services.html#service-04" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">04.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">SEO &amp; Local SEO</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Rank on search &amp; Maps</span>
+                  </a>
+                  <a href="services.html#service-05" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">05.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Website &amp; Landers</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">High-converting designs</span>
+                  </a>
+                  <a href="services.html#service-06" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">06.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Lead Generation</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Genuine customer inquiries</span>
+                  </a>
+                  <a href="services.html#service-07" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">07.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Content &amp; Creative</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Reels, ads &amp; banners</span>
+                  </a>
+                  <a href="services.html#service-08" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">08.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">WhatsApp Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Fast replies &amp; broadcasts</span>
+                  </a>
+                  <a href="services.html#service-09" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">09.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Branding &amp; Design</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Memorable visual identity</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="healthcare.html" class="text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">Healthcare &amp; Clinics</a>
+          <a href="case-studies.html" class="hover:text-cyan-400 transition-colors">Case Studies</a>
+          <a href="about.html" class="hover:text-cyan-400 transition-colors">About</a>
+          <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center space-x-3">
+          <!-- 3D Perspective HUD Indicator -->
+          <div class="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/40 text-[11px] font-mono text-cyan-300 shadow-lg shadow-cyan-500/10">
+            <div class="cube-3d-scene">
+              <div class="cube-3d">
+                <div class="cube-face cube-front"></div>
+                <div class="cube-face cube-back"></div>
+                <div class="cube-face cube-right"></div>
+                <div class="cube-face cube-left"></div>
+                <div class="cube-face cube-top"></div>
+                <div class="cube-face cube-bottom"></div>
+              </div>
+            </div>
+            <span class="font-bold tracking-wider">3D CYBER VIEW</span>
+          </div>
+
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20for%20my%20clinic/hospital." target="_blank" class="btn-3d-emerald text-xs font-semibold px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-all">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+            <span>WhatsApp Call: 6376566383</span>
+          </a>
+          <button onclick="openModal('consultation-modal')" class="btn-3d shimmer-btn text-xs font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white">
+            Book Clinic Consultation
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden header-glass border-b border-slate-800 px-6 pt-4 pb-6 mt-3 space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Navigation</span>
+        <button id="mobile-menu-close" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="flex flex-col space-y-3 font-medium text-slate-300">
+        <a href="index.html" class="hover:text-cyan-400 py-1">Home</a>
+
+        <!-- Mobile Services Collapsible with 9 Options -->
+        <div class="border-y border-slate-800/80 py-2">
+          <button id="mobile-services-toggle" class="w-full flex items-center justify-between text-left hover:text-cyan-400 py-1 font-semibold text-cyan-300">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Services (All 9 Options)</span>
+            </span>
+            <i data-lucide="chevron-down" id="mobile-services-icon" class="w-4 h-4 transition-transform duration-200 text-cyan-400"></i>
+          </button>
+          <div id="mobile-services-list" class="hidden pl-3 pt-2 pb-1 space-y-2 border-l border-cyan-500/30 ml-2 mt-1 text-xs text-slate-400">
+            <a href="services.html#service-01" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">01.</strong> Digital Marketing</a>
+            <a href="services.html#service-02" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">02.</strong> Social Media Marketing</a>
+            <a href="services.html#service-03" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">03.</strong> Performance Marketing</a>
+            <a href="services.html#service-04" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">04.</strong> SEO &amp; Local SEO</a>
+            <a href="services.html#service-05" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">05.</strong> Website &amp; Landing Pages</a>
+            <a href="services.html#service-06" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">06.</strong> Lead Generation</a>
+            <a href="services.html#service-07" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">07.</strong> Content &amp; Creative</a>
+            <a href="services.html#service-08" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">08.</strong> WhatsApp Marketing</a>
+            <a href="services.html#service-09" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">09.</strong> Branding &amp; Design</a>
+            <a href="services.html" class="block text-cyan-400 font-semibold pt-1">Explore All Deliverables &rarr;</a>
+          </div>
+        </div>
+
+        <a href="healthcare.html" class="hover:text-cyan-400 py-1 flex items-center gap-2 text-cyan-300">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Healthcare &amp; Clinics
+        </a>
+        <a href="case-studies.html" class="hover:text-cyan-400 py-1">Case Studies</a>
+        <a href="about.html" class="hover:text-cyan-400 py-1">About Us</a>
+        <a href="contact.html" class="hover:text-cyan-400 py-1">Contact</a>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800 space-y-2">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20for%20my%20clinic/hospital." target="_blank" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-lg">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>WhatsApp Call: +91 63765 66383</span>
+        </a>
+        <button onclick="openModal('consultation-modal')" class="shimmer-btn w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg">
+          Book Clinic Consultation
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10 pt-36 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-4xl mx-auto space-y-6">
+      
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-xs font-bold text-cyan-300">
+        <i data-lucide="stethoscope" class="w-4 h-4"></i> Specialized Medical &amp; Healthcare Division
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-heading text-white leading-tight">
+        Turn High-Intent Patients Into <span class="text-gradient-neon">Booked OPD Appointments.</span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        We help Hospitals, Dental Centers, IVF Clinics, Eye Specialists, and Independent Doctors build unshakeable patient trust, rank #1 on Google Local Maps, and scale OPD revenues.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <button onclick="openModal('consultation-modal')" class="btn-3d shimmer-btn w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-xl shadow-cyan-500/25 text-sm flex items-center justify-center gap-2">
+          <span>Schedule Clinic Growth Strategy Session</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+        <a href="#" class="btn-3d-emerald whatsapp-trigger w-full sm:w-auto px-7 py-4 rounded-xl font-semibold text-white bg-emerald-600 hover:bg-emerald-500 border border-emerald-500/40 flex items-center justify-center gap-2 text-sm" data-msg="Hello Curafy Digitech! I run a hospital/clinic and want to discuss increasing patient OPD appointments.">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Doctor Desk
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Healthcare Pillars Grid (3D Spatial Perspective) -->
+    <div class="stage-3d mt-24 grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Pillar 1 -->
+      <div class="card-3d rounded-2xl p-7 border border-slate-800 space-y-4">
+        <div class="layer-3d-2 w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+          <i data-lucide="map-pin" class="w-6 h-6"></i>
+        </div>
+        <div class="layer-3d-1">
+          <h3 class="text-xl font-bold text-white font-heading">Google 3-Pack Local Dominance</h3>
+          <p class="text-slate-400 text-xs leading-relaxed mt-2">
+            When patients in your city search for "Best Dental Clinic near me", "Top Orthopedic Doctor", or "Eye Specialist", your hospital will appear in the top 3 Google Maps results with authentic 5-star patient reviews.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div class="card-3d rounded-2xl p-7 border border-slate-800 space-y-4">
+        <div class="layer-3d-2 w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center">
+          <i data-lucide="message-square" class="w-6 h-6"></i>
+        </div>
+        <div class="layer-3d-1">
+          <h3 class="text-xl font-bold text-white font-heading">WhatsApp OPD Appointment Bot</h3>
+          <p class="text-slate-400 text-xs leading-relaxed mt-2">
+            No more dropped patient inquiries. Our smart automated desk captures patient details, preferred treatment dates, and doctor specialty, syncing directly with your hospital reception team.
+          </p>
+        </div>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div class="card-3d rounded-2xl p-7 border border-slate-800 space-y-4">
+        <div class="layer-3d-2 w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center">
+          <i data-lucide="award" class="w-6 h-6"></i>
+        </div>
+        <div class="layer-3d-1">
+          <h3 class="text-xl font-bold text-white font-heading">Doctor Personal Branding</h3>
+          <p class="text-slate-400 text-xs leading-relaxed mt-2">
+            Patients choose doctors they trust. We produce high-authority educational medical videos, treatment walkthroughs, and patient recovery stories that position your specialists as top authorities.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Specialized Medical Verticals -->
+    <div class="mt-24">
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <h2 class="text-3xl font-extrabold font-heading text-white">Healthcare Specialties We Grow</h2>
+        <p class="text-slate-400 text-sm">Tailored conversion pathways for every medical field</p>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="p-4 rounded-xl glass-panel text-center border border-slate-800 space-y-2">
+          <i data-lucide="smile" class="w-6 h-6 text-cyan-400 mx-auto"></i>
+          <span class="text-xs font-semibold text-white block">Dental Clinics</span>
+        </div>
+        <div class="p-4 rounded-xl glass-panel text-center border border-slate-800 space-y-2">
+          <i data-lucide="eye" class="w-6 h-6 text-blue-400 mx-auto"></i>
+          <span class="text-xs font-semibold text-white block">Eye / Lasik Care</span>
+        </div>
+        <div class="p-4 rounded-xl glass-panel text-center border border-slate-800 space-y-2">
+          <i data-lucide="baby" class="w-6 h-6 text-sky-400 mx-auto"></i>
+          <span class="text-xs font-semibold text-white block">IVF &amp; Fertility</span>
+        </div>
+        <div class="p-4 rounded-xl glass-panel text-center border border-slate-800 space-y-2">
+          <i data-lucide="bone" class="w-6 h-6 text-emerald-400 mx-auto"></i>
+          <span class="text-xs font-semibold text-white block">Orthopedics</span>
+        </div>
+        <div class="p-4 rounded-xl glass-panel text-center border border-slate-800 space-y-2">
+          <i data-lucide="sparkles" class="w-6 h-6 text-cyan-300 mx-auto"></i>
+          <span class="text-xs font-semibold text-white block">Dermatology</span>
+        </div>
+        <div class="p-4 rounded-xl glass-panel text-center border border-slate-800 space-y-2">
+          <i data-lucide="building-2" class="w-6 h-6 text-blue-300 mx-auto"></i>
+          <span class="text-xs font-semibold text-white block">Multispecialty</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Verified Healthcare Case Study Highlight -->
+    <div class="mt-24 glass-panel rounded-3xl p-8 sm:p-12 border border-cyan-500/40 glow-border">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7 space-y-4">
+          <span class="px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700 text-xs font-bold">Featured Healthcare Case</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">Apex Super-Specialty Hospital</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Apex Hospital was struggling with low OPD footfall and an ad agency that delivered zero verifiable appointments. Curafy Digitech implemented an integrated local medical SEO strategy + high-intent Google Search campaigns for orthopedics and cardiology.
+          </p>
+          <div class="grid grid-cols-3 gap-4 pt-4 border-t border-slate-800">
+            <div>
+              <span class="text-xs text-slate-400 block">Patient Appointments</span>
+              <span class="text-2xl font-black text-white font-heading font-mono">+340%</span>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 block">Cost Per Patient</span>
+              <span class="text-2xl font-black text-emerald-400 font-heading font-mono">₹210</span>
+            </div>
+            <div>
+              <span class="text-xs text-slate-400 block">Time to ROI</span>
+              <span class="text-2xl font-black text-cyan-400 font-heading font-mono">35 Days</span>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 text-center">
+          <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 space-y-4">
+            <h4 class="text-base font-bold text-white">Want Identical Results for Your Clinic?</h4>
+            <p class="text-xs text-slate-400">Get our comprehensive 20-point Hospital Patient Acquisition Audit tailored to your city.</p>
+            <button onclick="openModal('consultation-modal')" class="shimmer-btn w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg">
+              Book Doctor Growth Consultation
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#060A14] border-t border-slate-800 text-slate-400 text-xs py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <a href="index.html" class="inline-block">
+        <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-11 sm:h-12 w-auto mx-auto">
+      </a>
+      <p class="text-slate-500">&copy; 2026 Curafy Digitech. Healthcare &amp; Medical Digital Growth Unit.</p>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20for%20my%20clinic/hospital." target="_blank" class="hover:text-emerald-400 font-mono flex items-center gap-1.5">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>+91 63765 66383 (WhatsApp Call)</span>
+        </a>
+        <span>&bull;</span>
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="services.html" class="hover:text-white">Services</a>
+        <a href="case-studies.html" class="hover:text-white">Case Studies</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reusable Modals & Scripts -->
+  <div id="consultation-modal" class="modal-overlay hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="modal-box w-full max-w-lg rounded-2xl glass-panel border border-cyan-500/40 p-6 sm:p-8 relative shadow-2xl my-8">
+      <button data-close-modal class="absolute top-5 right-5 text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="space-y-2 mb-6">
+        <span class="inline-block px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700 text-[11px] font-bold uppercase tracking-wide">Healthcare Growth Desk</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-white font-heading">Book Clinic Strategy Session</h3>
+        <p class="text-xs text-slate-400">We will analyze your local area competition and build a patient acquisition roadmap.</p>
+      </div>
+      <form id="clinic-consultation-form" data-lead-form class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Doctor / Hospital Name *</label>
+          <input type="text" name="name" required placeholder="Dr. Name / Hospital Name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:border-cyan-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">WhatsApp Number *</label>
+            <input type="tel" name="phone" required placeholder="+91 63765 XXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:border-cyan-500">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Clinic City / Location *</label>
+            <input type="text" name="company" required placeholder="City name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:border-cyan-500">
+          </div>
+        </div>
+        <input type="hidden" name="service" value="Healthcare &amp; Clinic Marketing">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <button type="submit" class="shimmer-btn w-full py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Confirm Request</span>
+          </button>
+          <button type="button" onclick="sendEnquiryToWhatsApp('clinic-consultation-form')" class="w-full py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp (6376566383)</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="notification-toast" class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
+    <div class="glass-panel border border-cyan-500/50 rounded-xl p-4 shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+      </div>
+      <p id="toast-message" class="text-xs text-white font-medium">Inquiry sent successfully!</p>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP CALL & CHAT BADGE -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2">
+    <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20for%20my%20clinic/hospital." target="_blank" class="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-full glass-panel border border-emerald-500/50 bg-[#0A0F1D]/90 hover:bg-emerald-950/60 text-emerald-400 hover:text-white shadow-2xl shadow-emerald-500/30 transition-all group">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="text-xs font-bold font-mono">WhatsApp Call: 6376566383</span>
+    </a>
+    <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20for%20my%20clinic/hospital." target="_blank" class="whatsapp-pulse w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/50 transition-transform hover:scale-110" aria-label="WhatsApp Call 6376566383">
+      <i data-lucide="phone-call" class="w-6 h-6"></i>
+    </a>
+  </div>
+
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/tilt3d.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" width="100%" height="100%" style="overflow: visible;">
+  <defs>
+    <!-- Option 1: Deep Royal Blue + Electric Cyan Gradient -->
+    <linearGradient id="curafyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="curafyGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="50%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#1D4ED8" />
+    </linearGradient>
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Logo Icon Container (Hexagon / Digital Shield Pulse) -->
+  <g transform="translate(6, 6)">
+    <!-- Ambient Glow Background -->
+    <circle cx="42" cy="42" r="32" fill="url(#curafyGrad1)" opacity="0.2" filter="url(#glow)"/>
+    
+    <!-- Outer Hex-Shield Outline -->
+    <path d="M42 6 L74 24 L74 62 L42 80 L10 62 L10 24 Z" 
+          fill="#0B132B" 
+          stroke="url(#curafyGrad1)" 
+          stroke-width="2.5" 
+          stroke-linejoin="round"/>
+          
+    <!-- Dynamic Digital Pulse / Growth Chart Wave ('C' + Upward Metric Wave) -->
+    <path d="M22 43 L32 30 L43 50 L54 25 L65 35" 
+          fill="none" 
+          stroke="url(#curafyGrad2)" 
+          stroke-width="4" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"
+          filter="url(#glow)"/>
+
+    <!-- Pulse Nodes -->
+    <circle cx="22" cy="43" r="3" fill="#00F0FF" />
+    <circle cx="43" cy="50" r="3" fill="#38BDF8" />
+    <circle cx="54" cy="25" r="3.8" fill="#06B6D4" />
+    <circle cx="65" cy="35" r="3" fill="#2563EB" />
+    
+    <!-- Glowing Core Point -->
+    <circle cx="42" cy="66" r="2" fill="#00F0FF" />
+  </g>
+
+  <!-- Brand Typography with tspan for 100% natural, overlap-free flow -->
+  <g transform="translate(104, 8)">
+    <!-- Brand Name: CURAFY • DIGITECH (Increased font size to 41 for enhanced prominence) -->
+    <text x="0" y="47" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Space Grotesk', sans-serif" 
+          font-size="41">
+      <tspan font-weight="900" fill="#FFFFFF" letter-spacing="-0.5">CURAFY</tspan>
+      <tspan dx="10" fill="#00F0FF" font-size="28" font-weight="900">•</tspan>
+      <tspan dx="10" font-weight="600" fill="#E2E8F0" letter-spacing="1.2">DIGITECH</tspan>
+    </text>
+
+    <!-- Subtitle / Value Proposition Tagline -->
+    <text x="2" y="73" 
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-weight="700" 
+          font-size="10.5" 
+          letter-spacing="3.2" 
+          fill="#00F0FF">
+      DIGITAL GROWTH &amp; PERFORMANCE LAB
+    </text>
+  </g>
+</svg>

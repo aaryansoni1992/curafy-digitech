@@ -1,0 +1,607 @@
+/* Curafy Digitech - Option 1: Deep Royal Blue + Electric Cyan Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-dark: #0A0F1D;
+  --bg-darker: #060A14;
+  --bg-card: rgba(15, 23, 42, 0.78);
+  --border-glow: rgba(6, 182, 212, 0.35);
+  --primary-blue: #2563EB;
+  --primary-royal: #1D4ED8;
+  --neon-cyan: #00F0FF;
+  --electric-cyan: #06B6D4;
+  --sky-blue: #38BDF8;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-dark);
+  color: #E2E8F0;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0F1D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* High-Tech Ambient Grid Background */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 10%, rgba(6, 182, 212, 0.16), transparent 60%),
+              radial-gradient(circle at 90% 40%, rgba(37, 99, 235, 0.14), transparent 50%),
+              radial-gradient(circle at 10% 70%, rgba(0, 240, 255, 0.12), transparent 50%);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(56, 189, 248, 0.12);
+  box-shadow: 0 10px 35px -10px rgba(0, 0, 0, 0.65);
+}
+
+.glass-panel-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  transform: translateY(-4px);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 20px 40px -15px rgba(6, 182, 212, 0.25);
+}
+
+/* Futuristic Glowing Borders */
+.glow-border {
+  position: relative;
+}
+
+.glow-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(0, 240, 255, 0.8), rgba(6, 182, 212, 0.6), rgba(37, 99, 235, 0.8));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Radiant Text Gradients - Option 1: Cyan to Royal Blue */
+.text-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-neon {
+  background: linear-gradient(135deg, #00F0FF 0%, #38BDF8 50%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #00F0FF 0%, #06B6D4 50%, #1D4ED8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animated Gradient Orbs - Royal Blue & Electric Cyan */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(40px, -30px) scale(1.1); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(-30px, 35px) scale(0.95); }
+}
+
+.animate-orb-1 {
+  animation: floatOrb1 12s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: floatOrb2 15s ease-in-out infinite;
+}
+
+/* Custom Range Input Styling for Calculator */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #1E293B;
+  height: 8px;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00F0FF, #2563EB);
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.85);
+  border: 2px solid #FFFFFF;
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+/* WhatsApp Floating Button Pulse */
+@keyframes pulseGreen {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-pulse {
+  animation: pulseGreen 2.2s infinite;
+}
+
+/* Nav Blur & Fixed Header */
+.header-glass {
+  background: rgba(10, 15, 29, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+}
+
+/* Shimmer Effect for CTAs */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 30%
+  );
+  transform: rotate(25deg);
+  transition: transform 0.75s ease;
+}
+
+.shimmer-btn:hover::after {
+  transform: rotate(25deg) translate(50%, 50%);
+}
+
+/* Modal Overlay Animation */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ========================================================
+   🚀 3D VIEW ENGINE & VOLUMETRIC CYBER STYLING
+   ======================================================== */
+
+:root {
+  --perspective-deep: 1400px;
+  --perspective-card: 1000px;
+  --shadow-3d-cyan: 0 15px 35px -5px rgba(0, 240, 255, 0.35), 0 5px 15px rgba(37, 99, 235, 0.25);
+  --shadow-3d-deep: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 10px 25px -5px rgba(0, 240, 255, 0.2);
+  --shadow-3d-emerald: 0 15px 35px -5px rgba(16, 185, 129, 0.4), 0 5px 15px rgba(5, 150, 105, 0.3);
+}
+
+/* 3D Receding Horizon Cyber Grid Ground */
+.cyber-grid-3d-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  perspective: 700px;
+  perspective-origin: 50% 35%;
+}
+
+.cyber-grid-3d-plane {
+  position: absolute;
+  width: 250%;
+  height: 140%;
+  left: -75%;
+  top: 15%;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.12) 1px, transparent 1px);
+  transform: rotateX(72deg);
+  transform-origin: 50% 0%;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 80%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 80%);
+  animation: grid3DTravel 22s linear infinite;
+}
+
+@keyframes grid3DTravel {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 600px; }
+}
+
+/* 3D Horizon Glow Line */
+.cyber-horizon-glow {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 240, 255, 0.8), rgba(56, 189, 248, 0.9), rgba(0, 240, 255, 0.8), transparent);
+  box-shadow: 0 0 40px 8px rgba(0, 240, 255, 0.65);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 3D Card Container & Tilt Physics */
+.stage-3d {
+  perspective: var(--perspective-deep);
+  transform-style: preserve-3d;
+}
+
+.card-3d {
+  position: relative;
+  background: rgba(12, 19, 36, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.22);
+  box-shadow: 
+    0 15px 35px -5px rgba(0, 0, 0, 0.85),
+    0 0 25px rgba(0, 240, 255, 0.12),
+    inset 0 1.5px 1.5px 0 rgba(255, 255, 255, 0.35),
+    inset 0 -2px 6px 0 rgba(0, 0, 0, 0.7);
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
+}
+
+.card-3d:hover {
+  border-color: rgba(0, 240, 255, 0.65);
+  box-shadow: 
+    0 25px 50px -10px rgba(0, 0, 0, 0.95),
+    0 0 40px rgba(0, 240, 255, 0.32),
+    inset 0 2px 2px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -3px 8px 0 rgba(0, 0, 0, 0.8);
+}
+
+/* 3D Internal Floating Depths (Z-Translation) */
+.layer-3d-1 {
+  transform: translateZ(20px);
+  transform-style: preserve-3d;
+}
+
+.layer-3d-2 {
+  transform: translateZ(38px);
+  transform-style: preserve-3d;
+}
+
+.layer-3d-3 {
+  transform: translateZ(60px);
+  transform-style: preserve-3d;
+}
+
+/* Dynamic Specular Sheen Overlay on 3D Cards */
+.sheen-3d {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 240, 255, 0.22) 0%,
+    rgba(37, 99, 235, 0.08) 40%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: screen;
+}
+
+.card-3d:hover .sheen-3d {
+  opacity: 1;
+}
+
+/* Tactile 3D Extruded Buttons */
+.btn-3d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-weight: 700;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  transform-style: preserve-3d;
+  box-shadow: 
+    0 5px 0 #0284c7,
+    0 12px 24px rgba(0, 240, 255, 0.35),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.45);
+}
+
+.btn-3d:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 7px 0 #0284c7,
+    0 18px 30px rgba(0, 240, 255, 0.5),
+    inset 0 2px 2px rgba(255, 255, 255, 0.6);
+}
+
+.btn-3d:active {
+  transform: translateY(4px);
+  box-shadow: 
+    0 1px 0 #0284c7,
+    0 5px 12px rgba(0, 240, 255, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* 3D Green WhatsApp Extruded Button */
+.btn-3d-emerald {
+  box-shadow: 
+    0 5px 0 #047857,
+    0 12px 24px rgba(16, 185, 129, 0.4),
+    inset 0 1.5px 1.5px rgba(255, 255, 255, 0.45);
+}
+
+.btn-3d-emerald:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 7px 0 #047857,
+    0 18px 32px rgba(16, 185, 129, 0.55),
+    inset 0 2px 2px rgba(255, 255, 255, 0.6);
+}
+
+.btn-3d-emerald:active {
+  transform: translateY(4px);
+  box-shadow: 
+    0 1px 0 #047857,
+    0 5px 12px rgba(16, 185, 129, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+/* 3D Floating Isometric Satellite Cards */
+@keyframes float3DSatelliteA {
+  0%, 100% {
+    transform: translateY(0px) rotateX(10deg) rotateY(-12deg) translateZ(45px);
+  }
+  50% {
+    transform: translateY(-14px) rotateX(14deg) rotateY(-8deg) translateZ(65px);
+  }
+}
+
+@keyframes float3DSatelliteB {
+  0%, 100% {
+    transform: translateY(0px) rotateX(-8deg) rotateY(14deg) translateZ(55px);
+  }
+  50% {
+    transform: translateY(12px) rotateX(-12deg) rotateY(18deg) translateZ(75px);
+  }
+}
+
+@keyframes float3DSatelliteC {
+  0%, 100% {
+    transform: translateY(0px) rotateX(6deg) rotateY(-6deg) translateZ(70px);
+  }
+  50% {
+    transform: translateY(-16px) rotateX(10deg) rotateY(-2deg) translateZ(90px);
+  }
+}
+
+.satellite-3d-a {
+  animation: float3DSatelliteA 7s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.satellite-3d-b {
+  animation: float3DSatelliteB 8.5s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.satellite-3d-c {
+  animation: float3DSatelliteC 6s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+/* 3D Hologram Disc (Platform beneath 3D hero) */
+.hologram-disc-3d {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  left: 50%;
+  bottom: -15%;
+  transform: translateX(-50%) rotateX(75deg);
+  background: radial-gradient(
+    circle,
+    rgba(0, 240, 255, 0.25) 0%,
+    rgba(37, 99, 235, 0.18) 45%,
+    transparent 70%
+  );
+  border: 2px dashed rgba(0, 240, 255, 0.45);
+  box-shadow: 
+    0 0 60px 15px rgba(0, 240, 255, 0.4),
+    inset 0 0 40px rgba(0, 240, 255, 0.35);
+  animation: spinHoloDisc 25s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spinHoloDisc {
+  0% { transform: translateX(-50%) rotateX(75deg) rotate(0deg); }
+  100% { transform: translateX(-50%) rotateX(75deg) rotate(360deg); }
+}
+
+/* 3D Wireframe Cyber Cube (Mini HUD badge spinner) */
+.cube-3d-scene {
+  width: 22px;
+  height: 22px;
+  perspective: 200px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cube-3d {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotateCyberCube 8s linear infinite;
+}
+
+.cube-face {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 1.5px solid rgba(0, 240, 255, 0.85);
+  background: rgba(0, 240, 255, 0.12);
+  box-shadow: inset 0 0 6px rgba(0, 240, 255, 0.3);
+}
+
+.cube-front  { transform: translateZ(11px); }
+.cube-back   { transform: rotateY(180deg) translateZ(11px); }
+.cube-right  { transform: rotateY(90deg) translateZ(11px); }
+.cube-left   { transform: rotateY(-90deg) translateZ(11px); }
+.cube-top    { transform: rotateX(90deg) translateZ(11px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(11px); }
+
+@keyframes rotateCyberCube {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg); }
+}
+
+/* 3D Extruded Numerals & Headings */
+.text-3d-extruded {
+  text-shadow: 
+    0 1px 0 #0284c7,
+    0 2px 0 #0369a1,
+    0 3px 0 #075985,
+    0 4px 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(0, 240, 255, 0.5);
+}
+
+.text-3d-cyan {
+  text-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 20px rgba(0, 240, 255, 0.7),
+    0 0 40px rgba(6, 182, 212, 0.4);
+}
+
+/* Sector Portal Custom Styling */
+.sector-card {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
+}
+
+.sector-card:hover {
+  border-color: rgba(0, 240, 255, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(0, 240, 255, 0.25), 0 0 20px rgba(0, 240, 255, 0.15);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #0b1120;
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #00F0FF;
+}
+
+/* Infinite Marquee Ticker for Little & Big Company Names */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marqueeScrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 42s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeScrollReverse 42s linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover,
+.marquee-track-reverse:hover {
+  animation-play-state: paused;
+}
+
+.brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(51, 65, 85, 0.65);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.brand-badge:hover {
+  border-color: rgba(0, 240, 255, 0.6);
+  background: rgba(15, 23, 42, 0.95);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(0, 240, 255, 0.3);
+}
+

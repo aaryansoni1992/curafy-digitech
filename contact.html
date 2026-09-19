@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us &amp; Book Consultation | Curafy Digitech</title>
+  <meta name="description" content="Connect with Curafy Digitech. Schedule a 1-on-1 strategy call or claim a free digital audit for your business or clinic.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            curafy: {
+              dark: '#0A0F1D',
+              darker: '#060A14',
+              card: 'rgba(15, 23, 42, 0.8)',
+              border: 'rgba(56, 189, 248, 0.15)',
+              royal: '#2563EB',
+              blue: '#1D4ED8',
+              cyan: '#06B6D4',
+              electric: '#00F0FF',
+              sky: '#38BDF8',
+              emerald: '#10B981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[#0A0F1D] text-slate-200 antialiased bg-grid-pattern relative">
+
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-6">
+        <a href="index.html" class="flex items-center shrink-0 mr-6 lg:mr-10 group">
+          <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-9 sm:h-10 md:h-11 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-sm font-medium text-slate-300 shrink-0">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+
+          <!-- Services Dropdown Button with 9 Options -->
+          <div class="relative group/services py-2">
+            <a href="services.html" class="flex items-center gap-1 hover:text-cyan-400 transition-colors py-1 focus:outline-none cursor-pointer">
+              <span>Services (01–09)</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover/services:rotate-180 text-cyan-400"></i>
+            </a>
+
+            <!-- Mega Dropdown Panel with 9 Services -->
+            <div class="absolute top-full -left-20 w-[680px] pt-2 opacity-0 pointer-events-none group-hover/services:opacity-100 group-hover/services:pointer-events-auto transition-all duration-200 z-50">
+              <div class="glass-panel rounded-2xl p-5 border border-cyan-500/30 shadow-2xl bg-[#0A0F1D]/95 backdrop-blur-xl">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-cyan-300 font-heading">Our 9 Core Growth Services</span>
+                  </div>
+                  <a href="services.html" class="text-[11px] font-semibold text-slate-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+                    Explore All Deliverables <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
+                <div class="grid grid-cols-3 gap-2.5 text-xs">
+                  <a href="services.html#service-01" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">01.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Digital Marketing</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Complete online presence</span>
+                  </a>
+                  <a href="services.html#service-02" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">02.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Social Media Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Turn social into growth</span>
+                  </a>
+                  <a href="services.html#service-03" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">03.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Performance Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Meta &amp; Google Ads</span>
+                  </a>
+                  <a href="services.html#service-04" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">04.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">SEO &amp; Local SEO</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Rank on search &amp; Maps</span>
+                  </a>
+                  <a href="services.html#service-05" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">05.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Website &amp; Landers</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">High-converting designs</span>
+                  </a>
+                  <a href="services.html#service-06" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">06.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Lead Generation</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Genuine customer inquiries</span>
+                  </a>
+                  <a href="services.html#service-07" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">07.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Content &amp; Creative</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Reels, ads &amp; banners</span>
+                  </a>
+                  <a href="services.html#service-08" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">08.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">WhatsApp Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Fast replies &amp; broadcasts</span>
+                  </a>
+                  <a href="services.html#service-09" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">09.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Branding &amp; Design</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Memorable visual identity</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="healthcare.html" class="hover:text-cyan-400 transition-colors">Healthcare &amp; Clinics</a>
+          <a href="case-studies.html" class="hover:text-cyan-400 transition-colors">Case Studies</a>
+          <a href="about.html" class="hover:text-cyan-400 transition-colors">About</a>
+          <a href="contact.html" class="text-cyan-400 font-semibold border-b border-cyan-400 pb-0.5">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center space-x-3">
+          <!-- 3D Perspective HUD Indicator -->
+          <div class="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/40 text-[11px] font-mono text-cyan-300 shadow-lg shadow-cyan-500/10">
+            <div class="cube-3d-scene">
+              <div class="cube-3d">
+                <div class="cube-face cube-front"></div>
+                <div class="cube-face cube-back"></div>
+                <div class="cube-face cube-right"></div>
+                <div class="cube-face cube-left"></div>
+                <div class="cube-face cube-top"></div>
+                <div class="cube-face cube-bottom"></div>
+              </div>
+            </div>
+            <span class="font-bold tracking-wider">3D CYBER VIEW</span>
+          </div>
+
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20to%20discuss%20growing%20my%20business." target="_blank" class="btn-3d-emerald text-xs font-semibold px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-all">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+            <span>WhatsApp Call: 6376566383</span>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden header-glass border-b border-slate-800 px-6 pt-4 pb-6 mt-3 space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Navigation</span>
+        <button id="mobile-menu-close" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="flex flex-col space-y-3 font-medium text-slate-300">
+        <a href="index.html" class="hover:text-cyan-400 py-1">Home</a>
+
+        <!-- Mobile Services Collapsible with 9 Options -->
+        <div class="border-y border-slate-800/80 py-2">
+          <button id="mobile-services-toggle" class="w-full flex items-center justify-between text-left hover:text-cyan-400 py-1 font-semibold text-cyan-300">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Services (All 9 Options)</span>
+            </span>
+            <i data-lucide="chevron-down" id="mobile-services-icon" class="w-4 h-4 transition-transform duration-200 text-cyan-400"></i>
+          </button>
+          <div id="mobile-services-list" class="hidden pl-3 pt-2 pb-1 space-y-2 border-l border-cyan-500/30 ml-2 mt-1 text-xs text-slate-400">
+            <a href="services.html#service-01" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">01.</strong> Digital Marketing</a>
+            <a href="services.html#service-02" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">02.</strong> Social Media Marketing</a>
+            <a href="services.html#service-03" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">03.</strong> Performance Marketing</a>
+            <a href="services.html#service-04" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">04.</strong> SEO &amp; Local SEO</a>
+            <a href="services.html#service-05" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">05.</strong> Website &amp; Landing Pages</a>
+            <a href="services.html#service-06" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">06.</strong> Lead Generation</a>
+            <a href="services.html#service-07" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">07.</strong> Content &amp; Creative</a>
+            <a href="services.html#service-08" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">08.</strong> WhatsApp Marketing</a>
+            <a href="services.html#service-09" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">09.</strong> Branding &amp; Design</a>
+            <a href="services.html" class="block text-cyan-400 font-semibold pt-1">Explore All Deliverables &rarr;</a>
+          </div>
+        </div>
+
+        <a href="healthcare.html" class="hover:text-cyan-400 py-1">Healthcare &amp; Clinics</a>
+        <a href="case-studies.html" class="hover:text-cyan-400 py-1">Case Studies</a>
+        <a href="about.html" class="hover:text-cyan-400 py-1">About Us</a>
+        <a href="contact.html" class="hover:text-cyan-400 py-1 text-cyan-300">Contact</a>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800 space-y-2">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call." target="_blank" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-lg">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>WhatsApp Call: +91 63765 66383</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-36 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    
+    <div class="text-center max-w-3xl mx-auto space-y-4">
+      <span class="px-3.5 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-700 text-xs font-bold">Start Your Acceleration</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-white">
+        Let's Build Your Growth Engine
+      </h1>
+      <p class="text-slate-300 text-base">
+        Whether you are a hospital director seeking qualified patient appointments, a retailer wanting local domination, or a startup scaling revenue — we are here to execute.
+      </p>
+    </div>
+
+    <!-- Contact Hub Grid (3D Perspective Stage) -->
+    <div class="stage-3d grid grid-cols-1 lg:grid-cols-12 gap-10">
+      
+      <!-- Contact Details & Office (5 Cols - 3D Perspective Card) -->
+      <div class="lg:col-span-5 space-y-6">
+        
+        <div class="card-3d rounded-3xl p-7 border border-slate-800 space-y-6">
+          <div class="layer-3d-2">
+            <h3 class="text-xl font-bold text-white font-heading">Direct Channels</h3>
+          </div>
+          
+          <div class="layer-3d-1 space-y-4 text-xs">
+            <div class="flex items-start gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block font-medium">Inquiry &amp; Proposals</span>
+                <span class="text-white font-semibold text-sm">growth@curafydigitech.com</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block font-medium">WhatsApp Call &amp; Hotline</span>
+                <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20connect%20with%20your%20team." target="_blank" class="text-emerald-400 hover:text-emerald-300 font-semibold text-sm font-mono">+91 63765 66383</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block font-medium">Headquarters</span>
+                <span class="text-white font-semibold leading-relaxed">
+                  Curafy Digitech Innovation Hub, Tech City, Sector 62, India
+                </span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800">
+              <div class="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-slate-400 block font-medium">Operational Hours</span>
+                <span class="text-white font-semibold">Monday – Saturday: 9:30 AM – 7:30 PM</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="layer-3d-2 pt-2 space-y-2.5">
+            <a href="https://wa.me/916376566383?text=Hi%20Curafy%20Digitech!%20I%20would%20like%20to%20schedule%20a%20WhatsApp%20call." target="_blank" class="btn-3d-emerald w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="phone-call" class="w-4 h-4"></i> WhatsApp Call: 6376566383
+            </a>
+            <a href="tel:+916376566383" class="w-full py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-cyan-500 font-semibold text-xs flex items-center justify-center gap-2 transition-all">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-cyan-400"></i> Direct Cellular Call: 6376566383
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Consultation Form (7 Cols - 3D Perspective Card) -->
+      <div class="lg:col-span-7">
+        <div class="card-3d rounded-3xl p-8 sm:p-10 border border-cyan-500/40 glow-border space-y-6">
+          <div class="layer-3d-2 space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-2xl font-bold text-white font-heading">Schedule Your 1-on-1 Consultation</h3>
+              <span class="text-[11px] font-mono px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Hotline: 6376566383</span>
+            </div>
+            <p class="text-xs text-slate-400">Fill in the parameters below and our growth director will review your business prior to the call. You can submit online or send directly to WhatsApp.</p>
+          </div>
+
+          <form id="contact-page-form" data-lead-form class="layer-3d-1 space-y-4 text-xs">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">Your Full Name *</label>
+                <input type="text" name="name" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">Work Email Address *</label>
+                <input type="email" name="email" required placeholder="name@business.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">WhatsApp / Phone Number *</label>
+                <input type="tel" name="phone" required placeholder="+91 63765 XXXXX" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">Business or Clinic Name *</label>
+                <input type="text" name="company" required placeholder="Business Name" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">Primary Service *</label>
+                <select name="service" id="modal-service" class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500 text-xs">
+                  <option value="Digital Marketing">01. Digital Marketing</option>
+                  <option value="Social Media Marketing">02. Social Media Marketing</option>
+                  <option value="Performance Marketing">03. Performance Marketing</option>
+                  <option value="SEO & Local SEO">04. SEO & Local SEO</option>
+                  <option value="Website & Landing Pages">05. Website & Landing Pages</option>
+                  <option value="Lead Generation">06. Lead Generation</option>
+                  <option value="Content & Creative">07. Content & Creative</option>
+                  <option value="WhatsApp Marketing">08. WhatsApp Marketing</option>
+                  <option value="Branding & Design">09. Branding & Design</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">Industry / Sector *</label>
+                <select name="industry" class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500 text-xs">
+                  <option value="healthcare">Hospitals, Clinics &amp; Doctors</option>
+                  <option value="hospitality">Hospitality (Hotels, Resorts &amp; Stays)</option>
+                  <option value="real_estate">Real Estate &amp; Property Developers</option>
+                  <option value="education">Education &amp; Coaching Institutes</option>
+                  <option value="food_restaurants">Food, Cafes &amp; Restaurants</option>
+                  <option value="automobile">Automobile &amp; Dealerships</option>
+                  <option value="beauty_wellness">Beauty, Salons &amp; Wellness</option>
+                  <option value="fashion">Fashion &amp; Apparel Brands</option>
+                  <option value="jewellery">Jewellery &amp; Luxury Showrooms</option>
+                  <option value="professional_services">Professional &amp; B2B Services</option>
+                  <option value="manufacturing">Manufacturing &amp; Industrial B2B</option>
+                  <option value="ecommerce">E-Commerce &amp; D2C Brands</option>
+                  <option value="travel_tourism">Travel &amp; Tourism Operators</option>
+                  <option value="events_weddings">Events &amp; Wedding Planning</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-semibold text-slate-300 mb-1">Monthly Budget</label>
+                <select name="budget" class="w-full px-3.5 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500 text-xs">
+                  <option value="25k-50k">₹25,000 – ₹50,000 / mo</option>
+                  <option value="50k-1L">₹50,000 – ₹1,00,000 / mo</option>
+                  <option value="1L-3L">₹1,00,000 – ₹3,00,000 / mo</option>
+                  <option value="3L+">₹3,00,000+ / mo</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-300 mb-1">Website URL or Google Maps Link</label>
+              <input type="text" name="website" placeholder="https://yoursite.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+            </div>
+
+            <div>
+              <label class="block font-semibold text-slate-300 mb-1">What is your #1 growth obstacle or target?</label>
+              <textarea name="notes" rows="3" placeholder="e.g. Need 80+ patient appointments per month, high ad spend without leads, lack of local Google rankings..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500"></textarea>
+            </div>
+
+            <div class="layer-3d-2 grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <button type="submit" class="btn-3d shimmer-btn w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Submit Consultation</span>
+              </button>
+
+              <button type="button" onclick="sendEnquiryToWhatsApp('contact-page-form')" class="btn-3d-emerald w-full py-4 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Send to WhatsApp (6376566383)</span>
+              </button>
+            </div>
+
+            <p class="text-[11px] text-center text-slate-500">
+              🔒 We respect your confidentiality. Direct WhatsApp response to 6376566383 or official email callback.
+            </p>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer class="bg-[#060A14] border-t border-slate-800 text-slate-400 text-xs py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <a href="index.html" class="inline-block"><img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-11 sm:h-12 w-auto mx-auto"></a>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!" target="_blank" class="hover:text-emerald-400 font-mono flex items-center gap-1.5">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 text-emerald-400"></i>
+          <span>+91 63765 66383 (WhatsApp Call)</span>
+        </a>
+        <span>&bull;</span>
+        <a href="mailto:growth@curafydigitech.com" class="hover:text-cyan-400">growth@curafydigitech.com</a>
+      </div>
+      <p class="text-slate-500">&copy; 2026 Curafy Digitech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CALL & CHAT BADGE -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2">
+    <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20to%20discuss%20growing%20my%20business." target="_blank" class="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-full glass-panel border border-emerald-500/50 bg-[#0A0F1D]/90 hover:bg-emerald-950/60 text-emerald-400 hover:text-white shadow-2xl shadow-emerald-500/30 transition-all group">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="text-xs font-bold font-mono">WhatsApp Call: 6376566383</span>
+    </a>
+    <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20to%20discuss%20growing%20my%20business." target="_blank" class="whatsapp-pulse w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/50 transition-transform hover:scale-110" aria-label="WhatsApp Call 6376566383">
+      <i data-lucide="phone-call" class="w-6 h-6"></i>
+    </a>
+  </div>
+
+  <div id="notification-toast" class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
+    <div class="glass-panel border border-cyan-500/50 rounded-xl p-4 shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+      </div>
+      <p id="toast-message" class="text-xs text-white font-medium">Inquiry sent successfully!</p>
+    </div>
+  </div>
+
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/tilt3d.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

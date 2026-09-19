@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Capabilities (01–09) | Curafy Digitech</title>
+  <meta name="description" content="Explore Curafy Digitech's 9 core digital capabilities: Digital Marketing, Social Media Marketing, Performance Marketing, SEO, Website Design, Lead Generation, Content, WhatsApp Marketing, and Branding.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            curafy: {
+              dark: '#0A0F1D',
+              darker: '#060A14',
+              card: 'rgba(15, 23, 42, 0.8)',
+              border: 'rgba(56, 189, 248, 0.15)',
+              royal: '#2563EB',
+              blue: '#1D4ED8',
+              cyan: '#06B6D4',
+              electric: '#00F0FF',
+              sky: '#38BDF8',
+              emerald: '#10B981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles (Option 1: Deep Royal Blue + Electric Cyan) -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-[#0A0F1D] text-slate-200 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-grid-pattern relative">
+
+  <!-- Ambient Background Glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-24 left-1/3 w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[140px] animate-orb-1"></div>
+    <div class="absolute top-1/2 -right-40 w-[600px] h-[600px] bg-cyan-500/15 rounded-full blur-[150px] animate-orb-2"></div>
+    <div class="absolute bottom-10 -left-40 w-[500px] h-[500px] bg-sky-500/12 rounded-full blur-[130px] animate-orb-1"></div>
+  </div>
+
+  <!-- Navigation Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-6">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center shrink-0 mr-6 lg:mr-10 group">
+          <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-9 sm:h-10 md:h-11 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-5 xl:space-x-7 text-sm font-medium text-slate-300 shrink-0">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+
+          <!-- Services Dropdown Button with 9 Options (Active Page) -->
+          <div class="relative group/services py-2">
+            <button class="flex items-center gap-1 text-cyan-400 font-semibold py-1 focus:outline-none cursor-pointer border-b border-cyan-400 pb-0.5" aria-haspopup="true" aria-expanded="false">
+              <span>Services (01–09)</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover/services:rotate-180 text-cyan-400"></i>
+            </button>
+
+            <!-- Mega Dropdown Panel with 9 Services -->
+            <div class="absolute top-full -left-20 w-[680px] pt-2 opacity-0 pointer-events-none group-hover/services:opacity-100 group-hover/services:pointer-events-auto transition-all duration-200 z-50">
+              <div class="glass-panel rounded-2xl p-5 border border-cyan-500/30 shadow-2xl bg-[#0A0F1D]/95 backdrop-blur-xl">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-cyan-300 font-heading">Our 9 Core Growth Services</span>
+                  </div>
+                  <span class="text-[11px] font-semibold text-slate-400">Direct Navigation Below</span>
+                </div>
+                <div class="grid grid-cols-3 gap-2.5 text-xs">
+                  <a href="#service-01" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">01.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Digital Marketing</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Complete online presence</span>
+                  </a>
+                  <a href="#service-02" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">02.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Social Media Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Turn social into growth</span>
+                  </a>
+                  <a href="#service-03" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">03.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Performance Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Meta &amp; Google Ads</span>
+                  </a>
+                  <a href="#service-04" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">04.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">SEO &amp; Local SEO</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Rank on search &amp; Maps</span>
+                  </a>
+                  <a href="#service-05" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">05.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Website &amp; Landers</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">High-converting designs</span>
+                  </a>
+                  <a href="#service-06" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">06.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Lead Generation</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Genuine customer inquiries</span>
+                  </a>
+                  <a href="#service-07" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">07.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Content &amp; Creative</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Reels, ads &amp; banners</span>
+                  </a>
+                  <a href="#service-08" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">08.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">WhatsApp Mktg</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Fast replies &amp; broadcasts</span>
+                  </a>
+                  <a href="#service-09" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">09.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Branding &amp; Design</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Memorable visual identity</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="healthcare.html" class="text-cyan-300 hover:text-cyan-200 transition-colors flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Healthcare &amp; Clinics
+          </a>
+          <a href="case-studies.html" class="hover:text-cyan-400 transition-colors">Case Studies</a>
+          <a href="index.html#calculator" class="hover:text-cyan-400 transition-colors">ROI Calculator</a>
+          <a href="about.html" class="hover:text-cyan-400 transition-colors">About Us</a>
+          <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="hidden sm:flex items-center space-x-3">
+          <!-- 3D Perspective HUD Indicator -->
+          <div class="hidden xl:flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border border-cyan-500/40 text-[11px] font-mono text-cyan-300 shadow-lg shadow-cyan-500/10">
+            <div class="cube-3d-scene">
+              <div class="cube-3d">
+                <div class="cube-face cube-front"></div>
+                <div class="cube-face cube-back"></div>
+                <div class="cube-face cube-right"></div>
+                <div class="cube-face cube-left"></div>
+                <div class="cube-face cube-top"></div>
+                <div class="cube-face cube-bottom"></div>
+              </div>
+            </div>
+            <span class="font-bold tracking-wider">3D CYBER VIEW</span>
+          </div>
+
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20regarding%20services." target="_blank" class="btn-3d-emerald text-xs font-semibold px-4 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition-all">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+            <span>WhatsApp Call: 6376566383</span>
+          </a>
+          <button onclick="openModal('consultation-modal')" class="btn-3d shimmer-btn text-xs font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white transition-all">
+            Book Strategy Call
+          </button>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden header-glass border-b border-slate-800 px-6 pt-4 pb-6 mt-3 space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Navigation</span>
+        <button id="mobile-menu-close" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="flex flex-col space-y-3 font-medium text-slate-300">
+        <a href="index.html" class="hover:text-cyan-400 py-1">Home</a>
+
+        <!-- Mobile Services Collapsible with 9 Options -->
+        <div class="border-y border-slate-800/80 py-2">
+          <button id="mobile-services-toggle" class="w-full flex items-center justify-between text-left hover:text-cyan-400 py-1 font-semibold text-cyan-300">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Services (All 9 Options)</span>
+            </span>
+            <i data-lucide="chevron-down" id="mobile-services-icon" class="w-4 h-4 transition-transform duration-200 text-cyan-400"></i>
+          </button>
+          <div id="mobile-services-list" class="pl-3 pt-2 pb-1 space-y-2 border-l border-cyan-500/30 ml-2 mt-1 text-xs text-slate-400">
+            <a href="#service-01" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">01.</strong> Digital Marketing</a>
+            <a href="#service-02" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">02.</strong> Social Media Marketing</a>
+            <a href="#service-03" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">03.</strong> Performance Marketing</a>
+            <a href="#service-04" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">04.</strong> SEO &amp; Local SEO</a>
+            <a href="#service-05" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">05.</strong> Website &amp; Landing Pages</a>
+            <a href="#service-06" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">06.</strong> Lead Generation</a>
+            <a href="#service-07" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">07.</strong> Content &amp; Creative</a>
+            <a href="#service-08" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">08.</strong> WhatsApp Marketing</a>
+            <a href="#service-09" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">09.</strong> Branding &amp; Design</a>
+          </div>
+        </div>
+
+        <a href="healthcare.html" class="hover:text-cyan-400 py-1 flex items-center gap-2 text-cyan-300">
+          <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Healthcare &amp; Clinics
+        </a>
+        <a href="case-studies.html" class="hover:text-cyan-400 py-1">Case Studies</a>
+        <a href="index.html#calculator" class="hover:text-cyan-400 py-1">ROI Calculator</a>
+        <a href="about.html" class="hover:text-cyan-400 py-1">About Us</a>
+        <a href="contact.html" class="hover:text-cyan-400 py-1">Contact</a>
+      </div>
+
+      <div class="pt-4 border-t border-slate-800 space-y-2.5">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20schedule%20a%20WhatsApp%20call%20regarding%20services." target="_blank" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-lg">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span>WhatsApp Call: +91 63765 66383</span>
+        </a>
+        <button onclick="openModal('consultation-modal')" class="shimmer-btn w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg">
+          Book Strategy Call
+        </button>
+        <button onclick="openModal('audit-modal')" class="w-full py-3 rounded-xl border border-slate-700 bg-slate-900 text-slate-300 font-semibold text-xs">
+          Free Digital Audit
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10 pt-32 pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+    
+    <!-- Hero Banner -->
+    <div class="text-center max-w-3xl mx-auto space-y-5 pt-6">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-950/80 border border-cyan-500/40 text-xs font-bold text-cyan-300">
+        <i data-lucide="layers" class="w-4 h-4 text-cyan-400"></i>
+        <span>9 Specialized Growth Pillars</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-heading text-white tracking-tight leading-tight">
+        Precision Digital Services Engineered For Scale
+      </h1>
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        Curafy Digitech delivers end-to-end digital solutions designed to capture market share, generate high-intent customer leads, and maximize your return on ad spend.
+      </p>
+    </div>
+
+    <!-- Quick-Jump Horizontal Pills Bar -->
+    <div class="glass-panel rounded-2xl p-3 border border-cyan-500/25 overflow-x-auto no-scrollbar">
+      <div class="flex items-center gap-2 min-w-max text-xs font-medium">
+        <span class="text-slate-400 px-3 py-1 text-[11px] font-bold uppercase tracking-wider">Quick Jump:</span>
+        <a href="#service-01" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">01. Digital Marketing</a>
+        <a href="#service-02" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">02. Social Media</a>
+        <a href="#service-03" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">03. Performance Ads</a>
+        <a href="#service-04" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">04. SEO &amp; Local</a>
+        <a href="#service-05" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">05. Websites</a>
+        <a href="#service-06" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">06. Lead Gen</a>
+        <a href="#service-07" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">07. Content</a>
+        <a href="#service-08" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">08. WhatsApp</a>
+        <a href="#service-09" class="px-3 py-1.5 rounded-lg bg-slate-900/80 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 border border-slate-800 hover:border-cyan-500/40 transition-all">09. Branding</a>
+      </div>
+    </div>
+
+    <!-- SERVICES LISTING: 9 COMPREHENSIVE CARDS (3D Perspective Stage) -->
+    <div class="space-y-12 stage-3d">
+
+      <!-- ================= 01. DIGITAL MARKETING ================= -->
+      <section id="service-01" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="trending-up" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/90 px-2 py-0.5 rounded border border-cyan-800">01</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Complete Online Presence</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Digital Marketing</h2>
+              <p class="text-slate-300 text-sm mt-1">Build your complete online presence and drive sustainable multi-channel business growth.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Digital Marketing', 'Get a Digital Marketing Strategy')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+            <span>Get a Digital Marketing Strategy</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Core Deliverables &amp; Strategy Capabilities:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Digital Marketing Strategy</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Online Brand Promotion</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Campaign Planning</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Competitor Research</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Marketing Strategy</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Performance Tracking</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 02. SOCIAL MEDIA MARKETING ================= -->
+      <section id="service-02" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center shrink-0">
+              <i data-lucide="share-2" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-sky-400 bg-blue-950/90 px-2 py-0.5 rounded border border-blue-800">02</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Social Growth Engine</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Social Media Marketing</h2>
+              <p class="text-slate-300 text-sm mt-1">Turn your social media channels into an active revenue and brand-building engine.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Social Media Marketing', 'Grow My Social Media')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white shadow-lg shadow-blue-500/20 flex items-center gap-2">
+            <span>Grow My Social Media</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Core Deliverables &amp; Content Formats:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Instagram Marketing</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Facebook Marketing</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Social Media Management</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Content Calendar</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Post &amp; Creative Design</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Reels &amp; Short Videos</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Audience Engagement</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Community Moderation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 03. PERFORMANCE MARKETING ================= -->
+      <section id="service-03" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="target" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/90 px-2 py-0.5 rounded border border-cyan-800">03</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Targeted Advertising</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Performance Marketing</h2>
+              <p class="text-slate-300 text-sm mt-1">Reach high-intent buyers with hyper-targeted paid advertising across Meta and Google ecosystems.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Performance Marketing', 'Start a Campaign')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+            <span>Start a Campaign</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Core Advertising Deliverables:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Meta Ads</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Facebook &amp; Instagram Ads</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Google Ads</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Lead Generation Campaigns</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Conversion Campaigns</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Remarketing Sequences</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Campaign Optimization</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Live CAPI &amp; ROI Analytics</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 04. SEO & LOCAL SEO ================= -->
+      <section id="service-04" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center shrink-0">
+              <i data-lucide="search" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-sky-400 bg-blue-950/90 px-2 py-0.5 rounded border border-blue-800">04</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Search Engine Supremacy</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">SEO &amp; Local SEO</h2>
+              <p class="text-slate-300 text-sm mt-1">Help customers find your business at the exact moment they search on Google and Maps.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('SEO & Local SEO', 'Improve My Google Visibility')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-lg shadow-sky-500/20 flex items-center gap-2">
+            <span>Improve My Google Visibility</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Organic Ranking Components:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Keyword Research</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">On-Page SEO</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Technical SEO</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Local SEO</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Google Business Profile Opt.</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Website SEO</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">SEO Performance Tracking</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Google Maps 3-Pack Rank</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 05. WEBSITE & LANDING PAGES ================= -->
+      <section id="service-05" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="monitor" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/90 px-2 py-0.5 rounded border border-cyan-800">05</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">High-Conversion Web</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Website &amp; Landing Pages</h2>
+              <p class="text-slate-300 text-sm mt-1">Turn website visitors into booked clients, enquiries, and paying customers.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Website & Landing Pages', 'Build My Website')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+            <span>Build My Website</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Engineering &amp; Design Stack:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Website Design</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Landing Page Design</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">High-Converting Layouts</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Mobile Responsive Design</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Fast Loading Speed (90+ PageSpeed)</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Lead Capture Forms</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Call-to-Action Optimization</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">CRM &amp; WhatsApp Integration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 06. LEAD GENERATION ================= -->
+      <section id="service-06" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center shrink-0">
+              <i data-lucide="users" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-sky-400 bg-blue-950/90 px-2 py-0.5 rounded border border-blue-800">06</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-sky-400">High-Intent Leads</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Lead Generation</h2>
+              <p class="text-slate-300 text-sm mt-1">Get qualified, genuine customer inquiries directly into your sales pipeline.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Lead Generation', 'Generate More Leads')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white shadow-lg shadow-blue-500/20 flex items-center gap-2">
+            <span>Generate More Leads</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Lead Generation Pipeline:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">High-Intent Lead Generation</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Targeted Audience Reach</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Qualified Customer Inquiries</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Lead Filtering &amp; Nurturing</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">CRM Integration Support</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-sky-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Performance Reporting</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 07. CONTENT & CREATIVE ================= -->
+      <section id="service-07" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="video" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/90 px-2 py-0.5 rounded border border-cyan-800">07</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">High-Impact Visuals</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Content &amp; Creative</h2>
+              <p class="text-slate-300 text-sm mt-1">Grab attention and tell your story with scroll-stopping reels, ad banners, and copy.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Content & Creative', 'Create My Content')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+            <span>Create My Content</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Production Formats:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Social Media Creatives</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Promotional Banners</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">High-Converting Ad Creatives</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Short Video &amp; Reels Editing</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Brand Storytelling Content</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Direct-Response Copywriting</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 08. WHATSAPP MARKETING ================= -->
+      <section id="service-08" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="message-square" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-emerald-400 bg-emerald-950/90 px-2 py-0.5 rounded border border-emerald-800">08</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Direct Customer Engagement</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">WhatsApp Marketing</h2>
+              <p class="text-slate-300 text-sm mt-1">Connect directly with customers, automate bookings, and drive lightning-fast sales responses.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('WhatsApp Marketing', 'Start WhatsApp Marketing')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white shadow-lg shadow-emerald-500/20 flex items-center gap-2">
+            <span>Start WhatsApp Marketing</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Conversational CRM Features:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">WhatsApp Campaign Setup</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Customer Broadcast Messages</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Automated Chat Flows &amp; Bots</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Promotional Offers &amp; Updates</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Direct Lead Engagement</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Customer Communication</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= 09. BRANDING & DESIGN ================= -->
+      <section id="service-09" class="card-3d rounded-3xl p-8 sm:p-10 border border-slate-800 glow-border space-y-6 scroll-mt-28">
+        <div class="layer-3d-2 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div class="flex items-center gap-5">
+            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center shrink-0">
+              <i data-lucide="palette" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-mono text-xs font-bold text-cyan-400 bg-cyan-950/90 px-2 py-0.5 rounded border border-cyan-800">09</span>
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Brand Authority</span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1">Branding &amp; Design</h2>
+              <p class="text-slate-300 text-sm mt-1">Create a memorable, high-trust corporate identity that commands premium pricing.</p>
+            </div>
+          </div>
+          <button onclick="openServiceModal('Branding & Design', 'Build My Brand')" class="btn-3d shimmer-btn shrink-0 text-xs font-bold px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+            <span>Build My Brand</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </button>
+        </div>
+
+        <div class="layer-3d-1 space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Design Deliverables:</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-xs">
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Logo Design</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Brand Identity System</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Company Business Profile</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Brochure &amp; Product Catalogue</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Social Media Branding Kit</span>
+            </div>
+            <div class="flex items-center gap-3 p-3.5 rounded-xl bg-slate-900/80 border border-slate-800">
+              <i data-lucide="check-circle" class="w-4 h-4 text-cyan-400 shrink-0"></i>
+              <span class="font-semibold text-slate-200">Promotional Creatives</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CTA BANNER SECTION -->
+    <div class="relative glass-panel rounded-3xl p-8 sm:p-12 border border-cyan-500/40 glow-border text-center space-y-6 overflow-hidden">
+      <div class="absolute -right-20 -top-20 w-80 h-80 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10 max-w-2xl mx-auto space-y-4">
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">Ready To Scale With Curafy Digitech?</h2>
+        <p class="text-slate-300 text-sm">
+          Book a 30-minute free digital growth strategy call. We'll analyze your current online footprint and show you the exact levers to expand your business.
+        </p>
+        <div class="pt-4 flex flex-wrap justify-center gap-4">
+          <button onclick="openModal('consultation-modal')" class="shimmer-btn text-xs font-bold px-7 py-3.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-xl shadow-cyan-500/25">
+            Book My Strategy Call
+          </button>
+          <button onclick="openModal('audit-modal')" class="text-xs font-bold px-7 py-3.5 rounded-full border border-slate-700 bg-slate-900 hover:border-cyan-500 text-cyan-300">
+            Claim Free Audit
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#060A14] border-t border-slate-800/80 text-slate-400 text-xs py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-800/80">
+        <div class="space-y-3">
+          <img src="assets/images/logo.svg" alt="Curafy Digitech" class="h-11 sm:h-12 w-auto">
+          <p class="text-slate-500 leading-relaxed">
+            High-contrast, futuristic growth agency engineered for Hospitals, Local Businesses, Startups, and Enterprises.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 font-heading uppercase text-[11px] tracking-wider text-cyan-400">Quick Links</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="index.html" class="hover:text-cyan-400">Home</a></li>
+            <li><a href="services.html" class="text-cyan-400">All 9 Services</a></li>
+            <li><a href="healthcare.html" class="hover:text-cyan-400">Healthcare Growth Hub</a></li>
+            <li><a href="case-studies.html" class="hover:text-cyan-400">Case Studies</a></li>
+            <li><a href="about.html" class="hover:text-cyan-400">About Us</a></li>
+            <li><a href="contact.html" class="hover:text-cyan-400">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold text-white mb-3 font-heading uppercase text-[11px] tracking-wider text-cyan-400">Core Capabilities</h4>
+          <ul class="space-y-1.5 text-slate-400 text-[11px]">
+            <li><a href="#service-01" class="hover:text-cyan-300">01. Digital Marketing</a></li>
+            <li><a href="#service-02" class="hover:text-cyan-300">02. Social Media Marketing</a></li>
+            <li><a href="#service-03" class="hover:text-cyan-300">03. Performance Marketing</a></li>
+            <li><a href="#service-04" class="hover:text-cyan-300">04. SEO &amp; Local SEO</a></li>
+            <li><a href="#service-05" class="hover:text-cyan-300">05. Website &amp; Landing Pages</a></li>
+            <li><a href="#service-06" class="hover:text-cyan-300">06. Lead Generation</a></li>
+            <li><a href="#service-07" class="hover:text-cyan-300">07. Content &amp; Creative</a></li>
+            <li><a href="#service-08" class="hover:text-cyan-300">08. WhatsApp Marketing</a></li>
+            <li><a href="#service-09" class="hover:text-cyan-300">09. Branding &amp; Design</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <h4 class="font-bold text-white mb-1 font-heading uppercase text-[11px] tracking-wider text-cyan-400">Direct Inquiries</h4>
+          <p class="text-slate-400">Reach out directly to speak with our head of digital strategy:</p>
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20discuss%20your%20services." target="_blank" class="flex items-center gap-2 text-emerald-300 hover:underline font-mono font-bold">
+            <i data-lucide="phone-call" class="w-3.5 h-3.5"></i> +91 63765 66383 (WhatsApp)
+          </a>
+          <a href="mailto:growth@curafydigitech.com" class="flex items-center gap-2 text-cyan-300 hover:underline">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i> growth@curafydigitech.com
+          </a>
+        </div>
+      </div>
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-slate-500 text-[11px]">
+        <p>&copy; 2026 Curafy Digitech. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0 text-cyan-500/80 font-mono">Future-Proof Digital Engineering</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL 1: CONSULTATION MODAL -->
+  <div id="consultation-modal" class="modal-overlay hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="modal-box w-full max-w-lg rounded-2xl glass-panel border border-cyan-500/40 p-6 sm:p-8 relative shadow-2xl my-8">
+      <button data-close-modal class="absolute top-5 right-5 text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="space-y-2 mb-6">
+        <h3 class="text-xl sm:text-2xl font-bold text-white font-heading">Book Strategy Session</h3>
+        <p class="text-xs text-slate-400">Our senior digital strategist will analyze your growth potential and construct your customized roadmap.</p>
+      </div>
+      <form id="services-consultation-form" data-lead-form class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Your Full Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Dr. Aryan Verma / Rahul Mehta" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Phone / WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="+91 63765 XXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Work Email *</label>
+            <input type="email" name="email" required placeholder="name@business.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Service Interested In *</label>
+            <select name="service" id="modal-service" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+              <option value="Digital Marketing">01. Digital Marketing</option>
+              <option value="Social Media Marketing">02. Social Media Marketing</option>
+              <option value="Performance Marketing">03. Performance Marketing</option>
+              <option value="SEO & Local SEO">04. SEO & Local SEO</option>
+              <option value="Website & Landing Pages">05. Website & Landing Pages</option>
+              <option value="Lead Generation">06. Lead Generation</option>
+              <option value="Content & Creative">07. Content & Creative</option>
+              <option value="WhatsApp Marketing">08. WhatsApp Marketing</option>
+              <option value="Branding & Design">09. Branding & Design</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Business Type / Sector *</label>
+            <select name="industry" id="modal-industry" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
+              <option value="healthcare">Hospital / Medical Clinic</option>
+              <option value="hospitality">Hospitality / Hotels / Resorts</option>
+              <option value="real_estate">Real Estate / Builders / Brokers</option>
+              <option value="education">Education / Coaching / EdTech</option>
+              <option value="food_restaurants">Food / Restaurant / Cafe</option>
+              <option value="automobile">Automobile / Dealership / EV</option>
+              <option value="beauty_wellness">Beauty / Salon / Wellness / Spa</option>
+              <option value="fashion">Fashion / Apparel / D2C Boutique</option>
+              <option value="jewellery">Jewellery / Luxury Showroom</option>
+              <option value="professional_services">Professional Services / CA / Legal</option>
+              <option value="manufacturing">Manufacturing / Industrial B2B</option>
+              <option value="ecommerce">E-Commerce / D2C Brand</option>
+              <option value="travel_tourism">Travel / Tourism / Tour Operator</option>
+              <option value="events_weddings">Events / Wedding Planner / Venue</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Website or Social Link</label>
+          <input type="text" name="website" placeholder="https://yoursite.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Primary Growth Objective / Notes</label>
+          <textarea name="notes" id="modal-notes" rows="3" placeholder="Tell us about your target goals..." class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"></textarea>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <button type="submit" class="shimmer-btn w-full py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Confirm Request</span>
+          </button>
+          <button type="button" onclick="sendEnquiryToWhatsApp('services-consultation-form')" class="w-full py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp (6376566383)</span>
+          </button>
+        </div>
+        <p class="text-[10px] text-center text-slate-500">
+          🔒 100% Privacy Guaranteed. Zero spam. Direct hotline: 6376566383.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL 2: FREE DIGITAL AUDIT MODAL -->
+  <div id="audit-modal" class="modal-overlay hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
+    <div class="modal-box w-full max-w-lg rounded-2xl glass-panel border border-cyan-500/40 p-6 sm:p-8 relative shadow-2xl my-8">
+      <button data-close-modal class="absolute top-5 right-5 text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      <div class="space-y-2 mb-6">
+        <h3 class="text-xl sm:text-2xl font-bold text-white font-heading">Free Digital Growth Audit</h3>
+        <p class="text-xs text-slate-400">Receive a complete evaluation of your ads, Google rankings, and lead leaks within 24 hours.</p>
+      </div>
+      <form id="services-audit-form" data-lead-form class="space-y-4 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Business Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Apex Multispeciality Hospital" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+        </div>
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Website URL or Google Profile *</label>
+          <input type="text" name="notes" required placeholder="https://example.com" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Your Name *</label>
+            <input type="text" required placeholder="Contact Person" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">WhatsApp for Report Delivery *</label>
+            <input type="tel" name="phone" required placeholder="+91 63765 XXXXX" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <button type="submit" class="shimmer-btn w-full py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg shadow-cyan-500/25 transition-all flex items-center justify-center gap-2">
+            <i data-lucide="send" class="w-4 h-4"></i>
+            <span>Generate Free Audit</span>
+          </button>
+          <button type="button" onclick="sendEnquiryToWhatsApp('services-audit-form')" class="w-full py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg flex items-center justify-center gap-2">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>WhatsApp (6376566383)</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Global Toast Notification -->
+  <div id="notification-toast" class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
+    <div class="glass-panel border border-cyan-500/50 rounded-xl p-4 shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+      </div>
+      <p id="toast-message" class="text-xs text-white font-medium">Inquiry sent successfully!</p>
+    </div>
+  </div>
+
+  <!-- FLOATING WHATSAPP CALL & CHAT BADGE -->
+  <div class="fixed bottom-6 right-6 z-40 flex items-center gap-2">
+    <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20request%20a%20WhatsApp%20call%20regarding%20your%20services." target="_blank" class="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-full glass-panel border border-emerald-500/50 bg-[#0A0F1D]/90 hover:bg-emerald-950/60 text-emerald-400 hover:text-white shadow-2xl shadow-emerald-500/30 transition-all group">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span class="text-xs font-bold font-mono">WhatsApp Call: 6376566383</span>
+    </a>
+    <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20want%20to%20request%20a%20WhatsApp%20call%20regarding%20your%20services." target="_blank" class="whatsapp-pulse w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/50 transition-transform hover:scale-110" aria-label="WhatsApp Call 6376566383">
+      <i data-lucide="phone-call" class="w-6 h-6"></i>
+    </a>
+  </div>
+
+  <!-- JavaScript Controllers -->
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/tilt3d.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
