@@ -969,6 +969,9 @@
           <button class="sector-filter-btn active-sector px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-cyan-400 shadow-md shadow-cyan-500/20" data-filter="all">
             All Sectors (13)
           </button>
+          <button class="sector-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border text-slate-400 bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:text-white" data-filter="healthcare">
+            Hospital, Clinic &amp; Diagnostic Center
+          </button>
           <button class="sector-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border text-slate-400 bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:text-white" data-filter="real_estate">
             Real Estate
           </button>
@@ -1005,16 +1008,45 @@
           <button class="sector-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border text-slate-400 bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:text-white" data-filter="events_weddings">
             Events &amp; Weddings
           </button>
-          <button class="sector-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border text-slate-400 bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:text-white" data-filter="healthcare">
-            Hospitals &amp; Healthcare
-          </button>
         </div>
       </div>
 
       <!-- Sector Cards Grid (3D Spatial Perspective) -->
       <div id="sector-cards-grid" class="stage-3d grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-        <!-- 01. Real Estate -->
+        <!-- 01. Hospital, Clinic & Diagnostic Center (Flagship Specialized Pillar) -->
+        <div class="card-3d sector-card p-6 flex flex-col justify-between border-cyan-500/50 glow-border" data-sector="healthcare" data-sector-title="Hospital Clinic & Diagnostic Center" data-sector-category="Specialists, Surgeries, OPD & Diagnostic Labs">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="layer-3d-2 w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 flex items-center justify-center">
+                <i data-lucide="stethoscope" class="w-6 h-6"></i>
+              </div>
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-500">Flagship Pillar</span>
+            </div>
+            <div class="layer-3d-1">
+              <span class="text-[11px] font-semibold text-cyan-400 uppercase tracking-wider">Hospitals, Clinics &amp; Diagnostics</span>
+              <h3 class="text-lg font-bold text-white font-heading mt-1">Hospital, Clinic &amp; Diagnostic Center</h3>
+            </div>
+            <p class="layer-3d-1 text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Attract high-intent patients seeking doctors, surgeries, and treatments. Patient acquisition funnels with HIPAA-compliant trust positioning.
+            </p>
+            <ul class="layer-3d-1 space-y-2 text-xs text-slate-200 pt-1">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> Doctor Google 3-Pack Local SEO</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> WhatsApp OPD Lead Desk Integration</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> High-converting surgery/specialist ads</li>
+            </ul>
+          </div>
+          <div class="layer-3d-2 pt-5 mt-4 border-t border-slate-800/80 space-y-2">
+            <button onclick="openSectorModal('Hospital Clinic & Diagnostic Center', 'Acquire More Patients &amp; Diagnostic Bookings')" class="btn-3d w-full py-2.5 px-4 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center gap-1.5">
+              <span>Book Medical Strategy</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </button>
+            <a href="healthcare.html" class="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 flex items-center justify-center gap-1 pt-1">
+              <span>View Dedicated Healthcare Portal</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- 02. Real Estate -->
         <div class="card-3d sector-card p-6 flex flex-col justify-between border-slate-800 hover:border-cyan-500/50 transition-all" data-sector="real_estate" data-sector-title="Real Estate" data-sector-category="Builders, Developers & Brokers">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
@@ -1359,38 +1391,6 @@
             <button onclick="openSectorModal('Events &amp; Weddings', 'Fill Wedding Season Dates &amp; Venue Bookings')" class="btn-3d w-full py-2.5 px-4 text-xs text-white bg-gradient-to-r from-fuchsia-600 to-rose-600 flex items-center justify-center gap-1.5">
               <span>Book Event Dates</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
-          </div>
-        </div>
-
-        <!-- 14. Hospitals & Healthcare Clinics (Flagship Specialized Pillar) -->
-        <div class="card-3d sector-card p-6 flex flex-col justify-between border-cyan-500/50 glow-border" data-sector="healthcare" data-sector-title="Hospitals & Healthcare Clinics" data-sector-category="Specialists, Surgeries, OPD & Diagnostic Labs">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <div class="layer-3d-2 w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/40 text-cyan-400 flex items-center justify-center">
-                <i data-lucide="stethoscope" class="w-6 h-6"></i>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-500">Flagship Pillar</span>
-            </div>
-            <div class="layer-3d-1">
-              <span class="text-[11px] font-semibold text-cyan-400 uppercase tracking-wider">Hospitals &amp; Doctors</span>
-              <h3 class="text-lg font-bold text-white font-heading mt-1">Hospitals &amp; Clinics</h3>
-            </div>
-            <p class="layer-3d-1 text-slate-300 text-xs sm:text-sm leading-relaxed">
-              Attract high-intent patients seeking doctors, surgeries, and treatments. Patient acquisition funnels with HIPAA-compliant trust positioning.
-            </p>
-            <ul class="layer-3d-1 space-y-2 text-xs text-slate-200 pt-1">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> Doctor Google 3-Pack Local SEO</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> WhatsApp OPD Lead Desk Integration</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> High-converting surgery/specialist ads</li>
-            </ul>
-          </div>
-          <div class="layer-3d-2 pt-5 mt-4 border-t border-slate-800/80 space-y-2">
-            <button onclick="openSectorModal('Healthcare', 'Acquire More Patients &amp; Doctor Appointments')" class="btn-3d w-full py-2.5 px-4 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center gap-1.5">
-              <span>Book Medical Strategy</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </button>
-            <a href="healthcare.html" class="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 flex items-center justify-center gap-1 pt-1">
-              <span>View Dedicated Healthcare Portal</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
-            </a>
           </div>
         </div>
 
@@ -1749,7 +1749,7 @@
                 <span class="text-[11px] text-cyan-400 font-normal">Custom benchmark algorithms</span>
               </label>
               <select id="calc-industry" class="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-700 text-white focus:outline-none focus:border-cyan-500 text-sm">
-                <option value="healthcare">Hospitals, Clinics &amp; Doctors (Healthcare)</option>
+                <option value="healthcare">Hospital, Clinic &amp; Diagnostic Center</option>
                 <option value="hospitality">Hospitality (Hotels, Resorts &amp; Stays)</option>
                 <option value="real_estate">Real Estate (Builders, Developers &amp; Brokers)</option>
                 <option value="education">Education (Colleges, Coaching &amp; EdTech)</option>
@@ -2513,7 +2513,7 @@
                 <div>
                   <label class="block font-semibold text-slate-300 mb-1">Target Sector / Industry</label>
                   <select name="sector" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
-                    <option value="healthcare">Hospitals, Clinics &amp; Doctors</option>
+                    <option value="healthcare">Hospital, Clinic &amp; Diagnostic Center</option>
                     <option value="hospitality">Hospitality (Hotels, Resorts &amp; Stays)</option>
                     <option value="real_estate">Real Estate &amp; Property Developers</option>
                     <option value="education">Education &amp; Coaching Institutes</option>
@@ -2753,7 +2753,7 @@
           <div>
             <label class="block font-semibold text-slate-300 mb-1">Business Type / Sector *</label>
             <select name="industry" id="modal-industry" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
-              <option value="healthcare">Hospital / Medical Clinic</option>
+              <option value="healthcare">Hospital, Clinic &amp; Diagnostic Center</option>
               <option value="hospitality">Hospitality / Hotels / Resorts</option>
               <option value="real_estate">Real Estate / Builders / Brokers</option>
               <option value="education">Education / Coaching / EdTech</option>
