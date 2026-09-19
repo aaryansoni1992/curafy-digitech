@@ -956,7 +956,7 @@
           </div>
           <div class="flex items-center justify-between sm:justify-end gap-3 shrink-0">
             <span id="sector-count-display" class="px-3 py-1.5 rounded-lg bg-cyan-950/70 border border-cyan-700/50 text-cyan-300 font-mono text-xs font-semibold">
-              14 Sectors Displayed
+              13 Sectors Displayed
             </span>
             <button onclick="openModal('consultation-modal')" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold transition-all flex items-center gap-1.5">
               <i data-lucide="help-circle" class="w-3.5 h-3.5 text-cyan-400"></i> Not Listed? Custom Plan
@@ -967,10 +967,7 @@
         <!-- Filter Pills Navigation (Horizontal scroll on mobile) -->
         <div class="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-slate-800">
           <button class="sector-filter-btn active-sector px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-cyan-400 shadow-md shadow-cyan-500/20" data-filter="all">
-            All Sectors (14)
-          </button>
-          <button class="sector-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border text-slate-400 bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:text-white" data-filter="hospitality">
-            Hospitality
+            All Sectors (13)
           </button>
           <button class="sector-filter-btn px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition-all border text-slate-400 bg-slate-900/80 border-slate-800 hover:border-slate-700 hover:text-white" data-filter="real_estate">
             Real Estate
@@ -1017,36 +1014,7 @@
       <!-- Sector Cards Grid (3D Spatial Perspective) -->
       <div id="sector-cards-grid" class="stage-3d grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-        <!-- 01. Hospitality -->
-        <div class="card-3d sector-card p-6 flex flex-col justify-between border-slate-800 hover:border-cyan-500/50 transition-all" data-sector="hospitality" data-sector-title="Hospitality" data-sector-category="Hotels, Resorts & Luxury Stays">
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <div class="layer-3d-2 w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
-                <i data-lucide="hotel" class="w-6 h-6"></i>
-              </div>
-              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-cyan-950/80 text-cyan-300 border border-cyan-800">+280% Direct Bookings</span>
-            </div>
-            <div class="layer-3d-1">
-              <span class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Hospitality &amp; Stays</span>
-              <h3 class="text-lg font-bold text-white font-heading mt-1">Hospitality</h3>
-            </div>
-            <p class="layer-3d-1 text-slate-400 text-xs sm:text-sm leading-relaxed">
-              Maximize weekend &amp; seasonal occupancy while slashing reliance on high-commission OTAs through high-yield direct booking funnels.
-            </p>
-            <ul class="layer-3d-1 space-y-2 text-xs text-slate-300 pt-1">
-              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> Direct Guest Booking Engine Ads</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> OTA Commission Slash Strategy</li>
-              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-cyan-400 shrink-0"></i> Cinematic Reels &amp; Creator Stays</li>
-            </ul>
-          </div>
-          <div class="layer-3d-2 pt-5 mt-4 border-t border-slate-800/80">
-            <button onclick="openSectorModal('Hospitality', 'Boost Direct Hotel &amp; Resort Bookings')" class="btn-3d w-full py-2.5 px-4 text-xs text-white bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center gap-1.5">
-              <span>Boost Direct Bookings</span> <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- 02. Real Estate -->
+        <!-- 01. Real Estate -->
         <div class="card-3d sector-card p-6 flex flex-col justify-between border-slate-800 hover:border-cyan-500/50 transition-all" data-sector="real_estate" data-sector-title="Real Estate" data-sector-category="Builders, Developers & Brokers">
           <div class="space-y-4">
             <div class="flex items-center justify-between">
