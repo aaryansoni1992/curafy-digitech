@@ -1,72 +1,149 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 96" width="100%" height="100%" style="overflow: visible;">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 100" width="100%" height="100%" style="overflow: visible;">
   <defs>
-    <!-- Option 1: Deep Royal Blue + Electric Cyan Gradient -->
-    <linearGradient id="curafyGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Dynamic Gradients -->
+    <linearGradient id="curafyArcGrad" x1="0%" y1="100%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00F0FF" />
-      <stop offset="50%" stop-color="#06B6D4" />
-      <stop offset="100%" stop-color="#2563EB" />
+      <stop offset="45%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#3B82F6" />
     </linearGradient>
-    <linearGradient id="curafyGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" />
-      <stop offset="50%" stop-color="#0284C7" />
-      <stop offset="100%" stop-color="#1D4ED8" />
+
+    <linearGradient id="curafyArrowGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2DD4BF" />
+      <stop offset="50%" stop-color="#5EEAD4" />
+      <stop offset="100%" stop-color="#00F0FF" />
     </linearGradient>
-    <!-- Glow Filter -->
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur" />
+
+    <!-- 5 Bar Chart Pillar Gradients -->
+    <linearGradient id="barGrad1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#2DD4BF" />
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0891B2" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <linearGradient id="barGrad3" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="barGrad4" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="barGrad5" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#4338CA" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <!-- Neon Glow Filter -->
+    <filter id="curafyGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="curafySoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Logo Icon Container (Hexagon / Digital Shield Pulse) -->
-  <g transform="translate(6, 6)">
-    <!-- Ambient Glow Background -->
-    <circle cx="42" cy="42" r="32" fill="url(#curafyGrad1)" opacity="0.2" filter="url(#glow)"/>
-    
-    <!-- Outer Hex-Shield Outline -->
-    <path d="M42 6 L74 24 L74 62 L42 80 L10 62 L10 24 Z" 
-          fill="#0B132B" 
-          stroke="url(#curafyGrad1)" 
-          stroke-width="2.5" 
-          stroke-linejoin="round"/>
-          
-    <!-- Dynamic Digital Pulse / Growth Chart Wave ('C' + Upward Metric Wave) -->
-    <path d="M22 43 L32 30 L43 50 L54 25 L65 35" 
-          fill="none" 
-          stroke="url(#curafyGrad2)" 
-          stroke-width="4" 
-          stroke-linecap="round" 
-          stroke-linejoin="round"
-          filter="url(#glow)"/>
+  <!-- Cyber Tech Growth Emblem (Upper graphic from user's brand identity) -->
+  <g transform="translate(4, 2)">
+    <!-- Ambient Radial Glow -->
+    <circle cx="50" cy="48" r="36" fill="url(#curafyArcGrad)" opacity="0.14" filter="url(#curafySoftGlow)"/>
 
-    <!-- Pulse Nodes -->
-    <circle cx="22" cy="43" r="3" fill="#00F0FF" />
-    <circle cx="43" cy="50" r="3" fill="#38BDF8" />
-    <circle cx="54" cy="25" r="3.8" fill="#06B6D4" />
-    <circle cx="65" cy="35" r="3" fill="#2563EB" />
-    
-    <!-- Glowing Core Point -->
-    <circle cx="42" cy="66" r="2" fill="#00F0FF" />
+    <!-- 1. Outer Dashed Orbit Ring -->
+    <circle cx="50" cy="48" r="41" 
+            fill="none" 
+            stroke="#38BDF8" 
+            stroke-width="1.4" 
+            stroke-dasharray="5 5" 
+            opacity="0.75"/>
+
+    <!-- Outer Orbital Satellite Nodes -->
+    <circle cx="79" cy="21" r="2.8" fill="#38BDF8" filter="url(#curafyGlow)"/>
+    <circle cx="83" cy="11" r="1.5" fill="#5EEAD4"/>
+    <circle cx="88" cy="16" r="1.8" fill="#00F0FF"/>
+
+    <!-- 2. Inner Glowing Circular Arc -->
+    <path d="M 68 73 A 31 31 0 1 1 76 27" 
+          fill="none" 
+          stroke="url(#curafyArcGrad)" 
+          stroke-width="3.2" 
+          stroke-linecap="round" 
+          filter="url(#curafyGlow)"/>
+
+    <!-- Lower complementary arc segment -->
+    <path d="M 52 79 A 31 31 0 0 0 71 71" 
+          fill="none" 
+          stroke="#00F0FF" 
+          stroke-width="2.2" 
+          stroke-linecap="round" 
+          opacity="0.85"/>
+
+    <!-- 3. 5 Vertical Rounded Growth Bars (Ascending Histogram) -->
+    <!-- Bar 1: Mint Green -->
+    <rect x="31" y="55" width="6.5" height="15" rx="3.25" fill="url(#barGrad1)"/>
+    <!-- Bar 2: Cyan -->
+    <rect x="39.5" y="48" width="6.5" height="22" rx="3.25" fill="url(#barGrad2)"/>
+    <!-- Bar 3: Sky Blue -->
+    <rect x="48" y="41" width="6.5" height="29" rx="3.25" fill="url(#barGrad3)"/>
+    <!-- Bar 4: Cobalt Blue -->
+    <rect x="56.5" y="34" width="6.5" height="36" rx="3.25" fill="url(#barGrad4)"/>
+    <!-- Bar 5: Royal/Indigo Blue -->
+    <rect x="65" y="27" width="6.5" height="43" rx="3.25" fill="url(#barGrad5)"/>
+
+    <!-- 4. Ascending Growth Arrow Piercing Through -->
+    <line x1="24" y1="73" x2="80" y2="17" 
+          stroke="url(#curafyArrowGrad)" 
+          stroke-width="3.5" 
+          stroke-linecap="round" 
+          filter="url(#curafyGlow)"/>
+
+    <!-- Sharp Arrowhead at (80, 17) pointing to top-right -->
+    <polygon points="86,11 74,16 79,23" 
+             fill="#5EEAD4" 
+             filter="url(#curafyGlow)"/>
+
+    <!-- Celestial sparks near arrow tip -->
+    <circle cx="89" cy="9" r="1.3" fill="#FFFFFF"/>
+    <circle cx="86" cy="4" r="1" fill="#00F0FF"/>
   </g>
 
-  <!-- Brand Typography with tspan for 100% natural, overlap-free flow -->
-  <g transform="translate(104, 8)">
-    <!-- Brand Name: CURAFY • DIGITECH (Increased font size to 41 for enhanced prominence) -->
-    <text x="0" y="47" 
+  <!-- Brand Typography (100% matched to user's uploaded brand mark) -->
+  <g transform="translate(118, 4)">
+    <!-- CURAFY: Stylized Cyan 'C' + Crisp Bold White 'URAFY' -->
+    <text x="0" y="40" 
           font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Space Grotesk', sans-serif" 
-          font-size="41">
-      <tspan font-weight="900" fill="#FFFFFF" letter-spacing="-0.5">CURAFY</tspan>
-      <tspan dx="10" fill="#00F0FF" font-size="28" font-weight="900">•</tspan>
-      <tspan dx="10" font-weight="600" fill="#E2E8F0" letter-spacing="1.2">DIGITECH</tspan>
+          font-size="38" 
+          letter-spacing="-0.5">
+      <tspan fill="#00F0FF" font-weight="900">C</tspan>
+      <tspan fill="#FFFFFF" font-weight="800">URAFY</tspan>
     </text>
 
-    <!-- Subtitle / Value Proposition Tagline -->
-    <text x="2" y="73" 
+    <!-- DIGITECH in Rounded Electric Cyan Pill Capsule Badge -->
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="134" height="22" rx="11" 
+            fill="rgba(0, 240, 255, 0.08)" 
+            stroke="#00F0FF" 
+            stroke-width="1.6"/>
+      <text x="67" y="15" 
+            text-anchor="middle" 
+            font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Space Grotesk', sans-serif" 
+            font-size="11.5" 
+            font-weight="800" 
+            letter-spacing="2.4" 
+            fill="#FFFFFF">
+        DIGITECH
+      </text>
+    </g>
+
+    <!-- Subtitle: DIGITAL GROWTH & PERFORMANCE LAB -->
+    <text x="2" y="88" 
           font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
           font-weight="700" 
-          font-size="10.5" 
-          letter-spacing="3.2" 
-          fill="#00F0FF">
+          font-size="9" 
+          letter-spacing="2.8" 
+          fill="#38BDF8">
       DIGITAL GROWTH &amp; PERFORMANCE LAB
     </text>
   </g>
