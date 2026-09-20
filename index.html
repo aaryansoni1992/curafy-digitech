@@ -1883,217 +1883,17 @@
         <p class="text-slate-400 text-base">
           Explore how Curafy Digitech transforms business metrics into explosive commercial outcomes.
         </p>
-
-        <!-- Category Filter Buttons -->
-        <div class="flex flex-wrap justify-center gap-2 pt-4">
-          <button data-category="all" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white transition-all">
-            All Success Stories
-          </button>
-          <button data-category="healthcare" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white transition-all">
-            Healthcare &amp; Clinics
-          </button>
-          <button data-category="local" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white transition-all">
-            Local Businesses
-          </button>
-          <button data-category="startup" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white transition-all">
-            Startups &amp; SaaS
-          </button>
-          <button data-category="corporate" class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-slate-800/60 text-slate-400 hover:text-white transition-all">
-            Corporate &amp; B2B
-          </button>
-        </div>
       </div>
 
-      <!-- Case Studies Cards Grid (3D Spatial Perspective) -->
-      <div class="stage-3d grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Case 1: Healthcare Clinic -->
-        <div class="portfolio-card card-3d p-6 border border-slate-800 flex flex-col justify-between" data-category="healthcare">
-          <div class="space-y-4">
-            <div class="layer-3d-2 flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 text-[11px] font-bold border border-cyan-800">Big Enterprise • Healthcare</span>
-              <span class="text-xs font-mono text-emerald-400 font-bold">+340% Growth</span>
-            </div>
-            <div class="layer-3d-1">
-              <h3 class="text-lg font-bold text-white font-heading">Apollo &amp; Metro Multispecialty Hospital Network</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                Implemented a hyper-local Google 3-Pack optimization coupled with WhatsApp direct OPD booking funnels for laser eye surgeries and dental implants.
-              </p>
-            </div>
-            <div class="layer-3d-2 grid grid-cols-2 gap-3 py-3 border-y border-slate-800 text-center">
-              <div>
-                <span class="text-[11px] text-slate-400 block">Monthly Appointments</span>
-                <span class="text-xl font-bold text-white font-heading">320+</span>
-              </div>
-              <div>
-                <span class="text-[11px] text-slate-400 block">Cost Per Patient</span>
-                <span class="text-xl font-bold text-emerald-400 font-heading">₹230</span>
-              </div>
-            </div>
+      <!-- Case Studies Grid (Ready for user-provided client names) -->
+      <div id="case-studies-container" class="stage-3d">
+        <div class="text-center py-16 px-6 glass-panel rounded-3xl border border-cyan-500/30 max-w-xl mx-auto space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+            <i data-lucide="award" class="w-6 h-6"></i>
           </div>
-          <div class="layer-3d-2 pt-4 flex justify-between items-center text-xs">
-            <span class="text-slate-400">SEO + Google Ads + WhatsApp</span>
-            <button onclick="openModal('consultation-modal')" class="text-cyan-400 font-semibold hover:underline">Get Similar Results</button>
-          </div>
+          <h3 class="text-lg font-bold text-white font-heading">Client Case Studies Ready For Update</h3>
+          <p class="text-xs sm:text-sm text-slate-400">All previous entries cleared. Ready to display your verified client names &amp; ROI metrics.</p>
         </div>
-
-        <!-- Case 2: Local Business -->
-        <div class="portfolio-card card-3d p-6 border border-slate-800 flex flex-col justify-between" data-category="local">
-          <div class="space-y-4">
-            <div class="layer-3d-2 flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded bg-blue-950 text-sky-300 text-[11px] font-bold border border-blue-800">Little Boutique • Luxury Retail</span>
-              <span class="text-xs font-mono text-cyan-400 font-bold">5.8x ROAS</span>
-            </div>
-            <div class="layer-3d-1">
-              <h3 class="text-lg font-bold text-white font-heading">Royal Heritage Jewellery &amp; Bridal Studio</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                Localized Meta video ad campaigns targeting brides and families within a 15km radius, driving high-ticket foot traffic to showroom launches.
-              </p>
-            </div>
-            <div class="layer-3d-2 grid grid-cols-2 gap-3 py-3 border-y border-slate-800 text-center">
-              <div>
-                <span class="text-[11px] text-slate-400 block">Revenue Generated</span>
-                <span class="text-xl font-bold text-white font-heading">₹74 Lakh</span>
-              </div>
-              <div>
-                <span class="text-[11px] text-slate-400 block">Store Footfall</span>
-                <span class="text-xl font-bold text-cyan-400 font-heading">+420%</span>
-              </div>
-            </div>
-          </div>
-          <div class="layer-3d-2 pt-4 flex justify-between items-center text-xs">
-            <span class="text-slate-400">Meta Video Ads + Local SEO</span>
-            <button onclick="openModal('consultation-modal')" class="text-cyan-400 font-semibold hover:underline">Get Similar Results</button>
-          </div>
-        </div>
-
-        <!-- Case 3: Startup / SaaS -->
-        <div class="portfolio-card card-3d p-6 border border-slate-800 flex flex-col justify-between" data-category="startup">
-          <div class="space-y-4">
-            <div class="layer-3d-2 flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded bg-sky-950 text-cyan-300 text-[11px] font-bold border border-sky-800">Little High-Growth • Tech Startup</span>
-              <span class="text-xs font-mono text-cyan-400 font-bold">4.6x Pipeline</span>
-            </div>
-            <div class="layer-3d-1">
-              <h3 class="text-lg font-bold text-white font-heading">NexaOps Cloud Logistics Platform</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                Re-engineered the high-intent Google Search strategy and built an interactive conversion landing page that slashed demo drop-offs by 44%.
-              </p>
-            </div>
-            <div class="layer-3d-2 grid grid-cols-2 gap-3 py-3 border-y border-slate-800 text-center">
-              <div>
-                <span class="text-[11px] text-slate-400 block">Enterprise Demos</span>
-                <span class="text-xl font-bold text-white font-heading">180+</span>
-              </div>
-              <div>
-                <span class="text-[11px] text-slate-400 block">CAC Reduction</span>
-                <span class="text-xl font-bold text-emerald-400 font-heading">-39%</span>
-              </div>
-            </div>
-          </div>
-          <div class="layer-3d-2 pt-4 flex justify-between items-center text-xs">
-            <span class="text-slate-400">CRO + Google Inbound + Web</span>
-            <button onclick="openModal('consultation-modal')" class="text-cyan-400 font-semibold hover:underline">Get Similar Results</button>
-          </div>
-        </div>
-
-        <!-- Case 4: Corporate Enterprise -->
-        <div class="portfolio-card card-3d p-6 border border-slate-800 flex flex-col justify-between" data-category="corporate">
-          <div class="space-y-4">
-            <div class="layer-3d-2 flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 text-[11px] font-bold border border-emerald-800">Big Conglomerate • Industrial B2B</span>
-              <span class="text-xs font-mono text-emerald-400 font-bold">₹1.8 Cr Deal Value</span>
-            </div>
-            <div class="layer-3d-1">
-              <h3 class="text-lg font-bold text-white font-heading">Zenith &amp; Tata Industrial Infrastructure Group</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                Multi-channel LinkedIn Account-Based Marketing (ABM) strategy reaching C-level executives in manufacturing and logistics across India &amp; UAE.
-              </p>
-            </div>
-            <div class="layer-3d-2 grid grid-cols-2 gap-3 py-3 border-y border-slate-800 text-center">
-              <div>
-                <span class="text-[11px] text-slate-400 block">Qualified B2B RFPs</span>
-                <span class="text-xl font-bold text-white font-heading">42 Leads</span>
-              </div>
-              <div>
-                <span class="text-[11px] text-slate-400 block">Conversion Rate</span>
-                <span class="text-xl font-bold text-cyan-400 font-heading">14.2%</span>
-              </div>
-            </div>
-          </div>
-          <div class="layer-3d-2 pt-4 flex justify-between items-center text-xs">
-            <span class="text-slate-400">LinkedIn ABM + Content Engine</span>
-            <button onclick="openModal('consultation-modal')" class="text-cyan-400 font-semibold hover:underline">Get Similar Results</button>
-          </div>
-        </div>
-
-        <!-- Case 5: Healthcare Specialist Clinic -->
-        <div class="portfolio-card card-3d p-6 border border-slate-800 flex flex-col justify-between" data-category="healthcare">
-          <div class="space-y-4">
-            <div class="layer-3d-2 flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded bg-cyan-950 text-cyan-300 text-[11px] font-bold border border-cyan-800">Little Specialist • IVF Care</span>
-              <span class="text-xs font-mono text-cyan-400 font-bold">3.9x Patient Volume</span>
-            </div>
-            <div class="layer-3d-1">
-              <h3 class="text-lg font-bold text-white font-heading">Aura Fertility &amp; IVF Specialist Center</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                Empathetic, trust-building educational video campaigns on Meta &amp; YouTube paired with private consultation booking landing pages.
-              </p>
-            </div>
-            <div class="layer-3d-2 grid grid-cols-2 gap-3 py-3 border-y border-slate-800 text-center">
-              <div>
-                <span class="text-[11px] text-slate-400 block">Consultations Booked</span>
-                <span class="text-xl font-bold text-white font-heading">145+ / mo</span>
-              </div>
-              <div>
-                <span class="text-[11px] text-slate-400 block">Trust Rating</span>
-                <span class="text-xl font-bold text-emerald-400 font-heading">4.95 ★</span>
-              </div>
-            </div>
-          </div>
-          <div class="layer-3d-2 pt-4 flex justify-between items-center text-xs">
-            <span class="text-slate-400">YouTube Ads + Patient Funnel</span>
-            <button onclick="openModal('consultation-modal')" class="text-cyan-400 font-semibold hover:underline">Get Similar Results</button>
-          </div>
-        </div>
-
-        <!-- Case 6: Local Retail Chain -->
-        <div class="portfolio-card card-3d p-6 border border-slate-800 flex flex-col justify-between" data-category="local">
-          <div class="space-y-4">
-            <div class="layer-3d-2 flex justify-between items-start">
-              <span class="px-2.5 py-1 rounded bg-blue-950 text-cyan-300 text-[11px] font-bold border border-blue-800">Big Hospitality • Resort &amp; Spa</span>
-              <span class="text-xs font-mono text-emerald-400 font-bold">+290% Footfall</span>
-            </div>
-            <div class="layer-3d-1">
-              <h3 class="text-lg font-bold text-white font-heading">Radisson &amp; Vogue Wellness Spa Chain</h3>
-              <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                Dominating 4 city center locations with Google Maps local citations, geofenced Meta ad promotions, and automated WhatsApp appointment reminders.
-              </p>
-            </div>
-            <div class="layer-3d-2 grid grid-cols-2 gap-3 py-3 border-y border-slate-800 text-center">
-              <div>
-                <span class="text-[11px] text-slate-400 block">Direct Bookings</span>
-                <span class="text-xl font-bold text-white font-heading">580+ / mo</span>
-              </div>
-              <div>
-                <span class="text-[11px] text-slate-400 block">CAC</span>
-                <span class="text-xl font-bold text-cyan-400 font-heading">₹185</span>
-              </div>
-            </div>
-          </div>
-          <div class="layer-3d-2 pt-4 flex justify-between items-center text-xs">
-            <span class="text-slate-400">Local Maps + WhatsApp Engine</span>
-            <button onclick="openModal('consultation-modal')" class="text-cyan-400 font-semibold hover:underline">Get Similar Results</button>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="mt-12 text-center">
-        <a href="case-studies.html" class="inline-flex items-center gap-2 text-sm font-semibold px-6 py-3 rounded-full border border-slate-700 bg-slate-900 hover:border-cyan-500 text-cyan-300 transition-all">
-          <span>Explore In-Depth Case Study Archive</span>
-          <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
       </div>
     </section>
 
@@ -2108,77 +1908,15 @@
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Testimonial 1 -->
-          <div class="glass-panel rounded-2xl p-7 border border-slate-800 space-y-5">
-            <div class="flex items-center gap-1 text-yellow-400">
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
+        <!-- Testimonials Container (Ready for user-provided client names & reviews) -->
+        <div id="testimonials-container">
+          <div class="text-center py-16 px-6 glass-panel rounded-3xl border border-cyan-500/30 max-w-xl mx-auto space-y-3">
+            <div class="w-12 h-12 mx-auto rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+              <i data-lucide="message-square" class="w-6 h-6"></i>
             </div>
-            <p class="text-slate-300 text-sm italic leading-relaxed">
-              "Curafy Digitech transformed our hospital's OPD bookings. Within 60 days, our appointment calendar was fully booked, and our patient acquisition cost dropped by more than 50%."
-            </p>
-            <div class="flex items-center gap-3 pt-3 border-t border-slate-800/80">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center text-white font-bold text-sm">
-                DR
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white">Dr. Rajesh K. Sharma</h4>
-                <p class="text-xs text-slate-400">Medical Director, Apex Superspecialty Hospital</p>
-              </div>
-            </div>
+            <h3 class="text-lg font-bold text-white font-heading">Client Testimonials Ready For Update</h3>
+            <p class="text-xs sm:text-sm text-slate-400">All previous reviews cleared. Ready to display your founder, doctor &amp; CEO testimonials.</p>
           </div>
-
-          <!-- Testimonial 2 -->
-          <div class="glass-panel rounded-2xl p-7 border border-slate-800 space-y-5">
-            <div class="flex items-center gap-1 text-yellow-400">
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-            </div>
-            <p class="text-slate-300 text-sm italic leading-relaxed">
-              "As a retail brand competing against giants, Curafy gave us an unfair digital advantage. Their local Google Maps ranking strategy alone brought us ₹25L+ in direct walk-in sales."
-            </p>
-            <div class="flex items-center gap-3 pt-3 border-t border-slate-800/80">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-sky-600 flex items-center justify-center text-white font-bold text-sm">
-                VM
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white">Vikram Malhotra</h4>
-                <p class="text-xs text-slate-400">Managing Partner, Urban Luxe Retail</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Testimonial 3 -->
-          <div class="glass-panel rounded-2xl p-7 border border-slate-800 space-y-5">
-            <div class="flex items-center gap-1 text-yellow-400">
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-              <i data-lucide="star" class="w-4 h-4 fill-yellow-400"></i>
-            </div>
-            <p class="text-slate-300 text-sm italic leading-relaxed">
-              "Unlike other agencies that boast about 'vanity impressions', Curafy Digitech is genuinely obsessed with our bottom line revenue and qualified pipeline. Extraordinary team!"
-            </p>
-            <div class="flex items-center gap-3 pt-3 border-t border-slate-800/80">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500 to-blue-700 flex items-center justify-center text-white font-bold text-sm">
-                AS
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white">Ananya Sen</h4>
-                <p class="text-xs text-slate-400">Co-Founder, NexaOps Technologies</p>
-              </div>
-            </div>
-          </div>
-
         </div>
 
       </div>
