@@ -1,4 +1,4 @@
-﻿# Curafy Digitech - Digital Growth & Performance Lab
+# Curafy Digitech - Digital Growth & Performance Lab
 
 Curafy Digitech is a premier, futuristic high-contrast digital marketing & performance agency web platform engineered for Hospitals & Clinics, Local Businesses, Startups, and Corporate Enterprises.
 
@@ -13,7 +13,7 @@ Curafy Digitech is a premier, futuristic high-contrast digital marketing & perfo
   4. SEO & Local SEO (Keyword Research, Technical SEO, GBP Optimization)
   5. Website & Landing Pages (High-Conversion UI/UX, Speed Optimized)
 - **Direct Engagement & WhatsApp Integration:**
-  - One-click WhatsApp Call button (`6376566383`)
+  - One-click WhatsApp Call button (`+916376566383`)
   - Direct WhatsApp enquiry modal and audit request forms
 - **Social Proof & Brand Marquee:**
   - Continuous dual-lane marquee showcasing "Little & Big" company partnerships
