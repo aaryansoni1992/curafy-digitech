@@ -363,4 +363,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Helper for menu item selection to trigger sector filter and smooth scroll
+  window.selectSectorFromMenu = function(filterName) {
+    if (sectorSearchInput) {
+      sectorSearchInput.value = '';
+      if (sectorSearchClear) sectorSearchClear.classList.add('hidden');
+    }
+
+    const btn = document.querySelector(`.sector-filter-btn[data-filter="${filterName}"]`);
+    if (btn) {
+      btn.click();
+    } else {
+      filterSectors();
+    }
+
+    const industriesSection = document.getElementById('industries');
+    if (industriesSection) {
+      industriesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Close mobile menu if open
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+    }
+  };
 });

@@ -45,6 +45,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+
+    // Mobile industries submenu toggle
+    const mobileIndustriesToggle = document.getElementById('mobile-industries-toggle');
+    const mobileIndustriesList = document.getElementById('mobile-industries-list');
+    const mobileIndustriesIcon = document.getElementById('mobile-industries-icon');
+
+    if (mobileIndustriesToggle && mobileIndustriesList) {
+      mobileIndustriesToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isOpen = !mobileIndustriesList.classList.contains('hidden');
+        if (isOpen) {
+          mobileIndustriesList.classList.add('hidden');
+          if (mobileIndustriesIcon) mobileIndustriesIcon.style.transform = 'rotate(0deg)';
+        } else {
+          mobileIndustriesList.classList.remove('hidden');
+          if (mobileIndustriesIcon) mobileIndustriesIcon.style.transform = 'rotate(180deg)';
+        }
+      });
+    }
   }
 
   // 2. Sticky Navbar Glass Effect on Scroll

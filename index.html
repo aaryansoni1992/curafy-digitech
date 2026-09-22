@@ -139,7 +139,104 @@
             </div>
           </div>
 
-          <a href="#industries" class="hover:text-cyan-400 transition-colors">Industries</a>
+          <!-- Industries Dropdown Button with 12 Sectors -->
+          <div class="relative group/industries py-2">
+            <button class="flex items-center gap-1 hover:text-cyan-400 transition-colors py-1 focus:outline-none cursor-pointer" aria-haspopup="true" aria-expanded="false">
+              <span>Industries</span>
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform duration-200 group-hover/industries:rotate-180 text-cyan-400"></i>
+            </button>
+
+            <!-- Mega Dropdown Panel with 12 Sectors -->
+            <div class="absolute top-full -left-48 xl:-left-24 w-[780px] pt-2 opacity-0 pointer-events-none group-hover/industries:opacity-100 group-hover/industries:pointer-events-auto transition-all duration-200 z-50">
+              <div class="glass-panel rounded-2xl p-5 border border-cyan-500/30 shadow-2xl bg-[#0A0F1D]/95 backdrop-blur-xl">
+                <div class="flex items-center justify-between pb-3 mb-3 border-b border-slate-800">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-cyan-300 font-heading">12 Specialized Sector Blueprints</span>
+                  </div>
+                  <a href="#industries" onclick="selectSectorFromMenu('all')" class="text-[11px] font-semibold text-slate-400 hover:text-cyan-300 flex items-center gap-1 transition-colors">
+                    Explore Sector Portal <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                  </a>
+                </div>
+                <div class="grid grid-cols-3 gap-2.5 text-xs">
+                  <a href="#industries" onclick="selectSectorFromMenu('healthcare')" class="p-2.5 rounded-xl bg-cyan-950/40 hover:bg-cyan-900/60 border border-cyan-700/50 hover:border-cyan-400 transition-all group/item block">
+                    <div class="flex items-center justify-between">
+                      <span class="text-[10px] font-mono text-cyan-400 font-bold">01.</span>
+                      <span class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-cyan-950 text-cyan-300 border border-cyan-700">Flagship</span>
+                    </div>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block mt-0.5 leading-snug">Hospital, Clinic &amp; Diagnostic</span>
+                    <span class="text-[10px] text-cyan-400/80 block mt-0.5 line-clamp-1">Specialists, Surgeries &amp; OPD</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('real_estate')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">02.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Real Estate</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Builders, Developers &amp; Brokers</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('education')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">03.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Education</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Colleges, Schools &amp; EdTech</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('food_restaurants')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">04.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Food &amp; Restaurants</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Fine Dine, Cafes &amp; Kitchens</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('automobile')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">05.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Automobile</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Dealerships, EV &amp; Car Care</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('beauty_wellness')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">06.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Beauty &amp; Wellness</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Salons, Spas &amp; Aesthetic Clinics</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('fashion')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">07.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Fashion</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Apparel, Boutiques &amp; Stores</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('jewellery')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">08.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Jewellery</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Luxury Showrooms &amp; Bridal</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('professional_services')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">09.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Professional Services</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">CA, Legal &amp; Consulting</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('manufacturing')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">10.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Manufacturing</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">B2B Industrial &amp; Exporters</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('travel_tourism')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">11.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Travel &amp; Tourism</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Tour Packages &amp; Visas</span>
+                  </a>
+
+                  <a href="#industries" onclick="selectSectorFromMenu('events_weddings')" class="p-2.5 rounded-xl bg-slate-900/70 hover:bg-cyan-950/40 border border-slate-800 hover:border-cyan-500/40 transition-all group/item block">
+                    <span class="text-[10px] font-mono text-cyan-400 block font-bold">12.</span>
+                    <span class="font-bold text-white group-hover/item:text-cyan-300 block">Events &amp; Weddings</span>
+                    <span class="text-[10px] text-slate-400 block mt-0.5 line-clamp-1">Planners &amp; Banquet Venues</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <a href="healthcare.html" class="text-cyan-300 hover:text-cyan-200 transition-colors flex items-center gap-1.5">
             <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span> Healthcare &amp; Clinics
           </a>
@@ -220,7 +317,31 @@
           </div>
         </div>
 
-        <a href="#industries" class="hover:text-cyan-400 py-1">Industries</a>
+        <!-- Mobile Industries Collapsible with 12 Sectors -->
+        <div class="border-b border-slate-800/80 pb-2">
+          <button id="mobile-industries-toggle" class="w-full flex items-center justify-between text-left hover:text-cyan-400 py-1 font-medium text-slate-200">
+            <span class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-400"></span>
+              <span>Industries (12 Sectors)</span>
+            </span>
+            <i data-lucide="chevron-down" id="mobile-industries-icon" class="w-4 h-4 transition-transform duration-200 text-cyan-400"></i>
+          </button>
+          <div id="mobile-industries-list" class="hidden pl-3 pt-2 pb-1 space-y-2 border-l border-cyan-500/30 ml-2 mt-1 text-xs text-slate-400">
+            <a href="#industries" onclick="selectSectorFromMenu('healthcare')" class="block text-cyan-300 hover:text-white py-0.5 font-medium"><strong class="text-cyan-400">01.</strong> Hospital, Clinic &amp; Diagnostic</a>
+            <a href="#industries" onclick="selectSectorFromMenu('real_estate')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">02.</strong> Real Estate</a>
+            <a href="#industries" onclick="selectSectorFromMenu('education')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">03.</strong> Education</a>
+            <a href="#industries" onclick="selectSectorFromMenu('food_restaurants')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">04.</strong> Food &amp; Restaurants</a>
+            <a href="#industries" onclick="selectSectorFromMenu('automobile')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">05.</strong> Automobile</a>
+            <a href="#industries" onclick="selectSectorFromMenu('beauty_wellness')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">06.</strong> Beauty &amp; Wellness</a>
+            <a href="#industries" onclick="selectSectorFromMenu('fashion')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">07.</strong> Fashion</a>
+            <a href="#industries" onclick="selectSectorFromMenu('jewellery')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">08.</strong> Jewellery</a>
+            <a href="#industries" onclick="selectSectorFromMenu('professional_services')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">09.</strong> Professional Services</a>
+            <a href="#industries" onclick="selectSectorFromMenu('manufacturing')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">10.</strong> Manufacturing</a>
+            <a href="#industries" onclick="selectSectorFromMenu('travel_tourism')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">11.</strong> Travel &amp; Tourism</a>
+            <a href="#industries" onclick="selectSectorFromMenu('events_weddings')" class="block hover:text-cyan-300 py-0.5"><strong class="text-cyan-400">12.</strong> Events &amp; Weddings</a>
+            <a href="#industries" onclick="selectSectorFromMenu('all')" class="block text-cyan-400 font-semibold pt-1">View Full Sector Portal (All 12) &rarr;</a>
+          </div>
+        </div>
         <a href="healthcare.html" class="text-cyan-400 font-semibold py-1">Specialized: Healthcare &amp; Clinics</a>
         <a href="#calculator" class="hover:text-cyan-400 py-1">Interactive ROI Calculator</a>
         <a href="#case-studies" class="hover:text-cyan-400 py-1">Case Studies &amp; Results</a>
@@ -2819,20 +2940,18 @@
           <div>
             <label class="block font-semibold text-slate-300 mb-1">Business Type / Sector *</label>
             <select name="industry" id="modal-industry" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-cyan-500">
-              <option value="healthcare">Hospital, Clinic &amp; Diagnostic Center</option>
-              <option value="hospitality">Hospitality / Hotels / Resorts</option>
-              <option value="real_estate">Real Estate / Builders / Brokers</option>
-              <option value="education">Education / Coaching / EdTech</option>
-              <option value="food_restaurants">Food / Restaurant / Cafe</option>
-              <option value="automobile">Automobile / Dealership / EV</option>
-              <option value="beauty_wellness">Beauty / Salon / Wellness / Spa</option>
-              <option value="fashion">Fashion / Apparel / D2C Boutique</option>
-              <option value="jewellery">Jewellery / Luxury Showroom</option>
-              <option value="professional_services">Professional Services / CA / Legal</option>
-              <option value="manufacturing">Manufacturing / Industrial B2B</option>
-              <option value="ecommerce">E-Commerce / D2C Brand</option>
-              <option value="travel_tourism">Travel / Tourism / Tour Operator</option>
-              <option value="events_weddings">Events / Wedding Planner / Venue</option>
+              <option value="healthcare">01. Hospital, Clinic &amp; Diagnostic Center</option>
+              <option value="real_estate">02. Real Estate / Builders / Brokers</option>
+              <option value="education">03. Education / Coaching / EdTech</option>
+              <option value="food_restaurants">04. Food / Restaurant / Cafe</option>
+              <option value="automobile">05. Automobile / Dealership / EV</option>
+              <option value="beauty_wellness">06. Beauty / Salon / Wellness / Spa</option>
+              <option value="fashion">07. Fashion / Apparel / D2C Boutique</option>
+              <option value="jewellery">08. Jewellery / Luxury Showroom</option>
+              <option value="professional_services">09. Professional Services / CA / Legal</option>
+              <option value="manufacturing">10. Manufacturing / Industrial B2B</option>
+              <option value="travel_tourism">11. Travel / Tourism / Tour Operator</option>
+              <option value="events_weddings">12. Events / Wedding Planner / Venue</option>
             </select>
           </div>
         </div>
