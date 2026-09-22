@@ -62,6 +62,77 @@ window.openSectorModal = function (sectorValue, ctaGoal) {
   window.openModal('consultation-modal');
 };
 
+// Online Growth Enquiry Selection & Smooth Navigation
+window.selectSectorForEnquiry = function (sectorValue) {
+  const sectorSelect = document.getElementById('enquiry-sector');
+  if (sectorSelect && sectorValue) {
+    let matched = false;
+    for (let opt of sectorSelect.options) {
+      if (opt.value.toLowerCase() === sectorValue.toLowerCase() || 
+          opt.textContent.toLowerCase().includes(sectorValue.toLowerCase())) {
+        sectorSelect.value = opt.value;
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) {
+      sectorSelect.value = sectorValue;
+    }
+  }
+
+  const enquirySection = document.getElementById('enquiry');
+  if (enquirySection) {
+    enquirySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  const form = document.getElementById('home-enquiry-form');
+  if (form) {
+    form.classList.add('ring-2', 'ring-cyan-400', 'transition-all');
+    const firstInput = form.querySelector('input[name="name"]');
+    if (firstInput) {
+      setTimeout(() => firstInput.focus(), 600);
+    }
+    setTimeout(() => {
+      form.classList.remove('ring-2', 'ring-cyan-400');
+    }, 2800);
+  }
+};
+
+window.selectServiceForEnquiry = function (serviceValue) {
+  const serviceSelect = document.getElementById('enquiry-service');
+  if (serviceSelect && serviceValue) {
+    let matched = false;
+    for (let opt of serviceSelect.options) {
+      if (opt.value.toLowerCase() === serviceValue.toLowerCase() || 
+          opt.textContent.toLowerCase().includes(serviceValue.toLowerCase())) {
+        serviceSelect.value = opt.value;
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) {
+      serviceSelect.value = serviceValue;
+    }
+  }
+
+  const enquirySection = document.getElementById('enquiry');
+  if (enquirySection) {
+    enquirySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  const form = document.getElementById('home-enquiry-form');
+  if (form) {
+    form.classList.add('ring-2', 'ring-cyan-400', 'transition-all');
+    const firstInput = form.querySelector('input[name="name"]');
+    if (firstInput) {
+      setTimeout(() => firstInput.focus(), 600);
+    }
+    setTimeout(() => {
+      form.classList.remove('ring-2', 'ring-cyan-400');
+    }, 2800);
+  }
+};
+
 // Global Toast Notification Helper
 window.showToast = function (message, type = 'success') {
   const toast = document.getElementById('notification-toast');
@@ -87,30 +158,40 @@ window.openWhatsAppCall = function (customMsg) {
 
 window.sendEnquiryToWhatsApp = function (formId) {
   const form = document.getElementById(formId);
-  if (!form) return;
+  if (!form) return false;
 
   const name = form.querySelector('[name="name"]')?.value || form.querySelector('input[type="text"]')?.value || 'Prospective Client';
-  const phone = form.querySelector('[name="phone"]')?.value || form.querySelector('input[type="tel"]')?.value || 'Not provided';
+  const phone = form.querySelector('[name="phone"]')?.value || form.querySelector('input[type="tel"]')?.value || '';
   const email = form.querySelector('[name="email"]')?.value || form.querySelector('input[type="email"]')?.value || 'Not provided';
+  const company = form.querySelector('[name="company"]')?.value || 'Not specified';
   const service = form.querySelector('[name="service"]')?.value || form.querySelector('#enquiry-service')?.value || form.querySelector('#modal-service')?.value || 'Digital Marketing';
+  const sectorEl = form.querySelector('[name="sector"]') || form.querySelector('#enquiry-sector') || form.querySelector('#modal-industry');
+  const sector = sectorEl ? (sectorEl.options[sectorEl.selectedIndex]?.text || sectorEl.value) : 'Not specified';
+  const budget = form.querySelector('[name="budget"]')?.value || 'Not specified';
   const notes = form.querySelector('textarea')?.value || 'Please share growth roadmap and pricing.';
 
-  if (!phone || phone === 'Not provided') {
-    window.showToast('Please enter your phone number before sending to WhatsApp.', 'error');
-    return;
+  if (!phone || phone.trim() === '' || phone === 'Not provided') {
+    window.showToast('Please enter your WhatsApp / mobile number before submitting.', 'error');
+    const phoneInput = form.querySelector('[name="phone"]');
+    if (phoneInput) phoneInput.focus();
+    return false;
   }
 
-  const text = `*New Growth Enquiry - Curafy Digitech*\n\n` +
+  const text = `*New Online Growth Enquiry - Curafy Digitech*\n\n` +
     `👤 *Name:* ${name}\n` +
-    `📞 *Phone:* ${phone}\n` +
-    `📧 *Email:* ${email}\n` +
-    `🎯 *Service Required:* ${service}\n` +
-    `📝 *Details/Goals:* ${notes}\n\n` +
-    `Please connect with me on WhatsApp Call/Chat.`;
+    `📞 *Phone / WhatsApp:* ${phone}\n` +
+    `📧 *Work Email:* ${email}\n` +
+    `🏢 *Business / Clinic:* ${company}\n` +
+    `🎯 *Primary Service:* ${service}\n` +
+    `🏭 *Target Sector:* ${sector}\n` +
+    `💰 *Budget / Spend:* ${budget}\n` +
+    `📝 *Growth Goals:* ${notes}\n\n` +
+    `_Sent via Curafy Digitech Portal (curafydigitech.com)_`;
 
   const waUrl = `https://wa.me/916376566383?text=${encodeURIComponent(text)}`;
   window.open(waUrl, '_blank');
-  window.showToast('Opening WhatsApp with your enquiry details...', 'success');
+  window.showToast('🚀 Opening WhatsApp with your enquiry details...', 'success');
+  return true;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -246,6 +327,12 @@ document.addEventListener('DOMContentLoaded', () => {
   leadForms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      if (form.id === 'home-enquiry-form') {
+        const sent = window.sendEnquiryToWhatsApp('home-enquiry-form');
+        if (!sent) return;
+      }
+
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
 
@@ -255,11 +342,11 @@ document.addEventListener('DOMContentLoaded', () => {
           <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-          </svg> Processing Request...
+          </svg> Submitting &amp; Opening WhatsApp...
         `;
       }
 
-      // Simulate API submission with feedback
+      // Simulate submission feedback
       setTimeout(() => {
         if (submitBtn) {
           submitBtn.disabled = false;
@@ -272,8 +359,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         form.reset();
-        window.showToast('🚀 Inquiry received! Our Growth Strategist will contact you within 2 hours with your roadmap.', 'success');
-      }, 1100);
+        window.showToast('🚀 Inquiry received! Details forwarded to WhatsApp (+916376566383).', 'success');
+      }, 1000);
     });
   });
 
