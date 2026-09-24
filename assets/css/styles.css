@@ -163,7 +163,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.2);
 }
 
-/* WhatsApp Floating Button Pulse */
+/* Emerald Pulse Animation */
 @keyframes pulseGreen {
   0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
   70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
@@ -380,7 +380,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
     inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
-/* 3D Green WhatsApp Extruded Button */
+/* 3D Emerald Extruded Button */
 .btn-3d-emerald {
   box-shadow: 
     0 5px 0 #047857,

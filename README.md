@@ -12,9 +12,9 @@ Curafy Digitech is a premier, futuristic high-contrast digital marketing & perfo
   3. Performance Marketing (Meta & Google Ads, Lead Gen, ROAS Tracking)
   4. SEO & Local SEO (Keyword Research, Technical SEO, GBP Optimization)
   5. Website & Landing Pages (High-Conversion UI/UX, Speed Optimized)
-- **Direct Engagement & WhatsApp Integration:**
-  - One-click WhatsApp Call button (`+916376566383`)
-  - Direct WhatsApp enquiry modal and audit request forms
+- **Direct Engagement & Consultation Architecture:**
+  - One-click direct hotline call button (`+916376566383`)
+  - Direct consultation enquiry modal and audit request forms
 - **Social Proof & Brand Marquee:**
   - Continuous dual-lane marquee showcasing "Little & Big" company partnerships
   - Enterprise outcomes & startup metrics

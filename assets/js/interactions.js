@@ -1,6 +1,6 @@
 /**
  * Curafy Digitech - Interactive UI & Modals Controller
- * Handles modals, WhatsApp integration, case studies filtering,
+ * Handles modals, direct communication, case studies filtering,
  * FAQ accordions, and pricing switches.
  */
 
@@ -149,65 +149,29 @@ window.showToast = function (message, type = 'success') {
   }, 4500);
 };
 
-// WhatsApp Call & Message Helpers (Official No: +91 63765 66383)
-window.openWhatsAppCall = function (customMsg) {
-  const msg = customMsg || 'Hello Curafy Digitech! I would like to schedule a WhatsApp call/chat to discuss growing my business.';
-  const waUrl = `https://wa.me/916376566383?text=${encodeURIComponent(msg)}`;
-  window.open(waUrl, '_blank');
+// Direct Phone Call & Consultation Helpers (Official No: +91 63765 66383)
+window.openDirectCall = function () {
+  window.location.href = 'tel:+916376566383';
 };
 
 window.sendEnquiryToWhatsApp = function (formId) {
   const form = document.getElementById(formId);
   if (!form) return false;
 
-  const name = form.querySelector('[name="name"]')?.value || form.querySelector('input[type="text"]')?.value || 'Prospective Client';
   const phone = form.querySelector('[name="phone"]')?.value || form.querySelector('input[type="tel"]')?.value || '';
-  const email = form.querySelector('[name="email"]')?.value || form.querySelector('input[type="email"]')?.value || 'Not provided';
-  const company = form.querySelector('[name="company"]')?.value || 'Not specified';
-  const service = form.querySelector('[name="service"]')?.value || form.querySelector('#enquiry-service')?.value || form.querySelector('#modal-service')?.value || 'Digital Marketing';
-  const sectorEl = form.querySelector('[name="sector"]') || form.querySelector('#enquiry-sector') || form.querySelector('#modal-industry');
-  const sector = sectorEl ? (sectorEl.options[sectorEl.selectedIndex]?.text || sectorEl.value) : 'Not specified';
-  const budget = form.querySelector('[name="budget"]')?.value || 'Not specified';
-  const notes = form.querySelector('textarea')?.value || 'Please share growth roadmap and pricing.';
 
   if (!phone || phone.trim() === '' || phone === 'Not provided') {
-    window.showToast('Please enter your WhatsApp / mobile number before submitting.', 'error');
+    window.showToast('Please enter your phone / mobile number before submitting.', 'error');
     const phoneInput = form.querySelector('[name="phone"]');
     if (phoneInput) phoneInput.focus();
     return false;
   }
 
-  const text = `*New Online Growth Enquiry - Curafy Digitech*\n\n` +
-    `👤 *Name:* ${name}\n` +
-    `📞 *Phone / WhatsApp:* ${phone}\n` +
-    `📧 *Work Email:* ${email}\n` +
-    `🏢 *Business / Clinic:* ${company}\n` +
-    `🎯 *Primary Service:* ${service}\n` +
-    `🏭 *Target Sector:* ${sector}\n` +
-    `💰 *Budget / Spend:* ${budget}\n` +
-    `📝 *Growth Goals:* ${notes}\n\n` +
-    `_Sent via Curafy Digitech Portal (curafydigitech.com)_`;
-
-  const waUrl = `https://wa.me/916376566383?text=${encodeURIComponent(text)}`;
-  window.open(waUrl, '_blank');
-  window.showToast('🚀 Opening WhatsApp with your enquiry details...', 'success');
+  window.showToast('🚀 Consultation inquiry received! Our growth team will contact you shortly.', 'success');
   return true;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. WhatsApp Launcher Logic
-  const whatsappBtns = document.querySelectorAll('.whatsapp-trigger');
-  const whatsappNumber = '916376566383'; // Official Curafy Digitech WhatsApp No.
-
-  whatsappBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const customMsg = btn.getAttribute('data-msg') || 
-        'Hello Curafy Digitech team! I want to schedule a WhatsApp call regarding digital marketing and lead generation.';
-      const waUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(customMsg)}`;
-      window.open(waUrl, '_blank');
-    });
-  });
 
   // 2. Modal Close Buttons (Data attribute & Backdrop click)
   document.querySelectorAll('[data-close-modal]').forEach(btn => {
@@ -328,9 +292,11 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      if (form.id === 'home-enquiry-form') {
-        const sent = window.sendEnquiryToWhatsApp('home-enquiry-form');
-        if (!sent) return;
+      const phoneInput = form.querySelector('[name="phone"]');
+      if (phoneInput && (!phoneInput.value || phoneInput.value.trim() === '')) {
+        window.showToast('Please enter your phone / mobile number before submitting.', 'error');
+        phoneInput.focus();
+        return;
       }
 
       const submitBtn = form.querySelector('button[type="submit"]');
@@ -342,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-          </svg> Submitting &amp; Opening WhatsApp...
+          </svg> Submitting Request...
         `;
       }
 
@@ -359,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         form.reset();
-        window.showToast('🚀 Inquiry received! Details forwarded to WhatsApp (+916376566383).', 'success');
+        window.showToast('🚀 Consultation inquiry received! Our growth team will contact you shortly.', 'success');
       }, 1000);
     });
   });
