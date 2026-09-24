@@ -13,7 +13,7 @@ Curafy Digitech is a premier, futuristic high-contrast digital marketing & perfo
   4. SEO & Local SEO (Keyword Research, Technical SEO, GBP Optimization)
   5. Website & Landing Pages (High-Conversion UI/UX, Speed Optimized)
 - **Direct Engagement & Consultation Architecture:**
-  - One-click direct hotline call button (`+916376566383`)
+  - One-click strategy consultation booking
   - Direct consultation enquiry modal and audit request forms
 - **Social Proof & Brand Marquee:**
   - Continuous dual-lane marquee showcasing "Little & Big" company partnerships
@@ -35,4 +35,4 @@ powershell -ExecutionPolicy Bypass -File .\serve.ps1 -Port 5500
 Then visit: `http://localhost:5500`
 
 ---
-© 2026 Curafy Digitech. All rights reserved. Hotline: +91 6376566383.
+© 2026 Curafy Digitech. All rights reserved. Official Inquiries: growth@curafydigitech.com.

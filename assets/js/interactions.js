@@ -149,9 +149,14 @@ window.showToast = function (message, type = 'success') {
   }, 4500);
 };
 
-// Direct Phone Call & Consultation Helpers (Official No: +91 63765 66383)
+// Direct Inquiry & Consultation Helpers
 window.openDirectCall = function () {
-  window.location.href = 'tel:+916376566383';
+  const enquirySection = document.getElementById('enquiry');
+  if (enquirySection) {
+    enquirySection.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    window.location.href = 'contact.html';
+  }
 };
 
 window.sendEnquiryToWhatsApp = function (formId) {
