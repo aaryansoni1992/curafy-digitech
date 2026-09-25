@@ -276,7 +276,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 6. Interactive Lead Capture Forms (Consultation Modal, Audit Modal, Contact Form)
-  const TARGET_LEAD_EMAIL = 'sonu@curafydigitech.com';
+  const TARGET_LEAD_EMAIL = 'info@curafydigitech.com';
+  const CC_LEAD_EMAIL = 'sonu@curafydigitech.com';
   const leadForms = document.querySelectorAll('form[data-lead-form]');
 
   leadForms.forEach(form => {
@@ -299,7 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
-          </svg> Routing Inquiry...
+          </svg> Routing Inquiry to ${TARGET_LEAD_EMAIL}...
         `;
       }
 
@@ -315,6 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
       payload['_subject'] = `New Growth / Consultation Inquiry (${formIdentifier})`;
       payload['_template'] = 'table';
       payload['_captcha'] = 'false';
+      payload['_cc'] = CC_LEAD_EMAIL;
       payload['Submitted_From_Page'] = window.location.href;
       payload['Submission_Time'] = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
 
@@ -327,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Could not cache lead locally:', err);
       }
 
-      // Send to sonu@curafydigitech.com via FormSubmit AJAX API
+      // Send to info@curafydigitech.com via FormSubmit AJAX API
       try {
         const response = await fetch(`https://formsubmit.co/ajax/${TARGET_LEAD_EMAIL}`, {
           method: 'POST',

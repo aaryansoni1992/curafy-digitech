@@ -35,4 +35,4 @@ powershell -ExecutionPolicy Bypass -File .\serve.ps1 -Port 5500
 Then visit: `http://localhost:5500`
 
 ---
-© 2026 Curafy Digitech. All rights reserved. Official Inquiries: sonu@curafydigitech.com.
+© 2026 Curafy Digitech. All rights reserved. Official Inquiries: info@curafydigitech.com.
