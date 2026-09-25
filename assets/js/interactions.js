@@ -477,4 +477,50 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu.classList.add('hidden');
     }
   };
+
+  // 8. Vertical Scroll Progress Bar & Floating Scroll-to-Top Button at Right Side
+  let progressBar = document.getElementById('scroll-progress-bar');
+  if (!progressBar) {
+    progressBar = document.createElement('div');
+    progressBar.id = 'scroll-progress-bar';
+    document.body.appendChild(progressBar);
+  }
+
+  let scrollTopBtn = document.getElementById('scroll-to-top-btn');
+  if (!scrollTopBtn) {
+    scrollTopBtn = document.createElement('button');
+    scrollTopBtn.id = 'scroll-to-top-btn';
+    scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+    scrollTopBtn.setAttribute('title', 'Back to top');
+    scrollTopBtn.innerHTML = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m18 15-6-6-6 6"/>
+      </svg>
+    `;
+    document.body.appendChild(scrollTopBtn);
+  }
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+
+    if (progressBar) {
+      progressBar.style.height = `${scrollPercent}%`;
+    }
+
+    if (scrollTopBtn) {
+      if (scrollTop > 350) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    }
+  }, { passive: true });
+
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
 });
