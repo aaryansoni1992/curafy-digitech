@@ -140,11 +140,11 @@ window.showToast = function (message, type = 'success') {
   if (!toast || !toastMsg) return;
 
   toastMsg.textContent = message;
-  toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+  toast.classList.remove('-translate-y-12', 'translate-y-24', 'opacity-0', 'pointer-events-none');
   toast.classList.add('translate-y-0', 'opacity-100');
 
   setTimeout(() => {
-    toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('-translate-y-12', 'opacity-0', 'pointer-events-none');
     toast.classList.remove('translate-y-0', 'opacity-100');
   }, 4500);
 };
