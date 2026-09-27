@@ -381,6 +381,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         form.reset();
+
+        // Redirect to Thank You confirmation page
+        setTimeout(() => {
+          window.location.href = 'thank-you.html';
+        }, 500);
       }
     });
   });

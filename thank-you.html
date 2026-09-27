@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You | Curafy Digitech - Growth Enquiry Received</title>
+  <meta name="description" content="Thank you for submitting your growth enquiry with Curafy Digitech. Our senior strategists are reviewing your requirements and will connect within 2 hours.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            curafy: {
+              dark: '#0A0F1D',
+              darker: '#060A14',
+              card: 'rgba(15, 23, 42, 0.8)',
+              border: 'rgba(56, 189, 248, 0.15)',
+              royal: '#2563EB',
+              blue: '#1D4ED8',
+              cyan: '#06B6D4',
+              electric: '#00F0FF',
+              sky: '#38BDF8',
+              emerald: '#10B981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1101242505834988');
+    fbq('track', 'PageView');
+    fbq('track', 'Lead', {
+      content_name: 'Enquiry Thank You Page Confirmation',
+      currency: 'INR'
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1101242505834988&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+
+<body class="bg-[#0A0F1D] text-slate-200 antialiased selection:bg-cyan-500 selection:text-slate-950 bg-grid-pattern relative min-h-screen flex flex-col justify-between">
+
+  <!-- Ambient Cursor Glow & Background Glows -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[140px] animate-orb-1"></div>
+    <div class="absolute top-1/2 right-1/4 w-[600px] h-[600px] bg-cyan-500/15 rounded-full blur-[150px] animate-orb-2"></div>
+    <div class="absolute bottom-10 left-10 w-[450px] h-[450px] bg-blue-600/12 rounded-full blur-[130px] animate-orb-1"></div>
+  </div>
+
+  <!-- Header -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-6">
+        <a href="index.html" class="flex items-center shrink-0 mr-6 lg:mr-10 group">
+          <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-9 sm:h-10 md:h-11 lg:h-12 w-auto transition-transform duration-300 group-hover:scale-105">
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold text-slate-300">
+          <a href="index.html" class="hover:text-cyan-400 transition-colors">Home</a>
+          <a href="services.html" class="hover:text-cyan-400 transition-colors">Services</a>
+          <a href="healthcare.html" class="hover:text-cyan-400 transition-colors">Healthcare &amp; Clinics</a>
+          <a href="case-studies.html" class="hover:text-cyan-400 transition-colors">Case Studies</a>
+          <a href="about.html" class="hover:text-cyan-400 transition-colors">About</a>
+          <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <button onclick="openModal('careers-modal')" class="btn-3d text-xs font-semibold px-4 py-2.5 rounded-full border border-cyan-500/40 hover:border-cyan-400 bg-slate-900/80 hover:bg-cyan-950/60 text-cyan-300 hover:text-white transition-all flex items-center gap-1.5 shrink-0 shadow-sm">
+            <i data-lucide="briefcase" class="w-3.5 h-3.5 text-cyan-400"></i>
+            <span>Careers</span>
+            <span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">Hiring</span>
+          </button>
+          <a href="index.html#enquiry" class="btn-3d shimmer-btn text-xs font-semibold px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shrink-0">
+            Send New Enquiry
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobile-menu-btn" class="p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden header-glass border-b border-slate-800 px-6 pt-4 pb-6 mt-3 space-y-4 max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+        <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Navigation</span>
+        <button id="mobile-menu-close" class="text-slate-400 hover:text-white"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div class="flex flex-col space-y-3 font-medium text-slate-300">
+        <a href="index.html" class="hover:text-cyan-400 py-1">Home</a>
+        <a href="services.html" class="hover:text-cyan-400 py-1">Services</a>
+        <a href="healthcare.html" class="hover:text-cyan-400 py-1">Healthcare &amp; Clinics</a>
+        <a href="case-studies.html" class="hover:text-cyan-400 py-1">Case Studies</a>
+        <a href="about.html" class="hover:text-cyan-400 py-1">About Us</a>
+        <a href="contact.html" class="hover:text-cyan-400 py-1">Contact</a>
+      </div>
+      <div class="pt-4 border-t border-slate-800 space-y-2">
+        <button onclick="openModal('careers-modal')" class="w-full text-center text-xs font-bold py-3 rounded-xl border border-cyan-500/40 bg-slate-900/90 hover:bg-cyan-950/60 text-cyan-300 flex items-center justify-center gap-2">
+          <i data-lucide="briefcase" class="w-4 h-4 text-cyan-400"></i>
+          <span>Careers / We're Hiring</span>
+        </button>
+        <a href="index.html" class="shimmer-btn block text-center w-full py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg">
+          Back to Homepage
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN THANK YOU HERO -->
+  <main class="relative z-10 pt-36 pb-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex-1 flex flex-col justify-center">
+
+    <div class="stage-3d space-y-8">
+      
+      <!-- Top Card: Success Celebration -->
+      <div class="card-3d glass-panel rounded-3xl p-8 sm:p-12 md:p-14 border border-emerald-500/40 glow-border text-center relative overflow-hidden shadow-2xl">
+        
+        <!-- Glowing background aura -->
+        <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="layer-3d-2 space-y-6 max-w-2xl mx-auto">
+          
+          <!-- Animated Checkmark Emblem -->
+          <div class="relative w-20 h-20 sm:w-24 sm:h-24 mx-auto">
+            <div class="absolute inset-0 rounded-full bg-emerald-500/20 border-2 border-emerald-400/50 animate-ping"></div>
+            <div class="relative w-full h-full rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400 flex items-center justify-center text-white shadow-xl shadow-emerald-500/30">
+              <i data-lucide="check" class="w-10 h-10 sm:w-12 sm:h-12 stroke-[3]"></i>
+            </div>
+          </div>
+
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-950/80 border border-emerald-500/50 text-xs font-bold text-emerald-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Enquiry Successfully Submitted &bull; Details Logged</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold font-heading text-white leading-tight">
+            Thank You! We’ve Received Your <span class="text-gradient-neon">Growth Details.</span>
+          </h1>
+
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Your inquiry has been safely routed to our growth intelligence directors at <strong class="text-cyan-300 font-mono">info@curafydigitech.com</strong>. We are analyzing your industry requirements and constructing a custom revenue acceleration blueprint for you.
+          </p>
+
+          <!-- SLA Quick Summary Banner -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 text-left text-xs">
+            <div class="flex items-center gap-3 p-2">
+              <div class="w-9 h-9 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Response SLA</span>
+                <span class="text-white font-bold">Under 2 hrs (Mon–Sat)</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2">
+              <div class="w-9 h-9 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center shrink-0">
+                <i data-lucide="mail-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Official Contact</span>
+                <span class="text-cyan-300 font-mono font-bold truncate">info@curafydigitech.com</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 p-2">
+              <div class="w-9 h-9 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="text-[10px] text-slate-400 block font-semibold uppercase">Confidentiality</span>
+                <span class="text-emerald-400 font-bold">100% Privacy Protected</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- What Happens Next: 3-Step Process Stage -->
+      <div class="card-3d glass-panel rounded-3xl p-6 sm:p-8 md:p-10 border border-slate-800 space-y-6">
+        <div class="layer-3d-2 space-y-2 text-center sm:text-left">
+          <div class="flex items-center justify-center sm:justify-start gap-2">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-700 uppercase tracking-wider font-mono">Next Steps</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white font-heading">What Happens Next?</h2>
+          <p class="text-xs sm:text-sm text-slate-400">Here is our systematic onboarding &amp; strategy review roadmap:</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+          
+          <!-- Step 1 -->
+          <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3 relative group hover:border-cyan-500/50 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-bold font-mono text-sm flex items-center justify-center">
+              01
+            </div>
+            <h3 class="text-base font-bold text-white font-heading">Competitor &amp; Asset Audit</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Our specialists review your website speed, current ad performance, local Google ranking, and conversion bottlenecks to spot fast-win opportunities.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3 relative group hover:border-sky-500/50 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 font-bold font-mono text-sm flex items-center justify-center">
+              02
+            </div>
+            <h3 class="text-base font-bold text-white font-heading">Custom Growth Blueprint</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              We structure a tailored strategy document outlining target audience personas, ad spend ROAS projections, and timeline milestones.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="p-5 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-3 relative group hover:border-emerald-500/50 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-bold font-mono text-sm flex items-center justify-center">
+              03
+            </div>
+            <h3 class="text-base font-bold text-white font-heading">Priority Strategy Call</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              A Senior Growth Strategist connects with you via phone or email within 2 hours to walk you through recommendations and answer all questions.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Action Links -->
+        <div class="pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center justify-center gap-3">
+            <a href="index.html" class="btn-3d shimmer-btn px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs flex items-center gap-2">
+              <i data-lucide="home" class="w-4 h-4"></i> Return to Homepage
+            </a>
+            <a href="case-studies.html" class="btn-3d px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-cyan-300 border border-cyan-500/40 font-semibold text-xs flex items-center gap-2">
+              <i data-lucide="award" class="w-4 h-4"></i> View Case Studies
+            </a>
+            <a href="services.html" class="px-5 py-3 rounded-xl text-slate-300 hover:text-white text-xs font-semibold hover:underline">
+              Explore 9 Core Services &rarr;
+            </a>
+          </div>
+
+          <div class="text-center sm:text-right text-xs text-slate-400">
+            <span>Have an urgent question?</span><br>
+            <a href="mailto:info@curafydigitech.com" class="text-cyan-400 font-mono font-bold hover:underline">info@curafydigitech.com</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#060A14] border-t border-slate-800 text-slate-400 text-xs py-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-3">
+      <a href="index.html" class="inline-block">
+        <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-10 sm:h-11 w-auto mx-auto">
+      </a>
+      <div class="flex flex-wrap items-center justify-center gap-4 text-slate-400">
+        <a href="mailto:info@curafydigitech.com" class="hover:text-cyan-400">info@curafydigitech.com</a>
+        <span>&bull;</span>
+        <span>Response Time: Under 2 hrs</span>
+        <span>&bull;</span>
+        <a href="contact.html" class="hover:text-cyan-400">Contact Desk</a>
+      </div>
+      <p class="text-slate-500">&copy; 2026 Curafy Digitech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Notification Toast (Top-Right) -->
+  <div id="notification-toast" class="fixed top-6 right-6 z-50 transform -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
+    <div class="glass-panel border border-cyan-500/50 rounded-xl p-4 shadow-2xl flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+        <i data-lucide="check-circle" class="w-5 h-5"></i>
+      </div>
+      <p id="toast-message" class="text-xs text-white font-medium">Inquiry sent successfully!</p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/tilt3d.js"></script>
+  <script src="assets/js/mitra-ai.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
