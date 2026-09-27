@@ -329,6 +329,26 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Could not cache lead locally:', err);
       }
 
+      // Meta Pixel Conversion Event Tracking
+      try {
+        if (typeof window.fbq === 'function') {
+          if (form.id === 'careers-modal-form') {
+            window.fbq('track', 'SubmitApplication', {
+              content_name: 'Careers Job Application',
+              position: payload['position'] || 'General Applicant'
+            });
+          } else {
+            window.fbq('track', 'Lead', {
+              content_name: form.id || 'Website Growth Lead',
+              service: payload['service'] || 'Digital Marketing',
+              currency: 'INR'
+            });
+          }
+        }
+      } catch (fbqErr) {
+        console.warn('Meta Pixel tracking error:', fbqErr);
+      }
+
       // Send to info@curafydigitech.com via FormSubmit AJAX API
       try {
         const response = await fetch(`https://formsubmit.co/ajax/${TARGET_LEAD_EMAIL}`, {

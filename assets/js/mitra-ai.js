@@ -843,6 +843,17 @@
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(body)
       });
+      // Fire Meta Pixel Conversion Event
+      try {
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', 'Lead', {
+            content_name: 'Mitra AI Messenger Lead',
+            currency: 'INR'
+          });
+        }
+      } catch (fbqErr) {
+        console.warn('Mitra Meta Pixel tracking error:', fbqErr);
+      }
     } catch (err) {
       console.warn('Mitra lead dispatch notice:', err);
     }
