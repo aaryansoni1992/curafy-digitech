@@ -51,6 +51,7 @@
 
   // Quick Action Buttons
   const QUICK_CHIPS = [
+    { label: '💬 WhatsApp Chat', query: 'I want to chat on WhatsApp directly with Curafy Digitech.' },
     { label: '💼 Job Openings & Hiring', query: 'What career and job openings are available at Curafy Digitech?' },
     { label: '📈 Scale My Business', query: 'How can Curafy Digitech help grow my business and get more leads?' },
     { label: '🏥 Healthcare & Clinic Marketing', query: 'Tell me about patient acquisition for clinics and hospitals.' },
@@ -475,11 +476,12 @@
       return handleWebsiteQuery(q);
     }
 
-    // 7. BOOK CONSULTATION / CONTACT
+    // 7. BOOK CONSULTATION / CONTACT / WHATSAPP
     if (
       q.includes('consultation') || q.includes('book') || q.includes('call') ||
       q.includes('contact') || q.includes('talk') || q.includes('meeting') ||
-      q.includes('phone') || q.includes('email') || q.includes('connect')
+      q.includes('phone') || q.includes('email') || q.includes('connect') ||
+      q.includes('whatsapp') || q.includes('wa') || q.includes('mobile') || q.includes('number')
     ) {
       return handleConsultationQuery(q);
     }
@@ -712,23 +714,30 @@
   function handleConsultationQuery(q) {
     const html = `
       <div class="space-y-2">
-        <p class="font-bold text-white">Book Your 1-on-1 Growth Strategy Session:</p>
+        <p class="font-bold text-white">Connect with Curafy Digitech Strategy Desk:</p>
         <p class="text-[11px] text-slate-300">
           Connect directly with a Senior Growth Strategist to analyze your business goals, target customer persona, and ad roadmap.
         </p>
-        <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] space-y-1">
+        <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-[11px] space-y-1.5">
           <div class="text-cyan-300">🕒 <strong>Response Time:</strong> Under 2 hrs (Mon–Sat)</div>
+          <div class="text-emerald-400">💬 <strong>WhatsApp:</strong> <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="hover:underline font-mono text-white font-bold">+91 63765 66383</a></div>
           <div class="text-slate-300">✉️ <strong>Official Desk:</strong> <span class="font-mono text-white">${TARGET_EMAIL}</span></div>
         </div>
-        <button onclick="window.openModal && window.openModal('consultation-modal')" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg">
-          Click Here to Book Consultation Now
-        </button>
+        <div class="space-y-2 pt-1">
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-xs shadow-lg text-center flex items-center justify-center gap-1.5 hover:brightness-110 transition-all">
+            💬 Chat Instantly on WhatsApp (+91 63765 66383)
+          </a>
+          <button onclick="window.openModal && window.openModal('consultation-modal')" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-xs shadow-lg hover:brightness-110 transition-all">
+            Click Here to Book Consultation Form
+          </button>
+        </div>
       </div>
     `;
 
     return {
       html,
       followUpChips: [
+        { label: '💬 WhatsApp Chat', query: 'Connect on WhatsApp' },
         { label: '💼 Career Opportunities', query: 'Tell me about jobs at Curafy Digitech' },
         { label: '🏥 Healthcare Portal', query: 'Tell me about healthcare services' }
       ]
