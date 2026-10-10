@@ -16,19 +16,19 @@
         extend: {
           colors: {
             curafy: {
-              canvas: '#070B18',
-              surface: '#0C1226',
-              elevated: '#111A36',
-              card: '#0F172A',
-              border: 'rgba(139, 92, 246, 0.2)',
-              violet: '#8B5CF6',
-              purple: '#7C3AED',
-              indigo: '#6366F1',
-              accent: '#A78BFA',
-              cyan: '#00F0FF',
-              sky: '#38BDF8',
-              slate: '#94A3B8',
-              text: '#F8FAFC'
+              canvas: '#FFFFFF',
+              surface: '#F8FAFC',
+              elevated: '#F1F5F9',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+              blue: '#2563EB',
+              royal: '#1D4ED8',
+              navy: '#0F172A',
+              accent: '#3B82F6',
+              sky: '#0284C7',
+              cyan: '#06B6D4',
+              slate: '#475569',
+              text: '#0F172A'
             }
           },
           fontFamily: {
@@ -43,7 +43,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Styles: Dark Navy + Violet Glassmorphism -->
+  <!-- Custom Styles: Clean White Background + Corporate Blue Typography -->
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- Meta Pixel Code with Lead Event Tracking -->
@@ -69,21 +69,31 @@
   <!-- End Meta Pixel Code -->
 </head>
 
-<body class="bg-[#070B18] text-slate-300 antialiased selection:bg-violet-600 selection:text-white bg-grid-pattern relative min-h-screen flex flex-col justify-between">
+<body class="bg-white text-slate-700 antialiased selection:bg-blue-600 selection:text-white bg-grid-pattern relative min-h-screen flex flex-col justify-between">
+
+  <!-- Ambient Cursor Glow for Desktop -->
+  <div id="ambient-cursor-glow" class="pointer-events-none fixed top-0 left-0 w-[550px] h-[550px] rounded-full bg-gradient-to-tr from-blue-400/10 via-indigo-400/8 to-sky-300/10 blur-[120px] z-0 hidden lg:block"></div>
+
+  <!-- Background Ambient Glow Orbs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-32 left-1/4 w-[650px] h-[650px] bg-blue-300/15 rounded-full blur-[160px] animate-orb-1"></div>
+    <div class="absolute top-1/3 -right-40 w-[600px] h-[600px] bg-indigo-200/15 rounded-full blur-[160px] animate-orb-2"></div>
+    <div class="absolute bottom-10 -left-40 w-[550px] h-[550px] bg-sky-200/15 rounded-full blur-[140px] animate-orb-1"></div>
+  </div>
 
   <!-- Header -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
       <a href="index.html" class="flex items-center shrink-0 group">
         <img src="assets/images/logo.svg" alt="Curafy Digitech Logo" class="h-10 sm:h-11 w-auto transition-transform duration-300 group-hover:scale-105">
       </a>
 
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20just%20submitted%20my%20enquiry%20details%20and%20wanted%20to%20connect%20directly." target="_blank" rel="noopener noreferrer" class="btn-3d text-xs font-semibold px-3.5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 border border-emerald-400/40 text-white flex items-center gap-1.5 shadow-sm transition-all" aria-label="WhatsApp Chat">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20just%20submitted%20my%20enquiry%20details%20and%20wanted%20to%20connect%20directly." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3.5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shadow-sm transition-all whatsapp-pulse" aria-label="WhatsApp Chat">
           <i data-lucide="message-circle" class="w-4 h-4 text-emerald-100"></i>
           <span>WhatsApp Chat</span>
         </a>
-        <a href="index.html" class="text-xs font-semibold text-slate-300 hover:text-violet-400 transition-colors">
+        <a href="index.html" class="text-xs font-semibold text-blue-600 hover:text-blue-800 transition-colors">
           Return Home &rarr;
         </a>
       </div>
@@ -93,50 +103,50 @@
   <!-- Confirmation Card Main -->
   <main class="relative z-10 pt-36 pb-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto text-center space-y-8 flex-1 flex flex-col justify-center">
     
-    <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-violet-500/30 shadow-2xl space-y-6 glow-border">
+    <div class="glass-panel rounded-3xl p-8 sm:p-12 border border-slate-200 bg-white shadow-xl space-y-6">
       
-      <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mx-auto shadow-lg shadow-emerald-500/20">
+      <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto shadow-md">
         <i data-lucide="check-circle" class="w-8 h-8"></i>
       </div>
 
       <div class="space-y-2">
-        <span class="px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/30 text-emerald-400 text-xs font-bold font-heading">
+        <span class="px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold font-heading">
           Enquiry Received
         </span>
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-white font-heading">
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 font-heading">
           Thank You! We Have Received Your Details
         </h1>
-        <p class="text-sm sm:text-base text-slate-300 max-w-lg mx-auto leading-relaxed">
+        <p class="text-sm sm:text-base text-slate-600 max-w-lg mx-auto leading-relaxed">
           Your inquiry has been routed directly to our growth directors. We will review your requirements and reach out promptly.
         </p>
       </div>
 
       <!-- Quick Action Cards -->
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-left">
-        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
-          <span class="text-slate-400 font-bold block uppercase tracking-wider text-[10px] text-emerald-400">Prefer Immediate Discussion?</span>
-          <p class="text-slate-300">Message us directly on WhatsApp with your project brief.</p>
-          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20just%20submitted%20my%20enquiry%20details%20and%20wanted%20to%20connect%20directly." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-emerald-400 font-bold hover:underline pt-1">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+          <span class="font-bold block uppercase tracking-wider text-[10px] text-emerald-600">Prefer Immediate Discussion?</span>
+          <p class="text-slate-600">Message us directly on WhatsApp with your project brief.</p>
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20just%20submitted%20my%20enquiry%20details%20and%20wanted%20to%20connect%20directly." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-emerald-600 font-bold hover:underline pt-1">
             <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
             <span>Chat on WhatsApp (+91 63765 66383)</span>
           </a>
         </div>
 
-        <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 space-y-1.5">
-          <span class="text-slate-400 font-bold block uppercase tracking-wider text-[10px] text-violet-400">Official Confirmation</span>
-          <p class="text-slate-300">Direct inquiries: <span class="text-white font-mono">info@curafydigitech.com</span></p>
-          <a href="mailto:info@curafydigitech.com" class="inline-flex items-center gap-1.5 text-violet-400 font-bold hover:underline pt-1">
+        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5">
+          <span class="font-bold block uppercase tracking-wider text-[10px] text-blue-600">Official Confirmation</span>
+          <p class="text-slate-600">Direct inquiries: <span class="text-slate-900 font-mono">info@curafydigitech.com</span></p>
+          <a href="mailto:info@curafydigitech.com" class="inline-flex items-center gap-1.5 text-blue-600 font-bold hover:underline pt-1">
             <i data-lucide="mail" class="w-3.5 h-3.5"></i>
             <span>Send Email Reference</span>
           </a>
         </div>
       </div>
 
-      <div class="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-center gap-3">
+      <div class="pt-4 border-t border-slate-100 flex flex-wrap items-center justify-center gap-3">
         <a href="index.html" class="btn-primary-gradient shimmer-btn px-6 py-3 rounded-xl font-bold text-xs text-white shadow-lg">
           Back to Homepage
         </a>
-        <a href="services.html" class="px-5 py-3 rounded-xl font-semibold text-xs bg-slate-900 border border-slate-700 text-slate-300 hover:text-white">
+        <a href="services.html" class="px-5 py-3 rounded-xl font-semibold text-xs bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-200 transition-colors">
           Explore Services
         </a>
       </div>
@@ -145,10 +155,10 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-[#050814] border-t border-slate-800/80 text-slate-500 text-[11px] py-6 text-center">
+  <!-- Grounding Dark Navy Command Footer -->
+  <footer class="bg-[#0F172A] border-t border-slate-800 text-slate-400 text-[11px] py-6 text-center">
     <div class="max-w-7xl mx-auto px-4">
-      <p>&copy; 2026 Curafy Digitech. All rights reserved. | <a href="https://www.curafydigitech.com" class="text-slate-400">www.curafydigitech.com</a> | +91 63765 66383</p>
+      <p>&copy; 2026 Curafy Digitech. All rights reserved. | <a href="https://www.curafydigitech.com" class="text-blue-400 hover:underline">www.curafydigitech.com</a> | +91 63765 66383</p>
     </div>
   </footer>
 

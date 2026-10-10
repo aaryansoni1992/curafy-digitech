@@ -17,19 +17,19 @@
         extend: {
           colors: {
             curafy: {
-              canvas: '#070B18',
-              surface: '#0C1226',
-              elevated: '#111A36',
-              card: '#0F172A',
-              border: 'rgba(139, 92, 246, 0.2)',
-              violet: '#8B5CF6',
-              purple: '#7C3AED',
-              indigo: '#6366F1',
-              accent: '#A78BFA',
-              cyan: '#00F0FF',
-              sky: '#38BDF8',
-              slate: '#94A3B8',
-              text: '#F8FAFC'
+              canvas: '#FFFFFF',
+              surface: '#F8FAFC',
+              elevated: '#F1F5F9',
+              card: '#FFFFFF',
+              border: '#E2E8F0',
+              blue: '#2563EB',
+              royal: '#1D4ED8',
+              navy: '#0F172A',
+              accent: '#3B82F6',
+              sky: '#0284C7',
+              cyan: '#06B6D4',
+              slate: '#475569',
+              text: '#0F172A'
             }
           },
           fontFamily: {
@@ -44,7 +44,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Custom Styles: Dark Navy + Violet Glassmorphism -->
+  <!-- Custom Styles: Clean White Background + Corporate Blue Typography -->
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- Meta Pixel Code -->
@@ -66,10 +66,20 @@
   <!-- End Meta Pixel Code -->
 </head>
 
-<body class="bg-[#070B18] text-slate-300 antialiased selection:bg-violet-600 selection:text-white bg-grid-pattern relative">
+<body class="bg-white text-slate-700 antialiased selection:bg-blue-600 selection:text-white bg-grid-pattern relative">
+
+  <!-- Ambient Cursor Glow for Desktop -->
+  <div id="ambient-cursor-glow" class="pointer-events-none fixed top-0 left-0 w-[550px] h-[550px] rounded-full bg-gradient-to-tr from-blue-400/10 via-indigo-400/8 to-sky-300/10 blur-[120px] z-0 hidden lg:block"></div>
+
+  <!-- Background Ambient Glow Orbs -->
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+    <div class="absolute -top-32 left-1/4 w-[650px] h-[650px] bg-blue-300/15 rounded-full blur-[160px] animate-orb-1"></div>
+    <div class="absolute top-1/3 -right-40 w-[600px] h-[600px] bg-indigo-200/15 rounded-full blur-[160px] animate-orb-2"></div>
+    <div class="absolute bottom-10 -left-40 w-[550px] h-[550px] bg-sky-200/15 rounded-full blur-[140px] animate-orb-1"></div>
+  </div>
 
   <!-- Navigation Header -->
-  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between gap-4">
         
@@ -79,20 +89,20 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-sm font-medium text-slate-300 shrink-0">
-          <a href="index.html" class="hover:text-violet-400 transition-colors py-1">Home</a>
-          <a href="index.html#services" class="hover:text-violet-400 transition-colors py-1">Services</a>
-          <a href="index.html#industries" class="hover:text-violet-400 transition-colors py-1">Industries</a>
-          <a href="index.html#why-curafy" class="hover:text-violet-400 transition-colors py-1">Why Curafy</a>
-          <a href="index.html#how-we-work" class="hover:text-violet-400 transition-colors py-1">Process</a>
-          <a href="index.html#portfolio" class="hover:text-violet-400 transition-colors py-1">Portfolio</a>
-          <a href="index.html#about" class="hover:text-violet-400 transition-colors py-1">About</a>
-          <a href="contact.html" class="text-white font-semibold text-violet-400 border-b border-violet-400 pb-0.5">Contact</a>
+        <nav class="hidden lg:flex items-center space-x-6 xl:space-x-8 text-sm font-semibold text-slate-700 shrink-0">
+          <a href="index.html" class="hover:text-blue-600 transition-colors py-1">Home</a>
+          <a href="services.html" class="hover:text-blue-600 transition-colors py-1">Services</a>
+          <a href="index.html#industries" class="hover:text-blue-600 transition-colors py-1">Industries</a>
+          <a href="index.html#why-curafy" class="hover:text-blue-600 transition-colors py-1">Why Curafy</a>
+          <a href="index.html#how-we-work" class="hover:text-blue-600 transition-colors py-1">Process</a>
+          <a href="index.html#portfolio" class="hover:text-blue-600 transition-colors py-1">Portfolio</a>
+          <a href="about.html" class="hover:text-blue-600 transition-colors py-1">About</a>
+          <a href="contact.html" class="text-blue-600 font-bold border-b-2 border-blue-600 pb-0.5">Contact</a>
         </nav>
 
         <!-- Header Actions -->
         <div class="hidden sm:flex items-center gap-3">
-          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="btn-3d text-xs font-semibold px-3.5 py-2.5 rounded-full bg-emerald-600/90 hover:bg-emerald-500 border border-emerald-400/40 text-white flex items-center gap-1.5 shrink-0 shadow-sm transition-all whatsapp-pulse" aria-label="WhatsApp Chat">
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3.5 py-2.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 shrink-0 shadow-sm transition-all whatsapp-pulse" aria-label="WhatsApp Chat">
             <i data-lucide="message-circle" class="w-4 h-4 text-emerald-100"></i>
             <span>WhatsApp Us</span>
           </a>
@@ -104,10 +114,10 @@
 
         <!-- Mobile Menu Toggle Button -->
         <div class="lg:hidden flex items-center gap-2">
-          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="sm:hidden p-2 text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 rounded-xl" aria-label="WhatsApp">
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="sm:hidden p-2 text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-xl" aria-label="WhatsApp">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
           </a>
-          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-900/80 border border-violet-500/30 text-slate-200 hover:text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 focus:outline-none" aria-label="Toggle Navigation Menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -116,26 +126,26 @@
     </div>
 
     <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden lg:hidden px-5 pt-4 pb-6 mt-3 border-b border-violet-500/20 shadow-2xl max-h-[85vh] overflow-y-auto">
-      <div class="flex justify-between items-center pb-3 border-b border-slate-800">
-        <span class="text-xs font-bold uppercase tracking-widest text-violet-400 font-heading">Navigation Menu</span>
-        <button id="mobile-menu-close" class="text-slate-400 hover:text-white p-1" aria-label="Close Mobile Menu">
+    <div id="mobile-menu" class="hidden lg:hidden px-5 pt-4 pb-6 mt-3 bg-white border-b border-slate-200 shadow-2xl max-h-[85vh] overflow-y-auto">
+      <div class="flex justify-between items-center pb-3 border-b border-slate-100">
+        <span class="text-xs font-bold uppercase tracking-widest text-blue-600 font-heading">Navigation Menu</span>
+        <button id="mobile-menu-close" class="text-slate-500 hover:text-slate-900 p-1" aria-label="Close Mobile Menu">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="flex flex-col space-y-3 font-medium text-slate-200 pt-3 text-sm">
-        <a href="index.html" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="index.html#services" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="index.html#industries" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>Industries</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="index.html#why-curafy" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>Why Curafy</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="index.html#how-we-work" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>How We Work</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="index.html#portfolio" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>Portfolio</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="index.html#about" class="hover:text-violet-400 py-1.5 flex items-center justify-between"><span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i></a>
-        <a href="contact.html" class="text-violet-400 py-1.5 flex items-center justify-between font-bold"><span>Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-violet-400"></i></a>
+      <div class="flex flex-col space-y-3 font-semibold text-slate-700 pt-3 text-sm">
+        <a href="index.html" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="services.html" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="index.html#industries" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Industries</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="index.html#why-curafy" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Why Curafy</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="index.html#how-we-work" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>How We Work</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="index.html#portfolio" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Portfolio</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="about.html" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="contact.html" class="text-blue-600 py-1.5 flex items-center justify-between font-bold"><span>Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-blue-600"></i></a>
       </div>
 
-      <div class="pt-5 mt-4 border-t border-slate-800 space-y-2.5">
-        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white flex items-center justify-center gap-2 shadow-lg">
+      <div class="pt-5 mt-4 border-t border-slate-100 space-y-2.5">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-sm">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
           <span>Chat on WhatsApp (+91 63765 66383)</span>
         </a>
@@ -147,11 +157,11 @@
     
     <!-- Hero Banner -->
     <div class="text-center max-w-3xl mx-auto space-y-4 pt-4">
-      <span class="px-3.5 py-1 rounded-full badge-violet text-xs font-bold font-heading">Direct Contact &amp; Consultation</span>
-      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-white tracking-tight">
-        Let's Build Your <span class="text-gradient-violet">Digital Growth Strategy</span>
+      <span class="px-3.5 py-1 rounded-full badge-blue text-xs font-bold font-heading">Direct Contact &amp; Consultation</span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 tracking-tight">
+        Let's Build Your <span class="text-gradient-blue">Digital Growth Strategy</span>
       </h1>
-      <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+      <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
         Have questions about scaling your digital presence or need an experienced growth partner? Connect with Curafy Digitech directly.
       </p>
     </div>
@@ -163,60 +173,60 @@
       <div class="lg:col-span-5 space-y-5">
         
         <!-- WhatsApp Priority Card -->
-        <div class="glass-card p-6 space-y-3 border-emerald-500/30">
+        <div class="glass-card p-6 space-y-3 border-emerald-200 bg-white shadow-sm">
           <div class="flex items-center justify-between">
-            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center">
+            <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
               <i data-lucide="message-circle" class="w-5 h-5"></i>
             </div>
-            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">Fastest Response</span>
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Fastest Response</span>
           </div>
           <div>
-            <h3 class="text-base font-bold text-white font-heading">WhatsApp Priority Chat</h3>
-            <p class="text-xs text-slate-400 mt-1">Direct message our growth team for immediate project inquiries.</p>
+            <h3 class="text-base font-bold text-slate-900 font-heading">WhatsApp Priority Chat</h3>
+            <p class="text-xs text-slate-500 mt-1">Direct message our growth team for immediate project inquiries.</p>
           </div>
-          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 pt-1">
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-600 hover:text-emerald-700 pt-1">
             <span>+91 63765 66383</span>
             <i data-lucide="external-link" class="w-4 h-4"></i>
           </a>
         </div>
 
         <!-- Phone Call Card -->
-        <div class="glass-card p-6 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-violet-600/20 border border-violet-500/40 text-violet-400 flex items-center justify-center">
+        <div class="glass-card p-6 space-y-3 border-slate-200 bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center">
             <i data-lucide="phone-call" class="w-5 h-5"></i>
           </div>
           <div>
-            <h3 class="text-base font-bold text-white font-heading">Direct Phone</h3>
-            <p class="text-xs text-slate-400 mt-1">Speak with our strategists directly.</p>
+            <h3 class="text-base font-bold text-slate-900 font-heading">Direct Phone</h3>
+            <p class="text-xs text-slate-500 mt-1">Speak with our strategists directly.</p>
           </div>
-          <a href="tel:+916376566383" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-violet-400 pt-1">
+          <a href="tel:+916376566383" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-blue-600 pt-1">
             <span>+91 63765 66383</span>
           </a>
         </div>
 
         <!-- Email Card -->
-        <div class="glass-card p-6 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 border border-indigo-500/40 text-indigo-400 flex items-center justify-center">
+        <div class="glass-card p-6 space-y-3 border-slate-200 bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 text-indigo-600 flex items-center justify-center">
             <i data-lucide="mail" class="w-5 h-5"></i>
           </div>
           <div>
-            <h3 class="text-base font-bold text-white font-heading">Official Email</h3>
-            <p class="text-xs text-slate-400 mt-1">Send RFP briefs and formal commercial inquiries.</p>
+            <h3 class="text-base font-bold text-slate-900 font-heading">Official Email</h3>
+            <p class="text-xs text-slate-500 mt-1">Send RFP briefs and formal commercial inquiries.</p>
           </div>
-          <a href="mailto:info@curafydigitech.com" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-indigo-400 pt-1">
+          <a href="mailto:info@curafydigitech.com" class="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-blue-600 pt-1">
             <span>info@curafydigitech.com</span>
           </a>
         </div>
 
         <!-- Agency Location Card -->
-        <div class="glass-card p-6 space-y-3">
-          <div class="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/40 text-purple-400 flex items-center justify-center">
+        <div class="glass-card p-6 space-y-3 border-slate-200 bg-white shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-sky-50 border border-sky-200 text-sky-600 flex items-center justify-center">
             <i data-lucide="map-pin" class="w-5 h-5"></i>
           </div>
           <div>
-            <h3 class="text-base font-bold text-white font-heading">Headquarters</h3>
-            <p class="text-xs text-slate-300 mt-1 font-medium">India</p>
-            <p class="text-[11px] text-slate-400 mt-0.5">Serving clients nationally and globally across digital channels.</p>
+            <h3 class="text-base font-bold text-slate-900 font-heading">Headquarters</h3>
+            <p class="text-xs text-slate-800 mt-1 font-semibold">India</p>
+            <p class="text-[11px] text-slate-500 mt-0.5">Serving clients nationally and globally across digital channels.</p>
           </div>
         </div>
 
@@ -224,10 +234,10 @@
 
       <!-- Right Form (7 Cols) -->
       <div class="lg:col-span-7">
-        <div class="glass-panel rounded-3xl p-7 sm:p-9 border border-violet-500/30 space-y-6">
+        <div class="glass-panel rounded-3xl p-7 sm:p-9 border border-slate-200 bg-white shadow-md space-y-6">
           <div class="space-y-1">
-            <h2 class="text-2xl font-bold text-white font-heading">Send an Enquiry</h2>
-            <p class="text-xs text-slate-400">Please provide details regarding your business goals and we will respond promptly.</p>
+            <h2 class="text-2xl font-bold text-slate-900 font-heading">Send an Enquiry</h2>
+            <p class="text-xs text-slate-500">Please provide details regarding your business goals and we will respond promptly.</p>
           </div>
 
           <!-- Form connected to FormSubmit and Meta Pixel -->
@@ -239,25 +249,25 @@
             <input type="hidden" name="_next" value="thank-you.html">
 
             <div>
-              <label class="block font-semibold text-slate-300 mb-1">Your Full Name *</label>
-              <input type="text" name="name" required placeholder="e.g. Vikram Sharma" class="w-full px-4 py-3 rounded-xl text-white placeholder-slate-500">
+              <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Vikram Sharma" class="w-full px-4 py-3 rounded-xl text-slate-900 placeholder-slate-400">
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block font-semibold text-slate-300 mb-1">Phone / WhatsApp *</label>
-                <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX" class="w-full px-4 py-3 rounded-xl text-white placeholder-slate-500">
+                <label class="block font-semibold text-slate-700 mb-1">Phone / WhatsApp *</label>
+                <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX" class="w-full px-4 py-3 rounded-xl text-slate-900 placeholder-slate-400">
               </div>
               <div>
-                <label class="block font-semibold text-slate-300 mb-1">Work Email Address *</label>
-                <input type="email" name="email" required placeholder="name@business.com" class="w-full px-4 py-3 rounded-xl text-white placeholder-slate-500">
+                <label class="block font-semibold text-slate-700 mb-1">Work Email Address *</label>
+                <input type="email" name="email" required placeholder="name@business.com" class="w-full px-4 py-3 rounded-xl text-slate-900 placeholder-slate-400">
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block font-semibold text-slate-300 mb-1">Service Interested In *</label>
-                <select name="service" required class="w-full px-4 py-3 rounded-xl text-white">
+                <label class="block font-semibold text-slate-700 mb-1">Service Interested In *</label>
+                <select name="service" required class="w-full px-4 py-3 rounded-xl text-slate-900">
                   <option value="Lead Generation">Lead Generation</option>
                   <option value="Performance Marketing">Performance Marketing (Meta &amp; Google Ads)</option>
                   <option value="Social Media Marketing">Social Media Marketing</option>
@@ -271,8 +281,8 @@
                 </select>
               </div>
               <div>
-                <label class="block font-semibold text-slate-300 mb-1">Your Industry *</label>
-                <select name="industry" required class="w-full px-4 py-3 rounded-xl text-white">
+                <label class="block font-semibold text-slate-700 mb-1">Your Industry *</label>
+                <select name="industry" required class="w-full px-4 py-3 rounded-xl text-slate-900">
                   <option value="Healthcare & Clinics">Healthcare, Doctors &amp; Clinics</option>
                   <option value="Manufacturing & B2B">Manufacturing &amp; B2B</option>
                   <option value="Real Estate">Real Estate</option>
@@ -286,13 +296,13 @@
             </div>
 
             <div>
-              <label class="block font-semibold text-slate-300 mb-1">Business Name / Website (Optional)</label>
-              <input type="text" name="business_name" placeholder="e.g. Acme Health Clinic / https://example.com" class="w-full px-4 py-3 rounded-xl text-white placeholder-slate-500">
+              <label class="block font-semibold text-slate-700 mb-1">Business Name / Website (Optional)</label>
+              <input type="text" name="business_name" placeholder="e.g. Acme Health Clinic / https://example.com" class="w-full px-4 py-3 rounded-xl text-slate-900 placeholder-slate-400">
             </div>
 
             <div>
-              <label class="block font-semibold text-slate-300 mb-1">Project Details / Goals *</label>
-              <textarea name="message" required rows="4" placeholder="Tell us about what you want to achieve with digital marketing..." class="w-full px-4 py-3 rounded-xl text-white placeholder-slate-500"></textarea>
+              <label class="block font-semibold text-slate-700 mb-1">Project Details / Goals *</label>
+              <textarea name="message" required rows="4" placeholder="Tell us about what you want to achieve with digital marketing..." class="w-full px-4 py-3 rounded-xl text-slate-900 placeholder-slate-400"></textarea>
             </div>
 
             <div class="pt-2">
@@ -309,8 +319,8 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-[#050814] border-t border-slate-800/80 text-slate-400 text-xs py-14">
+  <!-- Grounding Dark Navy Command Footer -->
+  <footer class="relative z-10 bg-[#0F172A] border-t border-slate-800 text-slate-400 text-xs py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
@@ -323,30 +333,30 @@
             Curafy Digitech is a premium digital growth agency. We combine strategy, creative, technology, performance marketing, and lead generation into a unified growth engine for modern businesses.
           </p>
           <div class="pt-1 text-slate-300 font-mono text-[11px]">
-            Website: <a href="https://www.curafydigitech.com" class="text-violet-400 hover:underline">www.curafydigitech.com</a>
+            Website: <a href="https://www.curafydigitech.com" class="text-blue-400 hover:underline">www.curafydigitech.com</a>
           </div>
         </div>
 
         <div class="lg:col-span-3 space-y-3">
           <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider">Services</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="index.html#services" class="hover:text-violet-400 transition-colors">Social Media Marketing</a></li>
-            <li><a href="index.html#services" class="hover:text-violet-400 transition-colors">Meta Ads (Facebook &amp; Instagram)</a></li>
-            <li><a href="index.html#services" class="hover:text-violet-400 transition-colors">Google Ads (Search &amp; Maps)</a></li>
-            <li><a href="index.html#services" class="hover:text-violet-400 transition-colors">Search Engine Optimization (SEO)</a></li>
-            <li><a href="index.html#services" class="hover:text-violet-400 transition-colors">Website Development &amp; Landers</a></li>
-            <li><a href="index.html#services" class="hover:text-violet-400 transition-colors">Lead Generation</a></li>
+            <li><a href="services.html#service-01" class="hover:text-blue-400 transition-colors">Social Media Marketing</a></li>
+            <li><a href="services.html#service-02" class="hover:text-blue-400 transition-colors">Meta Ads (Facebook &amp; Instagram)</a></li>
+            <li><a href="services.html#service-03" class="hover:text-blue-400 transition-colors">Google Ads (Search &amp; Maps)</a></li>
+            <li><a href="services.html#service-04" class="hover:text-blue-400 transition-colors">Search Engine Optimization (SEO)</a></li>
+            <li><a href="services.html#service-05" class="hover:text-blue-400 transition-colors">Website Development &amp; Landers</a></li>
+            <li><a href="services.html#service-06" class="hover:text-blue-400 transition-colors">Lead Generation</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-2 space-y-3">
           <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider">Company</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="index.html" class="hover:text-violet-400 transition-colors">Home</a></li>
-            <li><a href="index.html#about" class="hover:text-violet-400 transition-colors">About Us</a></li>
-            <li><a href="index.html#industries" class="hover:text-violet-400 transition-colors">Industries</a></li>
-            <li><a href="index.html#portfolio" class="hover:text-violet-400 transition-colors">Portfolio</a></li>
-            <li><a href="contact.html" class="hover:text-violet-400 transition-colors">Contact</a></li>
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-blue-400 transition-colors">About Us</a></li>
+            <li><a href="index.html#industries" class="hover:text-blue-400 transition-colors">Industries</a></li>
+            <li><a href="index.html#portfolio" class="hover:text-blue-400 transition-colors">Portfolio</a></li>
+            <li><a href="contact.html" class="hover:text-blue-400 transition-colors">Contact</a></li>
           </ul>
         </div>
 
@@ -354,7 +364,7 @@
           <h4 class="text-white font-bold font-heading text-xs uppercase tracking-wider">Contact Curafy</h4>
           <ul class="space-y-2.5 text-xs">
             <li class="flex items-center gap-2">
-              <i data-lucide="phone" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <i data-lucide="phone" class="w-4 h-4 text-blue-400 shrink-0"></i>
               <a href="tel:+916376566383" class="hover:text-white transition-colors">+91 63765 66383</a>
             </li>
             <li class="flex items-center gap-2">
@@ -362,7 +372,7 @@
               <a href="https://wa.me/916376566383" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors">+91 63765 66383 (WhatsApp)</a>
             </li>
             <li class="flex items-center gap-2">
-              <i data-lucide="mail" class="w-4 h-4 text-violet-400 shrink-0"></i>
+              <i data-lucide="mail" class="w-4 h-4 text-blue-400 shrink-0"></i>
               <a href="mailto:info@curafydigitech.com" class="hover:text-white transition-colors">info@curafydigitech.com</a>
             </li>
           </ul>
@@ -370,7 +380,7 @@
 
       </div>
 
-      <div class="pt-6 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-4 text-slate-500 text-[11px]">
+      <div class="pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-4 text-slate-500 text-[11px]">
         <p>&copy; 2026 Curafy Digitech. All rights reserved. Official Inquiries: <a href="mailto:info@curafydigitech.com" class="text-slate-400 hover:underline">info@curafydigitech.com</a></p>
         <p>Premium Digital Marketing Agency &bull; <a href="https://www.curafydigitech.com" class="text-slate-400">www.curafydigitech.com</a></p>
       </div>
@@ -379,16 +389,16 @@
   </footer>
 
   <!-- Reusable Consultation Modal -->
-  <div id="consultation-modal" class="modal-overlay hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto">
-    <div class="modal-box w-full max-w-lg rounded-2xl p-6 sm:p-8 relative shadow-2xl my-8">
-      <button data-close-modal class="absolute top-5 right-5 text-slate-400 hover:text-white p-1" aria-label="Close Modal">
+  <div id="consultation-modal" class="modal-overlay hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-md p-4 overflow-y-auto">
+    <div class="modal-box w-full max-w-lg rounded-2xl p-6 sm:p-8 relative shadow-2xl my-8 bg-white border border-slate-200">
+      <button data-close-modal class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 p-1" aria-label="Close Modal">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
       
       <div class="space-y-1.5 mb-6">
-        <span class="px-2.5 py-0.5 rounded-full badge-violet text-[10px] font-bold font-heading">Strategy Consultation</span>
-        <h3 class="text-xl sm:text-2xl font-bold text-white font-heading">Book Free Consultation</h3>
-        <p class="text-xs text-slate-400">Share your business details and let's map out your growth trajectory.</p>
+        <span class="px-2.5 py-0.5 rounded-full badge-blue text-[10px] font-bold font-heading">Strategy Consultation</span>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-heading">Book Free Consultation</h3>
+        <p class="text-xs text-slate-500">Share your business details and let's map out your growth trajectory.</p>
       </div>
 
       <form id="consultation-modal-form" data-lead-form action="https://formsubmit.co/info@curafydigitech.com" method="POST" class="space-y-4 text-xs">
@@ -399,24 +409,24 @@
         <input type="hidden" name="_next" value="thank-you.html">
 
         <div>
-          <label class="block font-semibold text-slate-300 mb-1">Your Full Name *</label>
-          <input type="text" name="name" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 rounded-xl text-white placeholder-slate-500">
+          <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
+          <input type="text" name="name" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 rounded-xl text-slate-900 placeholder-slate-400">
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <label class="block font-semibold text-slate-300 mb-1">Phone / WhatsApp *</label>
-            <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl text-white placeholder-slate-500">
+            <label class="block font-semibold text-slate-700 mb-1">Phone / WhatsApp *</label>
+            <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl text-slate-900 placeholder-slate-400">
           </div>
           <div>
-            <label class="block font-semibold text-slate-300 mb-1">Work Email Address *</label>
-            <input type="email" name="email" required placeholder="name@business.com" class="w-full px-3.5 py-2.5 rounded-xl text-white placeholder-slate-500">
+            <label class="block font-semibold text-slate-700 mb-1">Work Email Address *</label>
+            <input type="email" name="email" required placeholder="name@business.com" class="w-full px-3.5 py-2.5 rounded-xl text-slate-900 placeholder-slate-400">
           </div>
         </div>
 
         <div>
-          <label class="block font-semibold text-slate-300 mb-1">Service Interested In *</label>
-          <select name="service" class="w-full px-3.5 py-2.5 rounded-xl text-white">
+          <label class="block font-semibold text-slate-700 mb-1">Service Interested In *</label>
+          <select name="service" class="w-full px-3.5 py-2.5 rounded-xl text-slate-900">
             <option value="Lead Generation">Lead Generation</option>
             <option value="Performance Marketing">Performance Marketing</option>
             <option value="Social Media Marketing">Social Media Marketing</option>
@@ -439,11 +449,11 @@
 
   <!-- Toast Notification -->
   <div id="notification-toast" class="fixed top-6 right-6 z-[9999] -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
-    <div class="p-4 rounded-xl glass-panel border border-violet-500/40 shadow-2xl flex items-center gap-3 bg-[#0C1226]/95">
-      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+    <div class="p-4 rounded-xl glass-panel border border-blue-200 shadow-2xl flex items-center gap-3 bg-white">
+      <div class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shrink-0">
         <i data-lucide="check" class="w-4 h-4"></i>
       </div>
-      <p id="toast-message" class="text-xs text-white font-medium leading-snug">Inquiry submitted successfully!</p>
+      <p id="toast-message" class="text-xs text-slate-900 font-medium leading-snug">Inquiry submitted successfully!</p>
     </div>
   </div>
 
