@@ -69,13 +69,13 @@
       <!-- Floating AI Trigger Button (Bottom-Left) -->
       <div id="mitra-ai-trigger-wrap" class="fixed bottom-6 left-6 z-50 flex items-center gap-3">
         <!-- Floating Button -->
-        <button id="mitra-ai-btn" type="button" aria-label="Open Mitra AI Messenger" class="mitra-btn relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 text-white shadow-2xl hover:brightness-110 active:scale-95 transition-all duration-300">
+        <button id="mitra-ai-btn" type="button" aria-label="Open Mitra AI Messenger" class="mitra-btn relative flex items-center gap-2.5 px-4 py-3 rounded-full bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 text-white shadow-xl shadow-violet-600/30 hover:brightness-110 active:scale-95 transition-all duration-300">
           <!-- Pulse radar wave -->
           <span class="mitra-radar-ring"></span>
           
           <!-- Avatar Icon -->
-          <div class="relative w-8 h-8 rounded-full bg-slate-950/80 border border-cyan-300/40 flex items-center justify-center shrink-0">
-            <svg class="w-4 h-4 text-cyan-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="relative w-8 h-8 rounded-full bg-white/20 border border-white/40 flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 8V4H8"></path>
               <rect width="16" height="12" x="4" y="8" rx="2"></rect>
               <path d="M2 14h2"></path>
@@ -83,13 +83,13 @@
               <path d="M15 13v2"></path>
               <path d="M9 13v2"></path>
             </svg>
-            <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-slate-900 animate-pulse"></span>
+            <span class="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-violet-900 animate-pulse"></span>
           </div>
 
           <!-- Label -->
           <div class="text-left pr-1">
             <span class="block text-xs font-extrabold tracking-wide uppercase leading-none font-heading text-white">Mitra AI</span>
-            <span class="block text-[10px] text-cyan-100 font-medium leading-tight">Ask Business &amp; Jobs</span>
+            <span class="block text-[10px] text-violet-200 font-medium leading-tight">Ask Business &amp; Jobs</span>
           </div>
 
           <!-- Unread indicator bubble -->
@@ -97,21 +97,21 @@
         </button>
 
         <!-- Prompt Callout Tooltip (Auto dismissed) -->
-        <div id="mitra-hint-bubble" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-900/95 border border-cyan-500/40 text-slate-200 text-xs shadow-xl animate-bounce pointer-events-none">
-          <span class="text-cyan-400 font-bold">✨ Ask Mitra</span>
-          <span class="text-[11px] text-slate-300">Services &bull; Careers &bull; Instant Help</span>
+        <div id="mitra-hint-bubble" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-[#0C1226] border border-violet-500/30 text-slate-200 text-xs shadow-xl animate-bounce pointer-events-none">
+          <span class="text-violet-400 font-bold">✨ Ask Mitra</span>
+          <span class="text-[11px] text-slate-400">Services &bull; Careers &bull; Instant Help</span>
         </div>
       </div>
 
       <!-- Mitra AI Messenger Box (Bottom-Left) -->
-      <div id="mitra-ai-messenger" class="hidden fixed bottom-24 left-6 z-50 w-[380px] max-w-[calc(100vw-32px)] h-[560px] max-h-[calc(100vh-120px)] flex-col rounded-3xl bg-slate-950/95 border border-cyan-500/50 shadow-2xl backdrop-blur-xl overflow-hidden transition-all duration-300">
+      <div id="mitra-ai-messenger" class="hidden fixed bottom-24 left-6 z-50 w-[380px] max-w-[calc(100vw-32px)] h-[560px] max-h-[calc(100vh-120px)] flex-col rounded-3xl bg-[#0C1226]/95 border border-violet-500/30 shadow-2xl backdrop-blur-2xl overflow-hidden transition-all duration-300">
         
         <!-- Header -->
-        <div class="p-4 bg-gradient-to-r from-slate-900 via-slate-900/90 to-slate-950 border-b border-cyan-500/30 flex items-center justify-between shrink-0">
+        <div class="p-4 bg-gradient-to-r from-[#070B18] via-[#0C1226] to-[#111A36] border-b border-slate-800 flex items-center justify-between shrink-0">
           <div class="flex items-center gap-3">
-            <div class="relative w-10 h-10 rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-0.5 shadow-lg shadow-cyan-500/20">
-              <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center">
-                <svg class="w-5 h-5 text-cyan-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="relative w-10 h-10 rounded-2xl bg-gradient-to-tr from-violet-500 to-indigo-600 p-0.5 shadow-lg shadow-violet-500/20">
+              <div class="w-full h-full bg-[#070B18] rounded-[14px] flex items-center justify-center">
+                <svg class="w-5 h-5 text-violet-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 8V4H8"></path>
                   <rect width="16" height="12" x="4" y="8" rx="2"></rect>
                   <path d="M2 14h2"></path>
@@ -125,7 +125,7 @@
             <div>
               <div class="flex items-center gap-1.5">
                 <h4 class="text-sm font-bold text-white font-heading tracking-wide">Mitra AI</h4>
-                <span class="px-1.5 py-0.2 rounded-full text-[9px] font-bold bg-cyan-950 text-cyan-300 border border-cyan-600/50">Curafy Bot</span>
+                <span class="px-1.5 py-0.2 rounded-full text-[9px] font-bold bg-violet-900/60 text-violet-200 border border-violet-600/50">Curafy Bot</span>
               </div>
               <p class="text-[11px] text-emerald-400 flex items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
@@ -145,35 +145,35 @@
         </div>
 
         <!-- Notification Banner / Quick Routing Notice -->
-        <div class="px-3.5 py-1.5 bg-cyan-950/40 border-b border-slate-800/80 flex items-center justify-between text-[10px] text-slate-400 shrink-0">
-          <span>⚡ Replies in seconds &bull; Direct email to <strong class="text-cyan-300 font-mono">info@curafydigitech.com</strong></span>
-          <span class="text-cyan-400 font-semibold">24x7 Active</span>
+        <div class="px-3.5 py-1.5 bg-[#070B18] border-b border-slate-800 flex items-center justify-between text-[10px] text-slate-400 shrink-0">
+          <span>⚡ Replies in seconds &bull; Email: <strong class="text-violet-400 font-mono">info@curafydigitech.com</strong></span>
+          <span class="text-emerald-400 font-semibold">24x7 Active</span>
         </div>
 
         <!-- Chat Stream -->
-        <div id="mitra-chat-stream" class="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs text-slate-200">
+        <div id="mitra-chat-stream" class="flex-1 p-4 overflow-y-auto space-y-3.5 text-xs text-slate-200 bg-[#080C1B]">
           <!-- Messages will be injected here -->
         </div>
 
         <!-- Quick Prompt Chips Strip -->
-        <div id="mitra-quick-chips" class="p-2 border-t border-slate-800 bg-slate-900/60 overflow-x-auto whitespace-nowrap flex items-center gap-1.5 no-scrollbar shrink-0">
+        <div id="mitra-quick-chips" class="p-2 border-t border-slate-800 bg-[#070B18] overflow-x-auto whitespace-nowrap flex items-center gap-1.5 no-scrollbar shrink-0">
           <!-- Quick reply pills will be populated here -->
         </div>
 
         <!-- Input Area -->
-        <form id="mitra-input-form" class="p-3 bg-slate-950 border-t border-slate-800 flex items-center gap-2 shrink-0">
+        <form id="mitra-input-form" class="p-3 bg-[#0C1226] border-t border-slate-800 flex items-center gap-2 shrink-0">
           <input 
             type="text" 
             id="mitra-user-input" 
             placeholder="Ask about business, services, or jobs..." 
             autocomplete="off"
-            class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-cyan-400 transition-colors"
+            class="flex-1 px-3.5 py-2.5 rounded-xl bg-[#080C1B] border border-slate-700 text-white placeholder-slate-500 text-xs focus:outline-none focus:border-violet-500 transition-colors"
           />
           <button 
             type="submit" 
             id="mitra-send-btn" 
             aria-label="Send message"
-            class="w-10 h-10 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex items-center justify-center hover:brightness-110 active:scale-95 transition-all shadow-md shadow-cyan-500/20 shrink-0"
+            class="w-10 h-10 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white flex items-center justify-center hover:brightness-110 active:scale-95 transition-all shadow-md shadow-violet-500/25 shrink-0"
           >
             <svg class="w-4 h-4 rotate-45 -translate-y-0.5 translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -308,7 +308,7 @@
     chips.forEach(chip => {
       const btn = document.createElement('button');
       btn.type = 'button';
-      btn.className = 'px-3 py-1 rounded-full text-[11px] font-medium bg-slate-800 hover:bg-cyan-950 text-slate-300 hover:text-cyan-300 border border-slate-700 hover:border-cyan-500/50 transition-all shrink-0';
+      btn.className = 'px-3 py-1 rounded-full text-[11px] font-medium bg-[#0F172A] hover:bg-violet-950/60 text-slate-300 hover:text-violet-300 border border-violet-500/30 transition-all shrink-0 shadow-xs';
       btn.textContent = chip.label;
       btn.onclick = () => {
         handleUserMessage(chip.query);
@@ -341,7 +341,7 @@
     const msg = document.createElement('div');
     msg.className = 'flex justify-end';
     msg.innerHTML = `
-      <div class="max-w-[85%] bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-2xl rounded-tr-sm px-3.5 py-2.5 shadow-md shadow-cyan-900/20 text-xs break-words">
+      <div class="max-w-[85%] bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-2xl rounded-tr-sm px-3.5 py-2.5 shadow-md shadow-violet-500/20 text-xs break-words">
         ${escapeHtml(text)}
       </div>
     `;
@@ -356,7 +356,7 @@
     const msg = document.createElement('div');
     msg.className = 'flex items-start gap-2.5';
     msg.innerHTML = `
-      <div class="w-7 h-7 rounded-xl bg-slate-900 border border-cyan-500/40 text-cyan-400 flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+      <div class="w-7 h-7 rounded-xl bg-violet-950/80 border border-violet-500/40 text-violet-400 flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 8V4H8"></path>
           <rect width="16" height="12" x="4" y="8" rx="2"></rect>
@@ -367,7 +367,7 @@
         </svg>
       </div>
       <div class="max-w-[88%] space-y-2">
-        <div class="bg-slate-900/90 border border-slate-800 text-slate-200 rounded-2xl rounded-tl-sm p-3.5 shadow-lg leading-relaxed text-xs space-y-2 break-words">
+        <div class="bg-[#0F172A] border border-violet-500/20 text-slate-200 rounded-2xl rounded-tl-sm p-3.5 shadow-md leading-relaxed text-xs space-y-2 break-words">
           ${htmlContent}
         </div>
       </div>
@@ -389,13 +389,13 @@
     typing.id = 'mitra-typing-indicator';
     typing.className = 'flex items-center gap-2 text-slate-400 text-xs';
     typing.innerHTML = `
-      <div class="w-6 h-6 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-cyan-400">
-        <svg class="w-3 h-3 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
+      <div class="w-6 h-6 rounded-lg bg-violet-950/80 border border-violet-500/40 flex items-center justify-center text-violet-400">
+        <svg class="w-3.5 h-3.5 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle><path d="M12 2a10 10 0 0 1 10 10"></path></svg>
       </div>
-      <div class="flex items-center gap-1 px-3 py-2 rounded-xl bg-slate-900/80 border border-slate-800">
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce"></span>
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.15s]"></span>
-        <span class="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-bounce [animation-delay:0.3s]"></span>
+      <div class="flex items-center gap-1 px-3 py-2 rounded-xl bg-[#0F172A] border border-violet-500/20 shadow-xs">
+        <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-bounce"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-bounce [animation-delay:0.15s]"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-violet-400 animate-bounce [animation-delay:0.3s]"></span>
         <span class="text-[10px] text-slate-400 ml-1">Mitra is analyzing...</span>
       </div>
     `;

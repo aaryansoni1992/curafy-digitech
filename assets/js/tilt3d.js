@@ -225,8 +225,8 @@
           const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
 
           if (dist < 85) {
-            const lineAlpha = (1 - dist / 85) * Math.min(p1.alpha, p2.alpha) * 0.45;
-            ctx.strokeStyle = `rgba(0, 240, 255, ${lineAlpha.toFixed(3)})`;
+            const lineAlpha = (1 - dist / 85) * Math.min(p1.alpha, p2.alpha) * 0.35;
+            ctx.strokeStyle = `rgba(139, 92, 246, ${lineAlpha.toFixed(3)})`;
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
@@ -238,9 +238,9 @@
       // Draw nodes
       for (let i = 0; i < projected.length; i++) {
         const p = projected[i];
-        ctx.fillStyle = `rgba(0, 240, 255, ${p.alpha.toFixed(2)})`;
-        ctx.shadowColor = '#00F0FF';
-        ctx.shadowBlur = p.alpha > 0.6 ? 10 : 0;
+        ctx.fillStyle = `rgba(167, 139, 250, ${p.alpha.toFixed(2)})`;
+        ctx.shadowColor = '#8B5CF6';
+        ctx.shadowBlur = p.alpha > 0.6 ? 8 : 0;
         ctx.beginPath();
         ctx.arc(p.x, p.y, Math.max(1, p.size), 0, Math.PI * 2);
         ctx.fill();
