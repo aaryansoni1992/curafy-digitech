@@ -357,10 +357,14 @@ select option {
   box-shadow: 0 25px 60px -10px rgba(15, 23, 42, 0.25) !important;
 }
 
-/* Mobile Nav Drawer */
+/* Mobile Nav Drawer & Backdrops */
 #mobile-menu {
   background: #FFFFFF !important;
   border-bottom: 1px solid #E2E8F0 !important;
+}
+
+#mobile-menu-backdrop {
+  transition: opacity 0.25s ease;
 }
 
 /* Subtle badge chips */
@@ -391,3 +395,142 @@ footer a {
 footer a:hover {
   color: #38BDF8 !important;
 }
+
+/* ========================================================
+   MOBILE COMFORT & THUMB-FRIENDLY ERGONOMICS
+   ======================================================== */
+
+/* Eliminate 300ms mobile tap delay and unwanted grey tap highlight */
+html, body {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+button, a, input, select, textarea {
+  touch-action: manipulation;
+}
+
+/* Desktop Floating WhatsApp Button */
+#whatsapp-floating-btn {
+  position: fixed;
+  bottom: 84px;
+  right: 20px;
+  z-index: 44;
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  background: #25D366;
+  box-shadow: 0 10px 25px -4px rgba(37, 211, 102, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+#whatsapp-floating-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 14px 30px -4px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-radar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 2px solid rgba(37, 211, 102, 0.6);
+  animation: pulseGreen 2.2s infinite;
+  pointer-events: none;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 60px;
+  background: #0F172A;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(8px);
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+#whatsapp-floating-btn:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Floating Mobile Quick Action Dock (Visible exclusively on mobile screens < 1024px) */
+#mobile-bottom-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 48;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 -4px 20px -2px rgba(15, 23, 42, 0.08);
+  padding: 8px 12px calc(8px + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 1024px) {
+  #mobile-bottom-dock {
+    display: none !important;
+  }
+}
+
+/* Mobile Screen Specific Optimizations (< 1024px) */
+@media (max-width: 1023px) {
+  /* Prevent content collision with fixed bottom dock */
+  body {
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  /* Reposition scroll-to-top button neatly above mobile bottom dock */
+  #scroll-to-top-btn {
+    bottom: calc(78px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 14px !important;
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  /* Hide individual floating WhatsApp circle on mobile since it is prominently inside the bottom dock */
+  #whatsapp-floating-btn {
+    display: none !important;
+  }
+
+  /* Prevent iOS Safari input auto-zoom by guaranteeing 16px minimum font size */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="url"],
+  select,
+  textarea {
+    min-height: 48px;
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* Mobile dialog padding & smooth scroll */
+  .modal-box {
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem auto !important;
+    padding: 1.25rem 1.25rem !important;
+  }
+}
+

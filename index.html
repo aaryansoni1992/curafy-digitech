@@ -116,10 +116,10 @@
 
         <!-- Mobile Menu Toggle Button -->
         <div class="lg:hidden flex items-center gap-2">
-          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="sm:hidden p-2 text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-xl" aria-label="WhatsApp">
+          <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="sm:hidden min-w-[42px] min-h-[42px] flex items-center justify-center p-2 text-emerald-600 bg-emerald-50 border border-emerald-200 rounded-xl" aria-label="WhatsApp">
             <i data-lucide="message-circle" class="w-5 h-5"></i>
           </a>
-          <button id="mobile-menu-btn" class="p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 focus:outline-none" aria-label="Toggle Navigation Menu">
+          <button id="mobile-menu-btn" class="min-w-[44px] min-h-[44px] flex items-center justify-center p-2.5 rounded-xl bg-slate-100 border border-slate-200 text-slate-700 hover:text-slate-900 focus:outline-none cursor-pointer" aria-label="Toggle Navigation Menu">
             <i data-lucide="menu" class="w-6 h-6"></i>
           </button>
         </div>
@@ -127,51 +127,54 @@
       </div>
     </div>
 
+    <!-- Mobile Drawer Backdrop -->
+    <div id="mobile-menu-backdrop" class="hidden lg:hidden fixed inset-0 bg-slate-900/40 backdrop-blur-xs z-40"></div>
+
     <!-- Mobile Drawer Navigation -->
-    <div id="mobile-menu" class="hidden lg:hidden px-5 pt-4 pb-6 mt-3 bg-white border-b border-slate-200 shadow-xl max-h-[85vh] overflow-y-auto">
+    <div id="mobile-menu" class="hidden lg:hidden relative z-50 px-5 pt-4 pb-6 mt-3 bg-white border-b border-slate-200 shadow-2xl max-h-[85vh] overflow-y-auto">
       <div class="flex justify-between items-center pb-3 border-b border-slate-200">
         <span class="text-xs font-bold uppercase tracking-widest text-blue-600 font-heading">Navigation Menu</span>
-        <button id="mobile-menu-close" class="text-slate-500 hover:text-slate-800 p-1" aria-label="Close Mobile Menu">
+        <button id="mobile-menu-close" class="min-w-[40px] min-h-[40px] flex items-center justify-center text-slate-500 hover:text-slate-800 p-2 rounded-lg hover:bg-slate-100 cursor-pointer" aria-label="Close Mobile Menu">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
-      <div class="flex flex-col space-y-3 font-semibold text-slate-700 pt-3 text-sm">
-        <a href="index.html" class="hover:text-blue-600 py-1.5 flex items-center justify-between text-blue-600"><span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="#services" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="#industries" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Industries We Help</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="#why-curafy" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Why Curafy</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="#how-we-work" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>How We Work</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="#portfolio" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Portfolio</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="#about" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
-        <a href="contact.html" class="hover:text-blue-600 py-1.5 flex items-center justify-between"><span>Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+      <div class="flex flex-col space-y-1 font-semibold text-slate-700 pt-3 text-sm">
+        <a href="index.html" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between text-blue-600 active:bg-blue-50"><span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-blue-500"></i></a>
+        <a href="#services" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#industries" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>Industries We Help</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#why-curafy" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>Why Curafy</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#how-we-work" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>How We Work</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#portfolio" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>Portfolio</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="#about" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>About Us</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
+        <a href="contact.html" class="min-h-[44px] px-3 py-2.5 rounded-xl hover:bg-slate-50 flex items-center justify-between active:bg-blue-50"><span>Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400"></i></a>
       </div>
 
       <div class="pt-5 mt-4 border-t border-slate-200 space-y-2.5">
-        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white flex items-center justify-center gap-2 shadow-md">
+        <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="w-full text-center text-xs font-bold py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white flex items-center justify-center gap-2 shadow-md min-h-[46px]">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
           <span>Chat on WhatsApp (+91 63765 66383)</span>
         </a>
-        <a href="tel:+916376566383" class="w-full text-center text-xs font-bold py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center justify-center gap-2">
+        <a href="tel:+916376566383" class="w-full text-center text-xs font-bold py-3.5 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 flex items-center justify-center gap-2 min-h-[46px]">
           <i data-lucide="phone" class="w-4 h-4 text-blue-600"></i>
           <span>Call Now (+91 63765 66383)</span>
         </a>
-        <button onclick="openModal('consultation-modal')" class="btn-primary-gradient shimmer-btn w-full py-3.5 rounded-xl text-white font-bold text-xs shadow-md flex items-center justify-center gap-2">
+        <button onclick="openModal('consultation-modal')" class="btn-primary-gradient shimmer-btn w-full py-3.5 rounded-xl text-white font-bold text-xs shadow-md flex items-center justify-center gap-2 min-h-[46px] cursor-pointer">
           <span>Get a Growth Strategy</span>
         </button>
       </div>
     </div>
   </header>
 
-  <main class="relative z-10 pt-28 sm:pt-32">
+  <main class="relative z-10 pt-24 sm:pt-32">
 
     <!-- ========================================================
          2. HERO SECTION
          ======================================================== -->
-    <section class="relative pt-6 pb-16 md:pt-12 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+    <section class="relative pt-4 pb-12 md:pt-12 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
         
         <!-- Hero Text & Conversion CTAs (7 Cols) -->
-        <div class="lg:col-span-7 space-y-6 sm:space-y-7 text-left">
+        <div class="lg:col-span-7 space-y-5 sm:space-y-7 text-left">
           
           <!-- Trust Pill Badge -->
           <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-semibold text-blue-700">
@@ -180,51 +183,51 @@
           </div>
 
           <!-- Main Headline -->
-          <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold font-heading text-slate-900 tracking-tight leading-[1.12]">
+          <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold font-heading text-slate-900 tracking-tight leading-[1.14] break-words">
             Get More Customers. <br>
             <span class="text-gradient-blue">Grow Faster.</span>
           </h1>
 
           <!-- Supporting Message -->
-          <p class="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
+          <p class="text-sm sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
             Curafy Digitech helps businesses grow through strategic digital marketing, performance advertising, creative content, websites, SEO and lead generation.
           </p>
 
-          <!-- Hero CTA Buttons -->
-          <div class="flex flex-wrap items-center gap-3.5 pt-2">
+          <!-- Hero CTA Buttons (Stacked Full-Width on Mobile for Easy Thumb Reach) -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
             <!-- Primary Hero CTA -->
-            <a href="#conversion-funnel" class="btn-primary-gradient shimmer-btn px-6 py-3.5 rounded-xl font-bold text-sm text-white flex items-center gap-2 shadow-lg shadow-blue-600/25 cursor-pointer">
+            <a href="#conversion-funnel" class="btn-primary-gradient shimmer-btn px-6 py-4 sm:py-3.5 rounded-xl font-bold text-sm text-white flex items-center justify-center gap-2 shadow-lg shadow-blue-600/25 cursor-pointer min-h-[48px]">
               <span>Get a Growth Strategy</span>
               <i data-lucide="arrow-right" class="w-4 h-4"></i>
             </a>
 
             <!-- Secondary Hero CTA -->
-            <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="px-5 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 border border-emerald-400/40 text-white flex items-center gap-2 shadow-md transition-all" aria-label="Chat on WhatsApp">
+            <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="px-5 py-4 sm:py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 border border-emerald-400/40 text-white flex items-center justify-center gap-2 shadow-md transition-all min-h-[48px]" aria-label="Chat on WhatsApp">
               <i data-lucide="message-circle" class="w-4 h-4 text-emerald-100"></i>
               <span>WhatsApp Us</span>
             </a>
 
             <!-- Consultation Modal Trigger -->
-            <button onclick="openModal('consultation-modal')" class="btn-secondary-ghost px-5 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2">
+            <button onclick="openModal('consultation-modal')" class="btn-secondary-ghost px-5 py-4 sm:py-3.5 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 min-h-[48px] cursor-pointer">
               <i data-lucide="calendar" class="w-4 h-4 text-blue-600"></i>
               <span>Book Free Consultation</span>
             </button>
           </div>
 
           <!-- Hero Direct Contact Strip -->
-          <div class="pt-4 flex flex-wrap items-center gap-6 text-xs text-slate-500 border-t border-slate-200">
-            <a href="tel:+916376566383" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
-              <i data-lucide="phone-call" class="w-4 h-4 text-blue-600"></i>
+          <div class="pt-4 flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-6 text-xs text-slate-500 border-t border-slate-200">
+            <a href="tel:+916376566383" class="flex items-center gap-2 hover:text-blue-600 py-1 transition-colors min-h-[36px]">
+              <i data-lucide="phone-call" class="w-4 h-4 text-blue-600 shrink-0"></i>
               <span>Call Now: <strong class="text-slate-900">+91 63765 66383</strong></span>
             </a>
             <span class="text-slate-300 hidden sm:inline">&bull;</span>
-            <a href="mailto:info@curafydigitech.com" class="flex items-center gap-2 hover:text-blue-600 transition-colors">
-              <i data-lucide="mail" class="w-4 h-4 text-blue-600"></i>
+            <a href="mailto:info@curafydigitech.com" class="flex items-center gap-2 hover:text-blue-600 py-1 transition-colors min-h-[36px]">
+              <i data-lucide="mail" class="w-4 h-4 text-blue-600 shrink-0"></i>
               <span>Email: <strong class="text-slate-900">info@curafydigitech.com</strong></span>
             </a>
             <span class="text-slate-300 hidden sm:inline">&bull;</span>
-            <span class="flex items-center gap-1.5 text-slate-700">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600"></i>
+            <span class="flex items-center gap-1.5 text-slate-700 py-1">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
               <span>Strategy + Creative + Performance</span>
             </span>
           </div>
@@ -995,18 +998,18 @@
                 <!-- Full Name -->
                 <div>
                   <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
-                  <input type="text" name="name" required placeholder="e.g. Vikram Sharma" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
+                  <input type="text" name="name" autocomplete="name" required placeholder="e.g. Vikram Sharma" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
                 </div>
 
                 <!-- Phone & Email Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
                     <label class="block font-semibold text-slate-700 mb-1">Phone / WhatsApp *</label>
-                    <input type="tel" name="phone" required placeholder="+91 98765 43210" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
+                    <input type="tel" name="phone" inputmode="tel" autocomplete="tel" required placeholder="+91 98765 43210" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
                   </div>
                   <div>
                     <label class="block font-semibold text-slate-700 mb-1">Work Email Address *</label>
-                    <input type="email" name="email" required placeholder="name@business.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
+                    <input type="email" name="email" inputmode="email" autocomplete="email" required placeholder="name@business.com" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
                   </div>
                 </div>
 
@@ -1014,7 +1017,7 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
                     <label class="block font-semibold text-slate-700 mb-1">Service Interested In *</label>
-                    <select name="service" id="enquiry-service" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 bg-white">
+                    <select name="service" id="enquiry-service" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 bg-white">
                       <option value="Lead Generation">Lead Generation</option>
                       <option value="Performance Marketing">Performance Marketing (Meta &amp; Google Ads)</option>
                       <option value="Social Media Marketing">Social Media Marketing</option>
@@ -1029,7 +1032,7 @@
                   </div>
                   <div>
                     <label class="block font-semibold text-slate-700 mb-1">Your Industry *</label>
-                    <select name="industry" id="enquiry-sector" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 bg-white">
+                    <select name="industry" id="enquiry-sector" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 bg-white">
                       <option value="Healthcare & Clinics">Healthcare, Doctors &amp; Clinics</option>
                       <option value="Manufacturing & B2B">Manufacturing &amp; B2B</option>
                       <option value="Real Estate">Real Estate &amp; Construction</option>
@@ -1045,12 +1048,12 @@
                 <!-- Notes / Goals -->
                 <div>
                   <label class="block font-semibold text-slate-700 mb-1">Your Key Growth Objective / Notes</label>
-                  <textarea name="notes" rows="2" placeholder="Tell us briefly about what you'd like to achieve..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400"></textarea>
+                  <textarea name="notes" rows="2" placeholder="Tell us briefly about what you'd like to achieve..." class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400"></textarea>
                 </div>
 
                 <!-- Submit Button -->
                 <div class="pt-1">
-                  <button type="submit" class="btn-primary-gradient shimmer-btn w-full py-3.5 rounded-xl font-bold text-sm text-white shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                  <button type="submit" class="btn-primary-gradient shimmer-btn w-full py-4 rounded-xl font-bold text-sm text-white shadow-md flex items-center justify-center gap-2 cursor-pointer min-h-[48px]">
                     <i data-lucide="send" class="w-4 h-4"></i>
                     <span>Get Your Growth Strategy</span>
                   </button>
@@ -1699,23 +1702,23 @@
 
         <div>
           <label class="block font-semibold text-slate-700 mb-1">Your Full Name *</label>
-          <input type="text" name="name" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
+          <input type="text" name="name" autocomplete="name" required placeholder="e.g. Rahul Sharma" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label class="block font-semibold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
-            <input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
+            <input type="tel" name="phone" inputmode="tel" autocomplete="tel" required placeholder="+91 XXXXXXXXXX" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
           </div>
           <div>
             <label class="block font-semibold text-slate-700 mb-1">Work Email Address *</label>
-            <input type="email" name="email" required placeholder="name@business.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
+            <input type="email" name="email" inputmode="email" autocomplete="email" required placeholder="name@business.com" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 placeholder-slate-400">
           </div>
         </div>
 
         <div>
           <label class="block font-semibold text-slate-700 mb-1">Service Interested In *</label>
-          <select name="service" id="modal-service" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-slate-900 bg-white">
+          <select name="service" id="modal-service" class="w-full px-3.5 py-3 rounded-xl border border-slate-300 text-slate-900 bg-white">
             <option value="Lead Generation">Lead Generation</option>
             <option value="Performance Marketing">Performance Marketing (Meta &amp; Google Ads)</option>
             <option value="Social Media Marketing">Social Media Marketing</option>
@@ -1734,7 +1737,7 @@
         </div>
 
         <div class="pt-2">
-          <button type="submit" class="btn-primary-gradient shimmer-btn w-full py-3.5 rounded-xl font-bold text-sm text-white shadow-md flex items-center justify-center gap-2 cursor-pointer">
+          <button type="submit" class="btn-primary-gradient shimmer-btn w-full py-4 rounded-xl font-bold text-sm text-white shadow-md flex items-center justify-center gap-2 cursor-pointer min-h-[48px]">
             <i data-lucide="send" class="w-4 h-4"></i>
             <span>Confirm Consultation Request</span>
           </button>
@@ -1867,5 +1870,33 @@
       });
     }
   </script>
+
+  <!-- ========================================================
+       FLOATING MOBILE QUICK ACTIONS DOCK (Thumb Ergonomics)
+       ======================================================== -->
+  <div id="mobile-bottom-dock" class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-xl border-t border-slate-200/90 shadow-[0_-4px_25px_rgba(15,23,42,0.08)] px-3 py-2">
+    <div class="max-w-md mx-auto grid grid-cols-3 gap-2 items-center">
+      
+      <!-- 1. Instant Call -->
+      <a href="tel:+916376566383" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-700 active:scale-95 transition-all min-h-[46px]" aria-label="Direct Phone Call">
+        <i data-lucide="phone-call" class="w-4 h-4 text-blue-600 mb-0.5"></i>
+        <span class="text-[11px] font-bold tracking-tight">Call Now</span>
+      </a>
+
+      <!-- 2. WhatsApp Direct Chat -->
+      <a href="https://wa.me/916376566383?text=Hello%20Curafy%20Digitech!%20I%20would%20like%20to%20discuss%20growing%20my%20business." target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 active:scale-95 transition-all min-h-[46px]" aria-label="WhatsApp Message">
+        <i data-lucide="message-circle" class="w-4 h-4 text-emerald-600 mb-0.5"></i>
+        <span class="text-[11px] font-bold tracking-tight">WhatsApp</span>
+      </a>
+
+      <!-- 3. Free Strategy / Consultation Modal Trigger -->
+      <button onclick="openModal('consultation-modal')" class="flex flex-col items-center justify-center py-2 px-1 rounded-xl btn-primary-gradient text-white shadow-md shadow-blue-600/20 active:scale-95 transition-all cursor-pointer min-h-[46px]" aria-label="Get Free Consultation">
+        <i data-lucide="zap" class="w-4 h-4 text-white mb-0.5"></i>
+        <span class="text-[11px] font-bold tracking-tight">Get Strategy</span>
+      </button>
+
+    </div>
+  </div>
+
 </body>
 </html>

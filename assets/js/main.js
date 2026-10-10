@@ -5,26 +5,47 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Menu Toggle
+  // 1. Mobile Menu Toggle with Body Scroll Lock
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileMenuClose = document.getElementById('mobile-menu-close');
+  const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+
+  function openMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.remove('hidden');
+    if (mobileMenuBackdrop) mobileMenuBackdrop.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    if (!mobileMenu) return;
+    mobileMenu.classList.add('hidden');
+    if (mobileMenuBackdrop) mobileMenuBackdrop.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
 
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        openMobileMenu();
+      } else {
+        closeMobileMenu();
+      }
     });
+
     if (mobileMenuClose) {
-      mobileMenuClose.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
+      mobileMenuClose.addEventListener('click', closeMobileMenu);
+    }
+
+    if (mobileMenuBackdrop) {
+      mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
     }
 
     // Close mobile menu when clicking any link
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
+      link.addEventListener('click', closeMobileMenu);
     });
 
     // Mobile services submenu toggle
