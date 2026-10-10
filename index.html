@@ -234,119 +234,191 @@
 
         </div>
 
-        <!-- Hero Futuristic Digital Growth Visual (5 Cols) -->
-        <div class="lg:col-span-5 relative">
+        <!-- Hero Futuristic 3D Digital Performance Meter (5 Cols) -->
+        <div class="lg:col-span-5 relative meter-3d-scene">
           
-          <!-- Ambient Glow Backdrop -->
-          <div class="absolute -inset-2 bg-gradient-to-r from-blue-400/15 to-indigo-300/15 rounded-3xl blur-2xl -z-10"></div>
+          <!-- Ambient Radial Glow Backdrop -->
+          <div class="absolute -inset-4 bg-gradient-to-tr from-blue-500/15 via-cyan-400/20 to-indigo-500/15 rounded-3xl blur-3xl -z-10 pointer-events-none"></div>
 
-          <!-- Futuristic Digital Marketing Ecosystem Hub Card -->
-          <div class="glass-panel rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-xl relative overflow-hidden space-y-5 bg-white">
+          <!-- 3D Glassmorphic Digital Speedometer Card (Pure Transparent Base) -->
+          <div id="hero-3d-meter-card" class="meter-3d-card meter-floating-idle rounded-3xl p-6 sm:p-7 border border-white/80 bg-white/45 backdrop-blur-2xl shadow-[0_25px_60px_-15px_rgba(37,99,235,0.18)] relative overflow-visible space-y-5">
             
-            <!-- Ecosystem Header -->
-            <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+            <!-- Meter Header -->
+            <div class="flex items-center justify-between pb-3.5 border-b border-slate-200/60 layer-depth-1">
               <div class="flex items-center gap-3">
-                <div class="w-9 h-9 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
-                  <i data-lucide="activity" class="w-5 h-5"></i>
+                <div class="w-9 h-9 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-blue-600 shadow-xs">
+                  <i data-lucide="gauge" class="w-5 h-5"></i>
                 </div>
                 <div>
-                  <h3 class="text-sm font-bold text-slate-900 font-heading">Digital Growth Ecosystem</h3>
-                  <p class="text-[11px] text-slate-500">Unified Multi-Channel Performance</p>
+                  <h3 class="text-sm font-bold text-slate-900 font-heading">Digital Performance Meter</h3>
+                  <p class="text-[11px] text-slate-500">Live Acquisition Velocity Telemetry</p>
                 </div>
               </div>
-              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[10px] font-bold text-emerald-700">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Active Engine
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50/90 border border-emerald-200 text-[10px] font-bold text-emerald-700 shadow-xs">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Active Telemetry</span>
               </span>
             </div>
 
-            <!-- Growth Flow Metric SVG Visual -->
-            <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200 space-y-3">
-              <div class="flex items-center justify-between text-xs">
-                <span class="text-slate-600 font-medium">Acquisition Trajectory</span>
-                <span class="text-blue-600 font-semibold flex items-center gap-1">
-                  <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> Continuous Optimization
-                </span>
-              </div>
+            <!-- Main Radial Speedometer Gauge (SVG + 3D Needle Animation) -->
+            <div class="relative flex flex-col items-center justify-center pt-2 layer-depth-2">
               
-              <!-- Clean SVG Analytics Trendline -->
-              <svg viewBox="0 0 400 120" class="w-full h-24 overflow-visible">
+              <svg viewBox="0 0 360 215" class="w-full max-w-[340px] sm:max-w-[360px] h-auto overflow-visible select-none">
                 <defs>
-                  <linearGradient id="heroAreaGradLight" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#2563EB" stop-opacity="0.25"/>
-                    <stop offset="100%" stop-color="#2563EB" stop-opacity="0.0"/>
+                  <!-- Dial Track Gradient -->
+                  <linearGradient id="meterSpeedGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#3B82F6" />
+                    <stop offset="55%" stop-color="#2563EB" />
+                    <stop offset="85%" stop-color="#06B6D4" />
+                    <stop offset="100%" stop-color="#0284C7" />
                   </linearGradient>
-                  <linearGradient id="heroLineGradLight" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#3B82F6"/>
-                    <stop offset="50%" stop-color="#2563EB"/>
-                    <stop offset="100%" stop-color="#1D4ED8"/>
+
+                  <!-- 3D Needle Gradient -->
+                  <linearGradient id="needleGrad3D" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#06B6D4" />
+                    <stop offset="60%" stop-color="#2563EB" />
+                    <stop offset="100%" stop-color="#1E3A8A" />
                   </linearGradient>
+
+                  <!-- 3D Bevel Filter for Needle Elevation -->
+                  <filter id="needleShadow3D" x="-40%" y="-40%" width="180%" height="180%">
+                    <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="rgba(37,99,235,0.45)" />
+                  </filter>
+
+                  <!-- Dial Glow Filter -->
+                  <filter id="dialGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                  </filter>
                 </defs>
-                <!-- Grid lines -->
-                <line x1="0" y1="30" x2="400" y2="30" stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1"/>
-                <line x1="0" y1="70" x2="400" y2="70" stroke="#E2E8F0" stroke-dasharray="4 4" stroke-width="1"/>
-                <line x1="0" y1="110" x2="400" y2="110" stroke="#E2E8F0" stroke-width="1"/>
-                <!-- Area -->
-                <path d="M 0 100 Q 80 85 140 70 T 260 45 T 400 15 L 400 115 L 0 115 Z" fill="url(#heroAreaGradLight)"/>
-                <!-- Line -->
-                <path d="M 0 100 Q 80 85 140 70 T 260 45 T 400 15" fill="none" stroke="url(#heroLineGradLight)" stroke-width="3" stroke-linecap="round"/>
-                <!-- Nodes -->
-                <circle cx="140" cy="70" r="4" fill="#3B82F6" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="260" cy="45" r="4" fill="#2563EB" stroke="#FFFFFF" stroke-width="2"/>
-                <circle cx="400" cy="15" r="5" fill="#1D4ED8" stroke="#FFFFFF" stroke-width="2"/>
+
+                <!-- Base Track Arc (Semi-Circle Background) -->
+                <path d="M 56 175 A 124 124 0 0 1 304 175" fill="none" stroke="#E2E8F0" stroke-width="12" stroke-linecap="round" opacity="0.8" />
+
+                <!-- Active Speed Arc (High-Performance Zone Glow) -->
+                <path d="M 56 175 A 124 124 0 0 1 304 175" fill="none" stroke="url(#meterSpeedGrad)" stroke-width="12" stroke-linecap="round" stroke-dasharray="390" stroke-dashoffset="24" filter="url(#dialGlow)" />
+
+                <!-- Speedometer Precision Digital Ticks -->
+                <g opacity="0.95">
+                  <line x1='48' y1='175' x2='34' y2='175' stroke='#2563EB' stroke-width='2.5' stroke-linecap='round' />
+                  <line x1='49.1' y1='157.8' x2='41.2' y2='156.7' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='52.5' y1='140.8' x2='44.8' y2='138.8' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='58' y1='124.5' x2='50.7' y2='121.4' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='65.7' y1='109' x2='58.8' y2='105' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='75.3' y1='94.6' x2='68.9' y2='89.8' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='86.7' y1='81.7' x2='76.8' y2='71.8' stroke='#2563EB' stroke-width='2.5' stroke-linecap='round' />
+                  <line x1='99.6' y1='70.3' x2='94.8' y2='63.9' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='114' y1='60.7' x2='110' y2='53.8' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='129.5' y1='53' x2='126.4' y2='45.7' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='145.8' y1='47.5' x2='143.8' y2='39.8' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='162.8' y1='44.1' x2='161.7' y2='36.2' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='180' y1='43' x2='180' y2='29' stroke='#2563EB' stroke-width='2.5' stroke-linecap='round' />
+                  <line x1='197.2' y1='44.1' x2='198.3' y2='36.2' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='214.2' y1='47.5' x2='216.2' y2='39.8' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='230.5' y1='53' x2='233.6' y2='45.7' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='246' y1='60.7' x2='250' y2='53.8' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='260.4' y1='70.3' x2='265.2' y2='63.9' stroke='#2563EB' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='273.3' y1='81.7' x2='283.2' y2='71.8' stroke='#06B6D4' stroke-width='2.5' stroke-linecap='round' />
+                  <line x1='284.7' y1='94.6' x2='291.1' y2='89.8' stroke='#06B6D4' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='294.3' y1='109' x2='301.2' y2='105' stroke='#06B6D4' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='302' y1='124.5' x2='309.3' y2='121.4' stroke='#06B6D4' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='307.5' y1='140.8' x2='315.2' y2='138.8' stroke='#06B6D4' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='310.9' y1='157.8' x2='318.8' y2='156.7' stroke='#CBD5E1' stroke-width='1.5' stroke-linecap='round' />
+                  <line x1='312' y1='175' x2='326' y2='175' stroke='#CBD5E1' stroke-width='2.5' stroke-linecap='round' />
+                </g>
+
+                <!-- Scale Labels (0%, 25%, 50%, 75%, MAX) -->
+                <text x="24" y="180" font-size="10" font-weight="700" fill="#64748B" font-family="'Space Grotesk', sans-serif">0%</text>
+                <text x="64" y="66" font-size="10" font-weight="700" fill="#64748B" font-family="'Space Grotesk', sans-serif">25%</text>
+                <text x="180" y="22" font-size="10" font-weight="700" fill="#2563EB" text-anchor="middle" font-family="'Space Grotesk', sans-serif">50%</text>
+                <text x="290" y="66" font-size="10" font-weight="700" fill="#0284C7" font-family="'Space Grotesk', sans-serif">75%</text>
+                <text x="334" y="180" font-size="10" font-weight="700" fill="#06B6D4" font-family="'Space Grotesk', sans-serif">MAX</text>
+
+                <!-- 3D Aerodynamic Needle Assembly (Pivots from Center 180, 175) -->
+                <g id="meter-needle-group" class="needle-pivot layer-depth-needle" style="transform: rotate(-90deg);" filter="url(#needleShadow3D)">
+                  <!-- Needle Blade with 3D Center Ridge -->
+                  <polygon points="176.5,175 178.5,52 180,44 181.5,52 183.5,175 180,183" fill="url(#needleGrad3D)" />
+                  <line x1="180" y1="48" x2="180" y2="175" stroke="#FFFFFF" stroke-width="1.2" opacity="0.8" />
+                  
+                  <!-- Glowing Needle Tip -->
+                  <circle cx="180" cy="46" r="3.5" fill="#06B6D4" filter="url(#dialGlow)" />
+                </g>
+
+                <!-- Center 3D Hub (Concentric Metallic Rings) -->
+                <g class="layer-depth-3">
+                  <!-- Outer Drop Glow -->
+                  <circle cx="180" cy="175" r="26" fill="rgba(37,99,235,0.12)" />
+                  <!-- Bezel Ring -->
+                  <circle cx="180" cy="175" r="19" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
+                  <!-- Inner Core -->
+                  <circle cx="180" cy="175" r="12" fill="#0F172A" />
+                  <!-- Active LED Center Pip -->
+                  <circle cx="180" cy="175" r="5" fill="#06B6D4" class="meter-glow-pulse" />
+                </g>
               </svg>
+
+              <!-- Central Digital HUD Readout -->
+              <div class="text-center mt-[-10px] space-y-1 layer-depth-3">
+                <div class="flex items-baseline justify-center gap-1">
+                  <span id="hero-meter-val" class="text-4xl sm:text-5xl font-extrabold font-heading text-slate-900 tracking-tight">0.0</span>
+                  <span class="text-2xl font-bold text-blue-600">%</span>
+                </div>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-heading">
+                  Growth Velocity Index
+                </div>
+                <div class="pt-1">
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50/90 border border-blue-200 text-[11px] font-bold text-blue-700 shadow-xs">
+                    <i data-lucide="zap" class="w-3.5 h-3.5 text-blue-600"></i>
+                    <span>Optimal Performance Zone</span>
+                  </span>
+                </div>
+              </div>
+
             </div>
 
-            <!-- Integrated Channel Nodes -->
-            <div class="grid grid-cols-2 gap-2.5 text-xs">
-              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-700 shrink-0">
-                  <i data-lucide="target" class="w-4 h-4"></i>
+            <!-- Companion Multi-Channel Micro Widgets (Inspired by Reference Dashboard) -->
+            <div class="grid grid-cols-2 gap-3 pt-1 text-xs layer-depth-2">
+              
+              <!-- Widget 1: Donut Ad Efficiency (like Internet Sales Goal 42%) -->
+              <div class="p-3.5 rounded-2xl bg-white/60 border border-slate-200/80 shadow-xs flex items-center gap-3">
+                <div class="relative w-11 h-11 shrink-0 flex items-center justify-center">
+                  <svg viewBox="0 0 36 36" class="w-11 h-11 -rotate-90">
+                    <path class="text-slate-200" stroke-width="3.5" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    <path class="text-blue-600" stroke-dasharray="98, 100" stroke-width="3.5" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                  </svg>
+                  <span class="absolute text-[10px] font-bold font-heading text-slate-900">98%</span>
                 </div>
                 <div>
-                  <span class="block font-bold text-slate-900 text-[11px]">Meta &amp; Google Ads</span>
-                  <span class="text-[10px] text-slate-500">High-intent buyer reach</span>
+                  <span class="block font-bold text-slate-900 text-[11px]">Ad Efficiency</span>
+                  <span class="text-[10px] text-slate-500">Meta &amp; Google Ads</span>
                 </div>
               </div>
 
-              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-indigo-100 border border-indigo-200 flex items-center justify-center text-indigo-700 shrink-0">
-                  <i data-lucide="search" class="w-4 h-4"></i>
-                </div>
+              <!-- Widget 2: Live Inflow Sparkline (like Retail & October Sales) -->
+              <div class="p-3.5 rounded-2xl bg-white/60 border border-slate-200/80 shadow-xs flex items-center justify-between">
                 <div>
-                  <span class="block font-bold text-slate-900 text-[11px]">SEO &amp; Local Maps</span>
-                  <span class="text-[10px] text-slate-500">Top organic discovery</span>
+                  <span class="block font-bold text-slate-900 text-[11px]">Lead Inflow</span>
+                  <span class="text-[10px] text-emerald-600 font-bold flex items-center gap-0.5">
+                    <i data-lucide="trending-up" class="w-3 h-3"></i> +340% Pace
+                  </span>
                 </div>
+                <!-- Mini Sparkline SVG -->
+                <svg viewBox="0 0 45 22" class="w-11 h-5 overflow-visible">
+                  <path d="M 0 18 Q 12 12 20 15 T 32 6 T 45 3" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" />
+                  <circle cx="45" cy="3" r="2.5" fill="#10B981" />
+                </svg>
               </div>
 
-              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-sky-100 border border-sky-200 flex items-center justify-center text-sky-700 shrink-0">
-                  <i data-lucide="globe" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <span class="block font-bold text-slate-900 text-[11px]">Web &amp; Landers</span>
-                  <span class="text-[10px] text-slate-500">Conversion-optimized</span>
-                </div>
-              </div>
-
-              <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-2.5">
-                <div class="w-7 h-7 rounded-lg bg-emerald-100 border border-emerald-200 flex items-center justify-center text-emerald-700 shrink-0">
-                  <i data-lucide="users" class="w-4 h-4"></i>
-                </div>
-                <div>
-                  <span class="block font-bold text-slate-900 text-[11px]">Lead Generation</span>
-                  <span class="text-[10px] text-slate-500">Direct business inquiries</span>
-                </div>
-              </div>
             </div>
 
-            <!-- Ecosystem Live Signal Footer -->
-            <div class="p-3 rounded-xl bg-blue-50/80 border border-blue-200 flex items-center justify-between text-[11px]">
-              <span class="text-slate-700 flex items-center gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i>
-                <span>Engineered for Measurable Customer Acquisition</span>
+            <!-- Bottom Live Telemetry Strip -->
+            <div class="p-3 rounded-xl bg-slate-50/70 border border-slate-200/70 flex items-center justify-between text-[11px] layer-depth-1">
+              <span class="text-slate-700 flex items-center gap-1.5 font-medium">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                <span>Engineered for Predictable Inquiries</span>
               </span>
-              <a href="#services" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-1 transition-colors">
-                <span>Explore</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
+              <a href="#services" class="text-blue-600 hover:text-blue-800 font-bold flex items-center gap-1 transition-colors">
+                <span>Services</span> <i data-lucide="arrow-right" class="w-3 h-3"></i>
               </a>
             </div>
 

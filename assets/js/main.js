@@ -169,4 +169,68 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     requestAnimationFrame(renderGlow);
   }
+
+  // 5. Transparent 3D Digital Speedometer Controller
+  const meterCard = document.getElementById('hero-3d-meter-card');
+  const meterNeedle = document.getElementById('meter-needle-group');
+  const meterValueEl = document.getElementById('hero-meter-val');
+
+  if (meterCard) {
+    // Interactive 3D Parallax Tilt on Mouse Move
+    const heroVisualArea = meterCard.closest('.lg\\:col-span-5') || meterCard.parentElement;
+
+    if (heroVisualArea && window.matchMedia('(pointer: fine)').matches) {
+      heroVisualArea.addEventListener('mousemove', (e) => {
+        const rect = heroVisualArea.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        const rotateX = -(y / rect.height) * 16;
+        const rotateY = (x / rect.width) * 18;
+
+        meterCard.classList.remove('meter-floating-idle');
+        meterCard.style.transform = `perspective(1200px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateZ(10px)`;
+      });
+
+      heroVisualArea.addEventListener('mouseleave', () => {
+        meterCard.style.transform = '';
+        meterCard.classList.add('meter-floating-idle');
+      });
+    }
+
+    // Trigger Initial Needle Sweep & Counter Animation
+    setTimeout(() => {
+      if (meterNeedle) {
+        // Sweep needle from -90deg up to 74deg
+        meterNeedle.style.transform = 'rotate(74deg)';
+        
+        // After sweep completes (2s), activate subtle engine throttle idle vibration
+        setTimeout(() => {
+          meterNeedle.classList.add('needle-throttling');
+        }, 2000);
+      }
+
+      if (meterValueEl) {
+        let current = 0;
+        const target = 94.8;
+        const duration = 1900;
+        const start = performance.now();
+
+        function countUp(now) {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = 1 - Math.pow(1 - progress, 3);
+          current = ease * target;
+          meterValueEl.textContent = current.toFixed(1);
+
+          if (progress < 1) {
+            requestAnimationFrame(countUp);
+          } else {
+            meterValueEl.textContent = '94.8';
+          }
+        }
+        requestAnimationFrame(countUp);
+      }
+    }, 400);
+  }
 });

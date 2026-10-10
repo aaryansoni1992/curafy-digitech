@@ -534,3 +534,83 @@ button, a, input, select, textarea {
   }
 }
 
+/* ========================================================
+   TRANSPARENT 3D DIGITAL PERFORMANCE METER
+   ======================================================== */
+.meter-3d-scene {
+  perspective: 1200px;
+}
+
+.meter-3d-card {
+  transform-style: preserve-3d;
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+/* Ambient 3D floating animation when idle */
+@keyframes meterFloatIdle {
+  0%, 100% {
+    transform: perspective(1200px) rotateX(6deg) rotateY(-5deg) translateY(0px);
+  }
+  50% {
+    transform: perspective(1200px) rotateX(2deg) rotateY(-2deg) translateY(-8px);
+  }
+}
+
+.meter-floating-idle {
+  animation: meterFloatIdle 7s ease-in-out infinite;
+}
+
+/* Layered 3D Depth */
+.layer-depth-1 {
+  transform: translateZ(12px);
+}
+.layer-depth-2 {
+  transform: translateZ(26px);
+}
+.layer-depth-3 {
+  transform: translateZ(42px);
+}
+.layer-depth-needle {
+  transform: translateZ(52px);
+}
+
+/* Realistic Speedometer Needle Animations */
+.needle-pivot {
+  transform-origin: 180px 175px;
+  transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes needleThrottleIdle {
+  0%, 100% {
+    transform: rotate(73deg);
+  }
+  25% {
+    transform: rotate(77deg);
+  }
+  50% {
+    transform: rotate(72.5deg);
+  }
+  75% {
+    transform: rotate(75.5deg);
+  }
+}
+
+.needle-throttling {
+  animation: needleThrottleIdle 3.5s ease-in-out infinite;
+}
+
+/* Glowing Pulsing Beacon */
+@keyframes meterGlowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6)) drop-shadow(0 0 16px rgba(37, 99, 235, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(6, 182, 212, 0.9)) drop-shadow(0 0 28px rgba(37, 99, 235, 0.6));
+  }
+}
+
+.meter-glow-pulse {
+  animation: meterGlowPulse 2.8s ease-in-out infinite;
+}
+
