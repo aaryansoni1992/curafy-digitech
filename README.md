@@ -20,6 +20,7 @@ Curafy Digitech is a premier, futuristic high-contrast digital marketing & perfo
   - Enterprise outcomes & startup metrics
 - **Multi-Page Experience:**
   - `index.html` - Main command center & hero showcase
+  - `landing.html` - High-converting performance marketing & ad campaign landing page
   - `services.html` - In-depth breakdown of all 5 service pillars
   - `healthcare.html` - Specialized medical & clinic marketing solutions
   - `case-studies.html` - Little vs. Big verified ROI case studies
