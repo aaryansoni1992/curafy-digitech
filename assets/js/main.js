@@ -233,4 +233,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }, 400);
   }
+
+  // ========================================================
+  // Meta Pixel Conversion Event Tracking (WhatsApp & Phone)
+  // ========================================================
+  document.addEventListener('click', (e) => {
+    // 1. WhatsApp Button Click Tracker
+    const waLink = e.target.closest('a[href*="wa.me"], a[href*="whatsapp.com"]');
+    if (waLink) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', {
+          content_name: 'WhatsApp Chat Initiated',
+          content_category: 'Direct WhatsApp Conversion',
+          currency: 'INR'
+        });
+        fbq('trackCustom', 'WhatsAppClick', {
+          page: window.location.pathname,
+          target_url: waLink.href
+        });
+      }
+    }
+
+    // 2. Direct Phone Call Click Tracker
+    const telLink = e.target.closest('a[href^="tel:"]');
+    if (telLink) {
+      if (typeof fbq === 'function') {
+        fbq('track', 'Contact', {
+          content_name: 'Phone Call Dialed',
+          content_category: 'Direct Phone Lead',
+          currency: 'INR'
+        });
+      }
+    }
+  });
 });
