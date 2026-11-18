@@ -335,6 +335,10 @@
             <i data-lucide="check-circle-2" class="w-4 h-4"></i>
             <span>Page Health Audit</span>
           </button>
+          <button onclick="switchTab('tab-blogs')" id="nav-tab-blogs" class="tab-btn px-4 py-3 text-xs font-semibold border-b-2 border-transparent text-slate-400 hover:text-slate-200 flex items-center gap-2 transition">
+            <i data-lucide="newspaper" class="w-4 h-4 text-emerald-400"></i>
+            <span>Blog Manager</span>
+          </button>
         </div>
 
         <!-- Tab Contents Area -->
@@ -792,6 +796,37 @@
             </div>
           </section>
 
+          <!-- ================= TAB 6: BLOG MANAGER ================= -->
+          <section id="tab-blogs" class="tab-panel hidden space-y-6">
+            <div class="glass-card p-6 rounded-xl border border-curafy-border">
+              <div class="flex flex-wrap items-center justify-between gap-4 mb-6 pb-4 border-b border-curafy-border">
+                <div>
+                  <h3 class="font-heading font-bold text-lg text-white flex items-center gap-2">
+                    <i data-lucide="newspaper" class="w-5 h-5 text-emerald-400"></i>
+                    <span>Curafy Blog &amp; Content Publisher</span>
+                  </h3>
+                  <p class="text-xs text-slate-400 mt-1">Publish new insights, manage articles, and drive organic traffic to your business.</p>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <a href="/blog.html" target="_blank" class="px-3.5 py-2 rounded-lg bg-curafy-surface hover:bg-slate-800 border border-curafy-border text-xs font-semibold text-slate-300 flex items-center gap-1.5 transition">
+                    <i data-lucide="external-link" class="w-3.5 h-3.5 text-cyan-400"></i>
+                    <span>View Public Blog</span>
+                  </a>
+                  <button type="button" onclick="openBlogEditorModal()" class="px-4 py-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-semibold text-xs shadow-lg shadow-emerald-500/20 flex items-center gap-1.5 transition">
+                    <i data-lucide="plus" class="w-4 h-4"></i>
+                    <span>Write New Blog Post</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Published Articles List -->
+              <div id="admin-blogs-list" class="space-y-3">
+                <div class="p-6 text-center text-xs text-slate-500">Loading published blog posts...</div>
+              </div>
+            </div>
+          </section>
+
         </div>
       </main>
 
@@ -896,6 +931,111 @@
 
       <div class="px-6 py-3 border-t border-curafy-border bg-curafy-surface/50 flex justify-end">
         <button onclick="closeBackupsModal()" class="px-4 py-2 rounded-lg bg-curafy-card hover:bg-slate-800 text-xs text-slate-300 font-semibold transition">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Editor Modal -->
+  <div id="modal-blog-editor" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden flex items-center justify-center p-4">
+    <div class="bg-curafy-navy border border-curafy-borderLight rounded-2xl w-full max-w-4xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div class="px-6 py-4 border-b border-curafy-border flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i data-lucide="edit-3" class="w-5 h-5 text-emerald-400"></i>
+          <h3 id="blog-modal-heading" class="font-heading font-bold text-base text-white">Create New Blog Article</h3>
+        </div>
+        <button onclick="closeBlogEditorModal()" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="p-6 flex-1 overflow-y-auto space-y-4 text-xs">
+        <input type="hidden" id="blog-edit-id">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Post Title -->
+          <div class="md:col-span-2">
+            <label class="block font-semibold text-slate-300 mb-1">Article Title *</label>
+            <input type="text" id="blog-input-title" oninput="onBlogTitleInput()" placeholder="e.g. 5 Local SEO Secrets for Hospitals in 2026" class="w-full px-3 py-2.5 rounded-lg bg-curafy-surface border border-curafy-border text-sm text-white focus:outline-none focus:border-cyan-400">
+          </div>
+
+          <!-- Slug -->
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">URL Slug (e.g. local-seo-secrets-hospitals)</label>
+            <input type="text" id="blog-input-slug" placeholder="auto-generated-from-title" class="w-full px-3 py-2 rounded-lg bg-curafy-surface border border-curafy-border font-mono text-cyan-300 focus:outline-none focus:border-cyan-400">
+          </div>
+
+          <!-- Category -->
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Category</label>
+            <select id="blog-input-category" class="w-full px-3 py-2 rounded-lg bg-curafy-surface border border-curafy-border text-white focus:outline-none focus:border-cyan-400">
+              <option value="Healthcare Marketing">Healthcare Marketing</option>
+              <option value="Performance Marketing">Performance Marketing</option>
+              <option value="SEO &amp; Search">SEO &amp; Search</option>
+              <option value="Conversion &amp; Web Design">Conversion &amp; Web Design</option>
+              <option value="Social Media Marketing">Social Media Marketing</option>
+            </select>
+          </div>
+
+          <!-- Author -->
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Author Name</label>
+            <input type="text" id="blog-input-author" placeholder="Aaryan Soni / Curafy Growth Team" class="w-full px-3 py-2 rounded-lg bg-curafy-surface border border-curafy-border text-white focus:outline-none focus:border-cyan-400">
+          </div>
+
+          <!-- Read Time -->
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Read Time Estimate</label>
+            <input type="text" id="blog-input-readtime" placeholder="e.g. 5 min read" class="w-full px-3 py-2 rounded-lg bg-curafy-surface border border-curafy-border text-white focus:outline-none focus:border-cyan-400">
+          </div>
+
+          <!-- Cover Image URL -->
+          <div class="md:col-span-2">
+            <div class="flex items-center justify-between mb-1">
+              <label class="font-semibold text-slate-300">Cover Image URL</label>
+              <button type="button" onclick="setSampleBlogImage()" class="text-[11px] text-cyan-400 hover:underline">Use Sample Marketing Image</button>
+            </div>
+            <input type="url" id="blog-input-image" oninput="onBlogImageChange()" placeholder="https://images.unsplash.com/photo-..." class="w-full px-3 py-2 rounded-lg bg-curafy-surface border border-curafy-border text-white focus:outline-none focus:border-cyan-400">
+            <div id="blog-image-preview-box" class="mt-2 h-28 rounded-lg overflow-hidden border border-curafy-border bg-slate-900 hidden">
+              <img id="blog-image-preview-img" src="" alt="Preview" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <!-- Excerpt -->
+          <div class="md:col-span-2">
+            <label class="block font-semibold text-slate-300 mb-1">Short Excerpt (2–3 sentences)</label>
+            <textarea id="blog-input-excerpt" rows="2" placeholder="Brief summary of the article for blog listing cards and search snippets..." class="w-full px-3 py-2 rounded-lg bg-curafy-surface border border-curafy-border text-white focus:outline-none focus:border-cyan-400 resize-none"></textarea>
+          </div>
+
+          <!-- Featured Checkbox -->
+          <div class="md:col-span-2 flex items-center gap-2">
+            <input type="checkbox" id="blog-input-featured" class="w-4 h-4 rounded text-blue-600 focus:ring-0 bg-curafy-surface border-curafy-border">
+            <label for="blog-input-featured" class="text-xs text-slate-300 font-medium">Pin this as the Main Featured Article at top of Blog</label>
+          </div>
+        </div>
+
+        <!-- Article Content Editor -->
+        <div class="pt-2">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-1.5 pb-1 border-b border-curafy-border">
+            <label class="font-semibold text-slate-300">Article Content (HTML / Rich Text)</label>
+            <div class="flex items-center gap-1.5">
+              <button type="button" onclick="insertContentTag('h2')" class="px-2 py-0.5 rounded bg-curafy-surface hover:bg-slate-800 text-[11px] text-slate-300 font-mono">+H2</button>
+              <button type="button" onclick="insertContentTag('h3')" class="px-2 py-0.5 rounded bg-curafy-surface hover:bg-slate-800 text-[11px] text-slate-300 font-mono">+H3</button>
+              <button type="button" onclick="insertContentTag('p')" class="px-2 py-0.5 rounded bg-curafy-surface hover:bg-slate-800 text-[11px] text-slate-300 font-mono">+Paragraph</button>
+              <button type="button" onclick="insertContentTag('ul')" class="px-2 py-0.5 rounded bg-curafy-surface hover:bg-slate-800 text-[11px] text-slate-300 font-mono">+Bullet List</button>
+              <button type="button" onclick="insertContentTag('tip')" class="px-2 py-0.5 rounded bg-curafy-surface hover:bg-slate-800 text-[11px] text-cyan-300 font-mono">+Tip Box</button>
+            </div>
+          </div>
+          <textarea id="blog-input-content" rows="12" placeholder="Write or paste your article HTML here. You can use <p>, <h2>, <h3>, <ul>, <li> tags..." class="w-full p-4 rounded-xl bg-slate-950 border border-curafy-border font-mono text-xs text-slate-200 focus:outline-none focus:border-cyan-400 transition resize-y"></textarea>
+        </div>
+
+      </div>
+
+      <div class="px-6 py-3 border-t border-curafy-border bg-curafy-surface/50 flex items-center justify-between">
+        <button onclick="closeBlogEditorModal()" class="px-4 py-2 rounded-lg bg-curafy-card hover:bg-slate-800 text-xs text-slate-300 font-semibold transition">Cancel</button>
+        <button onclick="saveBlogPost()" id="btn-publish-blog" class="px-5 py-2 rounded-lg bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-xs text-white font-semibold flex items-center gap-1.5 transition shadow-lg shadow-emerald-500/20">
+          <i data-lucide="check" class="w-4 h-4"></i>
+          <span>Publish Article to Website</span>
+        </button>
       </div>
     </div>
   </div>

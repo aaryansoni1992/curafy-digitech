@@ -471,6 +471,7 @@ function generateSitemap() {
     'landing.html': { priority: '0.8', changefreq: 'weekly', loc: '/landing.html' },
     'case-studies.html': { priority: '0.8', changefreq: 'monthly', loc: '/case-studies.html' },
     'about.html': { priority: '0.8', changefreq: 'monthly', loc: '/about.html' },
+    'blog.html': { priority: '0.9', changefreq: 'weekly', loc: '/blog.html' },
     'contact.html': { priority: '0.8', changefreq: 'monthly', loc: '/contact.html' },
     'thank-you.html': { priority: '0.3', changefreq: 'yearly', loc: '/thank-you.html' }
   };
@@ -684,6 +685,44 @@ const server = http.createServer((req, res) => {
         fs.writeFileSync(path.join(ROOT_DIR, 'robots.txt'), data.content, 'utf8');
         res.writeHead(200, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: true, message: 'robots.txt saved successfully!' }));
+      } catch (e) {
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: e.message }));
+      }
+    });
+    return;
+  }
+
+  // GET /api/blogs: Read all blogs
+  if (method === 'GET' && pathname === '/api/blogs') {
+    try {
+      const blogsPath = path.join(ROOT_DIR, 'assets', 'data', 'blogs.json');
+      let blogs = [];
+      if (fs.existsSync(blogsPath)) {
+        blogs = JSON.parse(fs.readFileSync(blogsPath, 'utf8'));
+      }
+      res.writeHead(200, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: true, blogs }));
+    } catch (e) {
+      res.writeHead(500, { 'Content-Type': 'application/json' });
+      res.end(JSON.stringify({ success: false, error: e.message }));
+    }
+    return;
+  }
+
+  // POST /api/blogs/save: Save blogs array
+  if (method === 'POST' && pathname === '/api/blogs/save') {
+    getJsonBody((err, data) => {
+      if (err || !data || !Array.isArray(data.blogs)) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: 'Invalid blogs payload' }));
+        return;
+      }
+      try {
+        const blogsPath = path.join(ROOT_DIR, 'assets', 'data', 'blogs.json');
+        fs.writeFileSync(blogsPath, JSON.stringify(data.blogs, null, 2), 'utf8');
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, message: 'Blogs saved successfully!' }));
       } catch (e) {
         res.writeHead(500, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify({ success: false, error: e.message }));

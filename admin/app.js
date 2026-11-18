@@ -293,6 +293,7 @@ const PAGE_FILES = [
   'landing.html',
   'case-studies.html',
   'about.html',
+  'blog.html',
   'contact.html',
   'thank-you.html'
 ];
@@ -1654,3 +1655,357 @@ function showToast(message, type = 'success') {
     setTimeout(() => toast.remove(), 250);
   }, 4000);
 }
+
+// ================= BLOG POSTS MANAGER =================
+
+let allAdminBlogs = [];
+
+async function loadAdminBlogs() {
+  const container = document.getElementById('admin-blogs-list');
+  if (!container) return;
+
+  try {
+    if (isLocalMode) {
+      const res = await fetch('/api/blogs');
+      const json = await res.json();
+      allAdminBlogs = json.blogs || [];
+    } else {
+      const res = await fetch(`https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REPO_BRANCH}/assets/data/blogs.json?t=${Date.now()}`);
+      if (res.ok) {
+        allAdminBlogs = await res.json();
+      } else {
+        allAdminBlogs = [];
+      }
+    }
+    renderAdminBlogsList();
+  } catch (err) {
+    container.innerHTML = `<div class="p-4 text-center text-xs text-rose-400">Error loading blogs: ${escapeHtml(err.message)}</div>`;
+  }
+}
+
+function renderAdminBlogsList() {
+  const container = document.getElementById('admin-blogs-list');
+  if (!container) return;
+
+  if (allAdminBlogs.length === 0) {
+    container.innerHTML = `
+      <div class="p-8 text-center bg-curafy-surface border border-curafy-border rounded-xl">
+        <i data-lucide="newspaper" class="w-8 h-8 text-slate-500 mx-auto mb-2"></i>
+        <h4 class="font-heading font-semibold text-sm text-slate-300">No Articles Published Yet</h4>
+        <p class="text-xs text-slate-500 mt-1">Click "Write New Blog Post" above to publish your first article.</p>
+      </div>
+    `;
+    refreshIcons();
+    return;
+  }
+
+  container.innerHTML = allAdminBlogs.map(b => {
+    return `
+      <div class="p-4 rounded-xl bg-curafy-surface border border-curafy-border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 hover:border-slate-600 transition">
+        <div class="flex items-center gap-3.5 min-w-0">
+          <img src="${escapeHtml(b.image || '/assets/images/curafy-logo-mark.png')}" alt="Cover" class="w-16 h-14 rounded-lg object-cover border border-curafy-border shrink-0 bg-slate-900" onerror="this.src='/assets/images/curafy-logo-mark.png'">
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-500/10 text-cyan-400 border border-cyan-500/30">
+                ${escapeHtml(b.category || 'General')}
+              </span>
+              ${b.featured ? '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">★ Featured</span>' : ''}
+              <span class="text-[11px] text-slate-400">${escapeHtml(b.date || '')}</span>
+            </div>
+            <h4 class="font-heading font-bold text-sm text-white truncate max-w-md sm:max-w-lg">${escapeHtml(b.title)}</h4>
+            <div class="text-[11px] text-slate-400 font-mono truncate">slug: /blog-post.html?slug=${escapeHtml(b.slug)}</div>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 shrink-0 self-end sm:self-auto">
+          <a href="/blog-post.html?slug=${encodeURIComponent(b.slug)}" target="_blank" class="p-2 rounded-lg bg-curafy-card hover:bg-slate-800 text-slate-300 hover:text-cyan-400 text-xs transition" title="Preview Article">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+          </a>
+          <button type="button" onclick="openBlogEditorModal('${b.id}')" class="px-3 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600/30 border border-blue-500/30 text-blue-300 hover:text-white font-semibold text-xs transition flex items-center gap-1">
+            <i data-lucide="edit-2" class="w-3.5 h-3.5"></i>
+            <span>Edit</span>
+          </button>
+          <button type="button" onclick="deleteBlogPost('${b.id}')" class="p-2 rounded-lg bg-rose-950/40 hover:bg-rose-900/60 border border-rose-500/30 text-rose-300 hover:text-white text-xs transition" title="Delete Article">
+            <i data-lucide="trash-2" class="w-4 h-4"></i>
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  refreshIcons();
+}
+
+function openBlogEditorModal(blogId) {
+  const modal = document.getElementById('modal-blog-editor');
+  const heading = document.getElementById('blog-modal-heading');
+  const previewBox = document.getElementById('blog-image-preview-box');
+
+  if (blogId) {
+    const post = allAdminBlogs.find(b => String(b.id) === String(blogId));
+    if (!post) return;
+
+    heading.textContent = 'Edit Blog Article';
+    document.getElementById('blog-edit-id').value = post.id;
+    document.getElementById('blog-input-title').value = post.title || '';
+    document.getElementById('blog-input-slug').value = post.slug || '';
+    document.getElementById('blog-input-category').value = post.category || 'Healthcare Marketing';
+    document.getElementById('blog-input-author').value = post.author || 'Curafy Growth Team';
+    document.getElementById('blog-input-readtime').value = post.readTime || '5 min read';
+    document.getElementById('blog-input-image').value = post.image || '';
+    document.getElementById('blog-input-excerpt').value = post.excerpt || '';
+    document.getElementById('blog-input-featured').checked = Boolean(post.featured);
+    document.getElementById('blog-input-content').value = post.content || '';
+
+    if (post.image) {
+      previewBox.classList.remove('hidden');
+      document.getElementById('blog-image-preview-img').src = post.image;
+    } else {
+      previewBox.classList.add('hidden');
+    }
+  } else {
+    heading.textContent = 'Create New Blog Article';
+    document.getElementById('blog-edit-id').value = '';
+    document.getElementById('blog-input-title').value = '';
+    document.getElementById('blog-input-slug').value = '';
+    document.getElementById('blog-input-category').value = 'Healthcare Marketing';
+    document.getElementById('blog-input-author').value = 'Curafy Editorial Team';
+    document.getElementById('blog-input-readtime').value = '5 min read';
+    document.getElementById('blog-input-image').value = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80';
+    document.getElementById('blog-input-excerpt').value = '';
+    document.getElementById('blog-input-featured').checked = false;
+    document.getElementById('blog-input-content').value = '<p class="lead text-lg text-slate-700 font-medium leading-relaxed mb-6">Write your opening hook here...</p>\n\n<h2>1. First Key Strategy</h2>\n<p>Explain your insight and framework in detail...</p>\n\n<div class="p-5 rounded-2xl bg-blue-50 border border-blue-200 text-blue-900 mb-6">\n  <h4 class="font-bold mb-1">Growth Insight</h4>\n  <p class="text-sm">Highlight key takeaway or actionable metric here.</p>\n</div>';
+
+    previewBox.classList.remove('hidden');
+    document.getElementById('blog-image-preview-img').src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80';
+  }
+
+  modal.classList.remove('hidden');
+  refreshIcons();
+}
+
+function closeBlogEditorModal() {
+  document.getElementById('modal-blog-editor').classList.add('hidden');
+}
+
+function onBlogTitleInput() {
+  const editId = document.getElementById('blog-edit-id').value;
+  const slugInput = document.getElementById('blog-input-slug');
+  const title = document.getElementById('blog-input-title').value;
+
+  if (!editId || !slugInput.value.trim()) {
+    slugInput.value = title
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, '')
+      .trim()
+      .replace(/\s+/g, '-');
+  }
+}
+
+function onBlogImageChange() {
+  const imgUrl = document.getElementById('blog-input-image').value.trim();
+  const box = document.getElementById('blog-image-preview-box');
+  const img = document.getElementById('blog-image-preview-img');
+  if (imgUrl) {
+    box.classList.remove('hidden');
+    img.src = imgUrl;
+  } else {
+    box.classList.add('hidden');
+  }
+}
+
+function setSampleBlogImage() {
+  const sample = 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80';
+  document.getElementById('blog-input-image').value = sample;
+  onBlogImageChange();
+}
+
+function insertContentTag(type) {
+  const textarea = document.getElementById('blog-input-content');
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+  const selected = textarea.value.substring(start, end) || 'Sample text';
+  let insert = '';
+
+  if (type === 'h2') insert = `<h2>${selected}</h2>\n`;
+  else if (type === 'h3') insert = `<h3>${selected}</h3>\n`;
+  else if (type === 'p') insert = `<p>${selected}</p>\n`;
+  else if (type === 'ul') insert = `<ul class="list-disc pl-6 space-y-2 mb-6 text-slate-700">\n  <li>${selected}</li>\n  <li>Second key point</li>\n</ul>\n`;
+  else if (type === 'tip') insert = `<div class="p-5 rounded-2xl bg-blue-50 border border-blue-200 text-blue-900 mb-6">\n  <h4 class="font-bold mb-1">Growth Pro Tip</h4>\n  <p class="text-sm">${selected}</p>\n</div>\n`;
+
+  textarea.value = textarea.value.substring(0, start) + insert + textarea.value.substring(end);
+  textarea.focus();
+}
+
+async function saveBlogPost() {
+  const btn = document.getElementById('btn-publish-blog');
+  const originalHtml = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = `<i data-lucide="loader" class="w-4 h-4 animate-spin"></i><span>Publishing...</span>`;
+  refreshIcons();
+
+  const editId = document.getElementById('blog-edit-id').value;
+  const title = document.getElementById('blog-input-title').value.trim();
+  const slug = document.getElementById('blog-input-slug').value.trim();
+  const category = document.getElementById('blog-input-category').value;
+  const author = document.getElementById('blog-input-author').value.trim() || 'Curafy Editorial Team';
+  const readTime = document.getElementById('blog-input-readtime').value.trim() || '5 min read';
+  const image = document.getElementById('blog-input-image').value.trim() || 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80';
+  const excerpt = document.getElementById('blog-input-excerpt').value.trim();
+  const featured = document.getElementById('blog-input-featured').checked;
+  const content = document.getElementById('blog-input-content').value.trim();
+
+  if (!title || !slug || !content) {
+    showToast('Please fill in Title, Slug, and Content!', 'error');
+    btn.disabled = false;
+    btn.innerHTML = originalHtml;
+    refreshIcons();
+    return;
+  }
+
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-US', { month: 'short', day: '2-digit', year: 'numeric' });
+
+  if (featured) {
+    allAdminBlogs.forEach(b => { b.featured = false; });
+  }
+
+  if (editId) {
+    const idx = allAdminBlogs.findIndex(b => String(b.id) === String(editId));
+    if (idx !== -1) {
+      allAdminBlogs[idx] = {
+        ...allAdminBlogs[idx],
+        title,
+        slug,
+        category,
+        author,
+        readTime,
+        image,
+        excerpt,
+        featured,
+        content
+      };
+    }
+  } else {
+    const newId = String(Date.now());
+    allAdminBlogs.unshift({
+      id: newId,
+      slug,
+      title,
+      category,
+      date: dateStr,
+      readTime,
+      author,
+      authorAvatar: 'assets/images/curafy-logo-mark.png',
+      image,
+      excerpt: excerpt || title,
+      featured,
+      content
+    });
+  }
+
+  try {
+    if (isLocalMode) {
+      const res = await fetch('/api/blogs/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ blogs: allAdminBlogs })
+      });
+      const json = await res.json();
+      if (!json.success) throw new Error(json.error);
+    } else {
+      let token = getGithubToken();
+      if (!token) {
+        token = prompt('Enter your GitHub Personal Access Token to commit the new blog post to the live site:');
+        if (!token) throw new Error('GitHub Token required to save live.');
+        localStorage.setItem('curafy_github_token', token.trim());
+      }
+
+      const fileInfoRes = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/assets/data/blogs.json`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const currentSha = fileInfoRes.ok ? (await fileInfoRes.json()).sha : undefined;
+
+      const commitRes = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/assets/data/blogs.json`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `blog: publish/update article "${title}" via Curafy Admin`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(allAdminBlogs, null, 2)))),
+          sha: currentSha,
+          branch: REPO_BRANCH
+        })
+      });
+
+      if (!commitRes.ok) {
+        const err = await commitRes.json();
+        throw new Error(err.message || 'GitHub commit failed');
+      }
+    }
+
+    showToast(`✓ Published "${title}" to your website!`, 'success');
+    closeBlogEditorModal();
+    renderAdminBlogsList();
+  } catch (err) {
+    showToast(`Failed to publish blog: ${err.message}`, 'error');
+  } finally {
+    btn.disabled = false;
+    btn.innerHTML = originalHtml;
+    refreshIcons();
+  }
+}
+
+async function deleteBlogPost(id) {
+  const post = allAdminBlogs.find(b => String(b.id) === String(id));
+  if (!post) return;
+  if (!confirm(`Are you sure you want to delete article "${post.title}"?`)) return;
+
+  allAdminBlogs = allAdminBlogs.filter(b => String(b.id) !== String(id));
+
+  try {
+    if (isLocalMode) {
+      await fetch('/api/blogs/save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ blogs: allAdminBlogs })
+      });
+    } else {
+      const token = getGithubToken();
+      if (!token) throw new Error('GitHub token required.');
+      const fileInfoRes = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/assets/data/blogs.json`, {
+        headers: { 'Authorization': `Bearer ${token}` }
+      });
+      const currentSha = fileInfoRes.ok ? (await fileInfoRes.json()).sha : undefined;
+
+      await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/assets/data/blogs.json`, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `blog: delete article "${post.title}" via Curafy Admin`,
+          content: btoa(unescape(encodeURIComponent(JSON.stringify(allAdminBlogs, null, 2)))),
+          sha: currentSha,
+          branch: REPO_BRANCH
+        })
+      });
+    }
+    showToast('Article deleted successfully!', 'info');
+    renderAdminBlogsList();
+  } catch (err) {
+    showToast(`Delete failed: ${err.message}`, 'error');
+  }
+}
+
+// Hook into tab switching: when tab-blogs is clicked, load blogs
+const origSwitchTab = switchTab;
+switchTab = function(tabId) {
+  origSwitchTab(tabId);
+  if (tabId === 'tab-blogs') {
+    loadAdminBlogs();
+  }
+};

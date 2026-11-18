@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "slug": "local-seo-strategies-clinics-hospitals-2026",
+    "title": "Top 7 Local SEO Strategies for Clinics & Hospitals to Maximize Patient Bookings in 2026",
+    "category": "Healthcare Marketing",
+    "date": "Nov 15, 2026",
+    "readTime": "6 min read",
+    "author": "Curafy Healthcare Lab",
+    "authorAvatar": "assets/images/curafy-logo-mark.png",
+    "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
+    "excerpt": "Discover how medical clinics, diagnostic centers, and specialized hospitals can dominate local Google 3-Pack rankings and capture high-intent patients searching nearby.",
+    "featured": true,
+    "content": "<p class=\"lead text-lg text-slate-700 font-medium leading-relaxed mb-6\">Over 73% of patients turn to Google search before scheduling an appointment with a local clinic, dentist, or specialist hospital. In 2026, healthcare search has evolved beyond simple keyword stuffing — Google's search algorithms heavily reward localized entity authority, verified physician profiles, and authentic patient sentiment.</p><h2>1. Dominate the Google Business Profile (GBP) Local 3-Pack</h2><p class=\"mb-4\">Your Google Business Profile is the primary digital front door of your medical practice. To ensure maximum visibility in local map packs:</p><ul class=\"list-disc pl-6 space-y-2 mb-6 text-slate-700\"><li><strong>Specify Primary & Secondary Categories:</strong> Use precise categories such as <em>'Pediatrician'</em> or <em>'Cardiologist'</em> instead of generic <em>'Doctor'</em>.</li><li><strong>Complete the Medical Services Menu:</strong> Add detailed pricing, consultation procedures, and accepted health insurance providers.</li><li><strong>Maintain Real-Time Operating Hours:</strong> Keep emergency and consultation hours accurate to avoid critical patient friction.</li></ul><div class=\"p-5 rounded-2xl bg-blue-50 border border-blue-200 text-blue-900 mb-8\"><h4 class=\"font-bold mb-1 text-blue-950 flex items-center gap-2\"><i data-lucide=\"lightbulb\" class=\"w-5 h-5 text-blue-600\"></i> Pro Healthcare Tip</h4><p class=\"text-sm text-blue-900\">Clinics that upload 5+ geotagged clinic facility photos each month receive 42% more direction requests and phone calls on Google Maps than inactive listings.</p></div><h2>2. Build Hyper-Local Procedure Pages</h2><p class=\"mb-4\">Patients rarely search just for <em>'hospital in my city'</em>. High-intent searchers look for specific conditions and treatments, such as <em>'knee arthroscopy surgeon in Vaishali Nagar'</em> or <em>'pain-free root canal near me'</em>.</p><p class=\"mb-6\">Create dedicated procedural pages containing detailed FAQs, pre-treatment instructions, expected recovery timelines, and physician credentials.</p><h2>3. Implement Schema.org MedicalBusiness & Physician Markup</h2><p class=\"mb-4\">Schema structured data helps Google understand your exact healthcare certifications, opening hours, consultation fees, and emergency contact details.</p><p class=\"mb-6\">Use <code>MedicalClinic</code> or <code>Hospital</code> JSON-LD schemas connected with specific <code>MedicalSpecialty</code> properties.</p><h2>Conclusion: Turning Clicks into Confirmed Appointments</h2><p class=\"mb-4\">Local SEO is not an overnight fix, but when executed systematically, it produces consistent, predictable, high-value patient appointments at a fraction of the cost of paid advertising.</p>"
+  },
+  {
+    "id": "2",
+    "slug": "google-ads-vs-meta-ads-2026-roas-breakdown",
+    "title": "Google Ads vs Meta Ads in 2026: Where Should Your Business Invest for Highest ROAS?",
+    "category": "Performance Marketing",
+    "date": "Nov 12, 2026",
+    "readTime": "8 min read",
+    "author": "Aaryan Soni",
+    "authorAvatar": "assets/images/curafy-logo-mark.png",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
+    "excerpt": "A data-backed comparison between Google Search/PMax ads and Meta (Instagram & Facebook) Ads to help you allocate your growth budget for maximum customer acquisition.",
+    "featured": false,
+    "content": "<p class=\"lead text-lg text-slate-700 font-medium leading-relaxed mb-6\">One of the most frequent questions business founders ask us at Curafy Digitech is: <em>'Should I allocate my marketing budget to Google Ads or Meta Ads?'</em> The short answer: it depends entirely on where your prospect stands in the buyer journey.</p><h2>Google Ads: Capturing Existing High Intent</h2><p class=\"mb-4\">Google Ads is fundamentally an <strong>intent-capture</strong> engine. When someone searches <em>'commercial interior designer in Jaipur'</em> or <em>'emergency dental clinic'</em>, they already have a problem and are actively searching for a solution with their credit card in hand.</p><ul class=\"list-disc pl-6 space-y-2 mb-6 text-slate-700\"><li><strong>Highest Conversion Rates:</strong> Search ad clicks convert at an average of 4%–9% across professional services.</li><li><strong>Higher Cost Per Click (CPC):</strong> Because intent is high, competition pushes bids up.</li><li><strong>Best For:</strong> B2B services, emergency treatments, local services, high-ticket consulting.</li></ul><h2>Meta Ads: Generating Latent Demand & Scale</h2><p class=\"mb-4\">Meta (Instagram & Facebook Ads) is an <strong>interest-discovery</strong> platform. Users are scrolling casually, not searching for a service. Your creative must stop their thumb and spark desire for something they didn't know they needed.</p><ul class=\"list-disc pl-6 space-y-2 mb-6 text-slate-700\"><li><strong>Lower CPC & Massive Reach:</strong> You can reach thousands of targeted prospects at a fraction of Google's cost.</li><li><strong>Visual Storytelling:</strong> Perfect for Before/After transformations, video case studies, and brand prestige.</li><li><strong>Best For:</strong> E-commerce, aesthetic clinics, hospitality, lifestyle, lead-generation webinars.</li></ul><div class=\"p-5 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 mb-8\"><h4 class=\"font-bold mb-1 text-emerald-950 flex items-center gap-2\"><i data-lucide=\"check-circle-2\" class=\"w-5 h-5 text-emerald-600\"></i> The Curafy Hybrid Formula</h4><p class=\"text-sm text-emerald-900\">Use Meta Video Ads for top-of-funnel brand awareness and audience building, then capture intent and retarget searchers with Google Performance Max and Search campaigns.</p></div>"
+  },
+  {
+    "id": "3",
+    "slug": "technical-seo-checklist-modern-websites-2026",
+    "title": "The Complete Technical SEO Checklist for Modern High-Growth Websites",
+    "category": "SEO & Search",
+    "date": "Nov 08, 2026",
+    "readTime": "5 min read",
+    "author": "Curafy SEO Lab",
+    "authorAvatar": "assets/images/curafy-logo-mark.png",
+    "image": "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=1200&q=80",
+    "excerpt": "From Core Web Vitals and crawl budget optimization to structured JSON-LD schemas and canonicalization: your essential technical checklist.",
+    "featured": false,
+    "content": "<p class=\"lead text-lg text-slate-700 font-medium leading-relaxed mb-6\">Great content and backlinks are useless if search engine crawlers cannot index, render, or understand your website structure. Technical SEO serves as the foundational bedrock of all organic search visibility.</p><h2>1. Core Web Vitals & INP (Interaction to Next Paint)</h2><p class=\"mb-4\">In 2026, page responsiveness is a major ranking factor. Ensure your Largest Contentful Paint (LCP) is under 2.5 seconds and Interaction to Next Paint (INP) remains below 200 milliseconds.</p><ul class=\"list-disc pl-6 space-y-2 mb-6 text-slate-700\"><li>Serve next-gen image formats (WebP and AVIF).</li><li>Eliminate render-blocking CSS and heavy unused JavaScript packages.</li><li>Preload key fonts and brand hero assets.</li></ul><h2>2. Clean Canonical & Hierarchy Architecture</h2><p class=\"mb-4\">Prevent duplicate content penalties by enforcing consistent HTTPS and self-referencing canonical tags across all root pages.</p>"
+  },
+  {
+    "id": "4",
+    "slug": "why-90-percent-business-websites-fail-to-convert",
+    "title": "Why 90% of Local Business Websites Fail to Convert Visitors into Paying Leads",
+    "category": "Conversion & Web Design",
+    "date": "Nov 02, 2026",
+    "readTime": "7 min read",
+    "author": "Curafy Design Studio",
+    "authorAvatar": "assets/images/curafy-logo-mark.png",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
+    "excerpt": "Driving traffic without conversion optimization is burning money. Discover the 5 fundamental conversion rate flaws that kill customer inquiries.",
+    "featured": false,
+    "content": "<p class=\"lead text-lg text-slate-700 font-medium leading-relaxed mb-6\">Most business owners believe they have a traffic problem. In reality, after auditing over 150+ company websites, we found that 90% actually have a <strong>conversion architecture failure</strong>. You don't need more visitors if your current site leaks 98% of people who visit.</p><h2>Flaw #1: Weak or Invisible Calls-to-Action (CTA)</h2><p class=\"mb-4\">If your visitor has to scroll or search for how to contact you, you have already lost them. Every high-converting landing page needs a persistent, sticky action element (such as a direct WhatsApp consultation or 1-click booking modal).</p><h2>Flaw #2: Zero Concrete Social Proof</h2><p class=\"mb-4\">Generic statements like <em>'We are the best agency'</em> carry zero weight. Real case studies with verifiable metrics (e.g. <em>'Generated ₹42L in verified patient revenue in 90 days'</em>) build instant credibility.</p>"
+  }
+]
