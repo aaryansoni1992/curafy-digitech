@@ -1,0 +1,21 @@
+{
+  "name": "curafy-digitech-seo",
+  "version": "2.0.0",
+  "description": "Curafy Digitech - SEO Control Center & Page Manager",
+  "main": "admin/server.js",
+  "scripts": {
+    "start": "node admin/server.js",
+    "admin": "node admin/server.js",
+    "seo": "node admin/server.js"
+  },
+  "keywords": [
+    "seo",
+    "admin",
+    "curafy-digitech",
+    "meta-tags",
+    "schema-generator",
+    "sitemap"
+  ],
+  "author": "Curafy Digitech",
+  "license": "ISC"
+}

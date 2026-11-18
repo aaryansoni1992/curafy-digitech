@@ -1,0 +1,9 @@
+# Curafy Digitech - robots.txt
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /.seo_backups/
+Disallow: /thank-you.html
+
+# Sitemaps
+Sitemap: https://www.curafydigitech.com/sitemap.xml

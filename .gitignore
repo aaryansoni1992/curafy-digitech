@@ -7,3 +7,7 @@ ehthumbs.db
 *.log
 scratch/
 .system_generated/
+
+# SEO Admin Backups
+.seo_backups/
+node_modules/
